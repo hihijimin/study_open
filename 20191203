@@ -182,6 +182,53 @@ over-ffting을 막기 위한 방법으로 데이터 양을 늘리기
 alexnet 개발자들은 data augmentation 방법으로 데이터 양 늘려서 했음( 하나의 이미지로 여러장의 비슷한 이미지를 만듦)
 하나의 이미지로 여러장 만드는 방법은 좌우 반전, 허용하는 입력 이미지 크기를 조금 다르게 함, 같은 내용을 담지만 위치를 조금 다르게 함
 
+5. googleNet
+
+<특징1> 1*1 컨볼루션
+1*1 필터커널로 컨볼루션 해주는 연산이 많다... 
+1*1 컨볼루션은 특성맵의 갯수를 줄이는 목적으로 사용된다 -> 특성맵 갯수가 적으면 그만큼 연산량이 줄어든다.
+연산량을 줄일 수 있다는 점은 네트워크를 더 깊이 만들수 있게 도와준다 준다
+특성맵에 따른 연산량 계산을 해보면?
+14*14*480 (480장의 14*14 특성맵) 을 48개의 5*5*480 필터커널로 컨볼루션 하면, (padding =2, stride =1)
+14*14*48 (48장의 14*14 특성맵) 생성
+연산횟수 = (14*14*48)*(5*5*480) =약 112.9M
+
+14*14*480 (480장의 14*14 특성맵) 을 16개의 5*5*16 필터커널로 컨볼루션 하면, (padding =2, stride =1)
+14*14*16 (16장의 14*14 특성맵) 생성
+how to transfer from 480 to 16 ??
+그니까 2번 과정을 거치는데 14*14*480 을 16개의 1*1*480 필터커널로 컨볼루션 한 후(14*14*16), 48개의 5*5*16 필터커널로 컨볼루션 하면,
+14*14*48 (48장의 14*14 특성맵) 생성
+연산횟수 = (14*14*16)*(1*1*480) + (14*14*48)*(5*5*16) =약 5.3M
+
+<특징2> Inception 모듈
+9개의 inception 모듈을 포함하고 있음
+filter concatenation
+1*1 convolution, 3*3 convolution, 5*5 convolution, 1*1 convolution
+                 1*1 convolution, 1*1 convolution, 3*3 max pooling
+previous layer
+이전층에서 생성된 특성맵을 1*1 convolution, 3*3 convolution, 5*5 convolution, 3*3 max pooling 모두 함께 쌓아준다.
+좀 더 다양한 종류의 특성이 도출된다. (동일한 사이즈의 필터커널을 이용해 컨볼루션을 해준거에 비해)
+
+<특징3> Global average pooling
+Alexnet , Vggnet 등에선 fully connectec layer 가 망의 후반부에 연결되어 있으나
+googlenet은 FC 방식 대신에 global average pooling 방식을 사용한다.
+이것은 이전층에서 산출된 특성맵들을 각각 평균낸 것들을 쭉~ 이어서 1차원 벡터를 만들어 준다.
+이후 softmax층을 연결해 줄수 있기 때문에 1차원 벡터로 해줌
+FC 방식은 1024개의 7*7*1024 필터커널로 컨볼루션 한다면 필요한 가중치는 7*7*1024*1024 =51.3M 인 반면,
+GAP 방식은 1024개의 7*7*1 필터커널로 사용하면 필요한 가중치는 없다.
+
+<특징4> autiliary classifier
+네트워크 깊이가 길어지면 깊어질수록 vanising gradient문제가 발생하는데
+가중치를 훈련하는 과정에서 역전파를 주로 활용하는데 역전파과정에서 가중치를 업데이트 하는데 사용되는 gradient가 점점 작아져서 0이 되어버리는 현상..
+그 결과 네트워크 내의 가중치들이 제대로 훈련되지 않는다.
+이 문제를 극복하기 위해서 Googlenet에선 네트퉈크 중에서 보조 분류기(autilliary classifier)을 달아주었음
+보조 분류기 구성은 
+5*5 평균 풀링(stride=3) - 128개의 1*1 필터커널 콘볼루션 - 1024 fully connected - 1000 fully connected - softmax 
+보조 분류기 구성은 훈련시에만 사용하고 평가시엔 사용하지 않는다
+
+
+
+
 
 
 <참고자료>
@@ -189,3 +236,4 @@ alexnet 개발자들은 data augmentation 방법으로 데이터 양 늘려서 �
 [2] https://bskyvision.com/504, VGGNet의 구조(VGG16)
 [3] https://bskyvision.com/418, Lenet-5의 구조
 [4] https://bskyvision.com/421?category=635506, Alexnet 구조
+[5] https://bskyvision.com/539?category=635506, googlenet 구조
