@@ -1,0 +1,2 @@
+softmax 함수 구현시 단점
+overflow 문제 생김 softmax 함수는 지수함수를 사용하는데 아주 큰 값을 내뱉어낸다.
