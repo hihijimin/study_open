@@ -1,4 +1,4 @@
-# 구글 코랩에서 파일 다운로
+# 구글 코랩에서 경로 받아 오기
 from google.colab import drive  :'/content/gdrive' 이 경로는 '구글드라이브에 접속하겠다  
 drive.mount('/content/gdrive')
 
