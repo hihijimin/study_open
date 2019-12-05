@@ -9,10 +9,10 @@
 다시말해, 주파수 성분들은 알 수 있지만 주파수 성분이 어느 구간에 배치되어 있는지 알수 없다.
   
 푸리에 변환 사용하는 이유: 시간영역에서 해석하기 곤란한 신호의 주파수 성분과 진폭등을 쉽게 파악할 수 있다.
-![image](https://user-images.githubusercontent.com/56099627/70221852-6aa0ba00-178c-11ea-9f20-6fe10629aace.png)
-식설명: 푸리에 변환 
+![image](https://user-images.githubusercontent.com/56099627/70221852-6aa0ba00-178c-11ea-9f20-6fe10629aace.png)  
+식설명: 푸리에 변환  
 ![image](https://user-images.githubusercontent.com/56099627/70222085-cb2ff700-178c-11ea-987e-45a8b3445f1a.png)  
-식설명: 역푸리에 변환  
+식설명: 역푸리에 변환    
   
 **단시간 푸리에 변환(STFT)**  
 푸리에변환의 한계를 돌파하기 위해 제안된 방법
