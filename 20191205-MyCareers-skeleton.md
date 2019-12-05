@@ -1,4 +1,4 @@
-# tusimple DUC
+# 객체추출 위한 DUC
 
 `객체추출에 탁월한 DUC(Dense Upsampling Convolution) 알고리즘을 적용하였습니다. 이 알고리즘은 DeepLab-V2 ResNet-101 네트워크를 기본모델로 사용한 것으로 full-resolution label map을 한번에 처리 대신에 pixel-level accuracy map 단위로 처리하여 객체를 추출하는 방법입니다.` 
 ![image](https://user-images.githubusercontent.com/56099627/70226740-b6eff800-1794-11ea-934d-98b39efffc19.png)  
@@ -18,6 +18,7 @@ Dense upsampling conv 은 downdampling factor로 width, hight을 나눈다. d^2 
   
 `보행 데이터를 입력으로 두고 출력 층에는 분류할 객체를 카테고리 별(사람, 건물, 배경 등)로 분류할 수 있도록 지정하였고 교차 엔트로피(Cross-Entropy) 형태의 오차 함수를 사용하여 출력층에서 활성화 함수의 도함수에 의한 영향을 제거하도록 하였습니다. 출력 맵에서 모든 픽셀 위치에 결과가 합계되며 SGD (Stochastic Gradient Descent)을 사용하여 결과를 최적화 시켜 최종적으로 객체를 카테고리별 분류를 할 수 있었습니다.`  
   
+# skeleton 추출  
 `vgg-19 네트워크는 3X3 의 비교적 작은 필터 크기를 사용하여 convolution 연산을 하는데 큰 필터로 한번 연산 하는 것보다 작은 필터로 여러번 연산하여 비선형성 처리가 수월하게 됩니다. 입력데이터가 10개 레이어 vgg-19 네트워크에 통과한 이미지 데이터는 feature가 강조된 형태로 출력됩니다. 출력된 데이터는 6개의 state의 입력으로 활용되어 affinity field 와 confidence map을 구하는데 이용하였습니다. 각 stage에서 정답 라벨과 feature 비교를 통해 loss을 구하고 이를 점점 줄여나가는 방향으로 최적화시켜 feature 들이 점점 사람의 관절 위치를 가리키게 하였습니다.`  
   
 목적은 RGB 이미지로 부터 사람의 body part에 대한 2D keypoint 를 구하는 것이다.  
