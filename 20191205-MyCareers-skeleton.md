@@ -1,0 +1,2 @@
+# tusimple DUC
+객체추출에 탁월한 DUC(Dense Upsampling Convolution) 알고리즘을 적용하였습니다. 이 알고리즘은 DeepLab-V2 ResNet-101 네트워크를 기본모델로 사용한 것으로 full-resolution label map을 한번에 처리 대신에 pixel-level accuracy map 단위로 처리하여 객체를 추출하는 방법입니다. 보행 데이터를 입력으로 두고 출력 층에는 분류할 객체를 카테고리 별(사람, 건물, 배경 등)로 분류할 수 있도록 지정하였고 교차 엔트로피(Cross-Entropy) 형태의 오차 함수를 사용하여 출력층에서 활성화 함수의 도함수에 의한 영향을 제거하도록 하였습니다. 출력 맵에서 모든 픽셀 위치에 결과가 합계되며 SGD (Standard Stochastic Gradient Descent)을 사용하여 결과를 최적화 시켜 최종적으로 객체를 카테고리별 분류를 할 수 있었습니다.
