@@ -16,6 +16,12 @@ Dense upsampling conv 은 downdampling factor로 width, hight을 나눈다. d^2 
 전체 label map을 feature map과 hight와 width가 동일한 동일한 d² 하위 파트로 나누는 것입니다.  
 다시말해, 전체 레이블 맵을 여러개 채널의 작은 레이블 맵으로 변형 시키는 것  
   
+** Upsampling (업샘플링의 역할을 좀더 자세히)**  
+feature map level에서 segmentation 한 결과는 너무 coarse한 결과이다. 따라서, 이 coarse한 결과를 dense하게 (원래의 image size로) 만들어주어야 합니다. 그래서 upsampling을 사용한다. 그러면 각 class별로 dense한 segmentation 결과를 얻을 수 있다. 즉, 원래 image의 폭을 W, 높이를 H, 라고 한다면, WxHxL 의 dense heatmap결과를 얻을 수 있다.  
+  
+** Segmentation**
+그러나 우리는 결국 각 class 별 결과를 추정하고자 하는 것이 아니죠. 하나의 이미지에서 모든 class의 segmentation된 결과를 얻어야 한다. 그래서 윗 단계에서 얻어진 upsampling된 각 class별 heatmap을 softmax를 이용하여 가장 높은 확률을 가지는 class만 모아서 한장의 segmentation 이미지로 만든다.  
+  
 `보행 데이터를 입력으로 두고 출력 층에는 분류할 객체를 카테고리 별(사람, 건물, 배경 등)로 분류할 수 있도록 지정하였고 교차 엔트로피(Cross-Entropy) 형태의 오차 함수를 사용하여 출력층에서 활성화 함수의 도함수에 의한 영향을 제거하도록 하였습니다. 출력 맵에서 모든 픽셀 위치에 결과가 합계되며 SGD (Stochastic Gradient Descent)을 사용하여 결과를 최적화 시켜 최종적으로 객체를 카테고리별 분류를 할 수 있었습니다.`  
   
 # skeleton 추출  
@@ -42,9 +48,10 @@ Confidence map을 추출할땐 각 joint에 heatmap을 1개씩 배정했기 때�
   
 confidence map과 affinity field를 조합하여 완성된 human skeleton 을 만든다. 조합할때는 greedy relaxation 을 통해 각 part를 조합하게 된다.  
 
-
-
-
+  
+  
+참고해서 보자  
+[1] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation  
 참고  
 [1] Understanding Convolution for Semantic Segmentation, Panqu Wang
 [2] https://3months.tistory.com/213, Segmentation과 Dilated Convolution  
@@ -52,3 +59,4 @@ confidence map과 affinity field를 조합하여 완성된 human skeleton 을 �
 [4] https://m.blog.naver.com/PostView.nhn?blogId=worb1605&logNo=221297566317&proxyReferer=https%3A%2F%2Fwww.google.com%2F, Open Pose
 [5] http://blog.naver.com/PostView.nhn?blogId=kyy0810&logNo=221426685008&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=true&from=search, [c++/머신러닝] pose extimation : openpose review
 [6] Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields, Zhe Cao
+[7] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation
