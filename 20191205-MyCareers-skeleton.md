@@ -21,6 +21,9 @@ Dense upsampling conv 은 downdampling factor로 width, hight을 나눈다. d^2 
 # skeleton 추출  
 `vgg-19 네트워크는 3X3 의 비교적 작은 필터 크기를 사용하여 convolution 연산을 하는데 큰 필터로 한번 연산 하는 것보다 작은 필터로 여러번 연산하여 비선형성 처리가 수월하게 됩니다. 입력데이터가 10개 레이어 vgg-19 네트워크에 통과한 이미지 데이터는 feature가 강조된 형태로 출력됩니다. 출력된 데이터는 6개의 state의 입력으로 활용되어 affinity field 와 confidence map을 구하는데 이용하였습니다. 각 stage에서 정답 라벨과 feature 비교를 통해 loss을 구하고 이를 점점 줄여나가는 방향으로 최적화시켜 feature 들이 점점 사람의 관절 위치를 가리키게 하였습니다.`  
   
+![image](https://user-images.githubusercontent.com/56099627/70232882-be1d0300-17a0-11ea-8674-48733f0b0de0.png)    
+![image](https://user-images.githubusercontent.com/56099627/70232950-e1e04900-17a0-11ea-8720-65ec0ad068f2.png)  
+  
 목적은 RGB 이미지로 부터 사람의 body part에 대한 2D keypoint 를 구하는 것이다.  
 vgg-19 네트워크의 앞 10개 레이어만 가지고 사용한다.  
 10개 레이어 통과한 이미지는 feature가 강조된 형태로 output 출력한다.  
@@ -48,3 +51,4 @@ confidence map과 affinity field를 조합하여 완성된 human skeleton 을 �
 [3] https://medium.com/@sh.tsang/review-resnet-duc-hdc-dense-upsampling-convolution-and-hybrid-dilated-convolution-semantic-c4208227b1ca, Review: ResNet-DUC-HDC — Dense Upsampling Convolution and Hybrid Dilated Convolution (Semantic Segmentation)
 [4] https://m.blog.naver.com/PostView.nhn?blogId=worb1605&logNo=221297566317&proxyReferer=https%3A%2F%2Fwww.google.com%2F, Open Pose
 [5] http://blog.naver.com/PostView.nhn?blogId=kyy0810&logNo=221426685008&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=true&from=search, [c++/머신러닝] pose extimation : openpose review
+[6] Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields, Zhe Cao
