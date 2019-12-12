@@ -1,3 +1,9 @@
+# Relu
+<img src="https://latex.codecogs.com/gif.latex?y=\left\{\begin{matrix}&space;x&space;(x>0)&space;\\&space;0&space;(x\leq&space;0)&space;\end{matrix}\right." title="y=\left\{\begin{matrix} x (x>0) \\ 0 (x\leq 0) \end{matrix}\right." />  
+  
+# Sigmoid  
+<img src="https://latex.codecogs.com/gif.latex?y=\frac{1}{1&plus;e^{-x}}" title="y=\frac{1}{1+e^{-x}}" />  
+  
 # softmax 함수 구현시 단점(문제점)  
   overflow 문제 생김 softmax 함수는 지수함수를 사용하는데 아주 큰 값을 내뱉어내기 때문  
   일반적으로 회기에는 항등함수를, 분류에는 softmax 함수를 사용함  
