@@ -43,8 +43,8 @@ maen pooling : 평균값을 뽑아내는 것
 stride =2 이면서 2x2 filter을 통해 max pooling을 한다면  
 ![image](https://user-images.githubusercontent.com/56099627/70594289-5e50ad00-1c23-11ea-85f5-a2eca11423ac.png)  
 각 pixel 마다 최대값(평균값도 이런식으로 하면 됌)을 뽑아낸다
-
   
-참고 
+  
+참고  
 [1] https://mc.ai/cnn%EC%97%90%EC%84%9C-pooling%EC%9D%B4%EB%9E%80/, CNN에서 pooling이란?  
 [2] https://medium.com/@hobinjeong/cnn-convolutional-neural-network-9f600dd3b395, CNN(Convolutional Neural Network)이란?
