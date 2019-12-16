@@ -9,6 +9,7 @@ predcition functions에 training data을 수행했을 때 잘 작동하는 데 t
   
 ### weight 를 정의하는 방법은?
 <p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56099627/70883267-c1708400-2015-11ea-8b99-673cd9971f02.png" /></p>  
+
 - L2 norm of w (= Euclidean norm)  
 - A norm is a measure of a vector’s length  
   
