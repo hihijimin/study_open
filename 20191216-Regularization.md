@@ -12,7 +12,7 @@ predcition functions에 training data을 수행했을 때 잘 작동하는 데 t
 - L2 norm of w (= Euclidean norm)  
 - A norm is a measure of a vector’s length  
   
-### goal for minimization 
+### Goal for minimization 
 <img src="https://latex.codecogs.com/gif.latex?L(w)&plus;\lambda&space;\left&space;\|&space;w&space;\right&space;\|^{2}" title="L(w)+\lambda \left \| w \right \|^{2}" /></a>  
 - L(w) 은 loss function  
 - <img src="https://latex.codecogs.com/gif.latex?\lambda&space;\left&space;\|&space;w&space;\right&space;\|^{2}" title="\lambda \left \| w \right \|^{2}" /></a> 은 이것을 최소화 함으로써 w을 0에 가깝게 만드는 결과를 선호한다  
