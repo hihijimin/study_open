@@ -29,12 +29,20 @@
   
 - **conda install tensorflow** 작성한다: tensorflow 설치하기  
   - proceed(y/n)? 나오면 y
-  - 설치 할 때 인터넷 접속이 원활해야함
+  - 설치 할 때 인터넷 접속이 원활해야함  
 ![image](https://user-images.githubusercontent.com/56099627/71882178-4ebb7a00-3177-11ea-91af-d514711d2adb.png)  
 - 올바른게 tensorflow 설치 됐는지 확인해 보기 위해 **conda list**을 작성하여 가상환경에 설치된 패키지와 모듈을 조회한다
-  - 참고로 설치되고 나면 38개의 패키지가 설치 된다.
+  - 참고로 설치되고 나면 38개의 패키지가 설치 된다.  
 ![image](https://user-images.githubusercontent.com/56099627/71882305-8f1af800-3177-11ea-8900-f7a6f9466d41.png)
 - 완료된 tensorflow 결과 화면
+
+# 가상환경에 jupyter, spyder 설치 하기
+- 일반적으로 바로 jupyter, spyder 실행하면 무조건 root 계정의 가상환경으로 바탕으로 작동하기 때문에  가상환경이 활성화된 상태에서 다음과 같이 입력해야 함
+  - **conda install jupyter notebook** : jupyter notebook 설치
+  - **jupyter notebook** : jupyter notebook 실행
+  - **conda install spyder** : spyder 설치
+  - **spyder** : spyder 실행
+  
 
 참고  
 [1] https://nomis.tistory.com/115,  [Python] 설치 & pip 이용 방법  
