@@ -47,6 +47,10 @@
 ![image](https://user-images.githubusercontent.com/56099627/71884104-03a36600-317b-11ea-8bbf-12a94aba3cb9.png)
 - **pip install opencv-contrib-python** 작성
 
+# Anaconda PIL(python image library) 설치하기
+![image](https://user-images.githubusercontent.com/56099627/71884421-a9ef6b80-317b-11ea-9ab3-ce60063834a8.png)
+- < from PIL import Image > 이렇게쓰는 패키지 설치하기 위해 **conda install -c https://conda.anaconda.org/anaconda pil** 라고 작성하기
+
 참고  
 [1] https://nomis.tistory.com/115,  [Python] 설치 & pip 이용 방법  
 [2] https://zvi975.tistory.com/65, Anaconda에 Tensorflow 설치, 사용하기
