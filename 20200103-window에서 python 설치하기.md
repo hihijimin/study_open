@@ -42,7 +42,10 @@
   - **jupyter notebook** : jupyter notebook 실행
   - **conda install spyder** : spyder 설치
   - **spyder** : spyder 실행
-  
+
+# 가상환경에 opencv 패키지 설치하기
+![image](https://user-images.githubusercontent.com/56099627/71884104-03a36600-317b-11ea-8bbf-12a94aba3cb9.png)
+- **pip install opencv-contrib-python** 작성
 
 참고  
 [1] https://nomis.tistory.com/115,  [Python] 설치 & pip 이용 방법  
