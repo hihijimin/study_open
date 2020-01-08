@@ -26,10 +26,21 @@
 
 # cudnn 설치하기
 ![image](https://user-images.githubusercontent.com/56099627/71951429-5f72fb00-321e-11ea-9b1d-55650ce01e3e.png)
-- cuDnn 1.0 다운로드 하기 
+- cuda 10.2 다운로드 하기 
   -링크: https://developer.nvidia.com/cuda-downloads
-- **빠른 설치**로 진행
+- cuda 10.2 **빠른 설치**로 진행
 ![image](https://user-images.githubusercontent.com/56099627/71951523-aeb92b80-321e-11ea-9343-5b2b0227db42.png)
+  
+- cuDnn 설치 for cuda 10.2
+  - 링크: https://developer.nvidia.com/rdp/cudnn-download (로그인 후 다운로드 가능)
+![image](https://user-images.githubusercontent.com/56099627/71951869-e379b280-321f-11ea-88d5-09d4394e2314.png)
+- cuDnn 파일을 다운로드 받으면 zip 파일로 되어 있음 압축을 풀면 3개의 폴더가 보임
+- cuda을 설치했다면 아래 경로에 쿠다 있음
+  - **C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2**
+  ![image](https://user-images.githubusercontent.com/56099627/71952116-df9a6000-3220-11ea-97ef-4f77e80d3d5f.png)
+  - 압축을 푼 3개의 폴더의 내용을 해당 경로에 **덮어씌어 준다**. (bin, include, lib 폴더에는 각각 cudnn의 dll, lib, 헤더 파일이 생겼을 것임)
+
+
 
 # 가상환경에 Tensorflow 설치하기 
 - 참고로 cmd을 이용해 모듈을 설치할 때는 pip을 사용한다. 하지만 아나콘다에서는 conda을 사용하는 것이 좋다
