@@ -52,6 +52,13 @@
 - < from PIL import Image > 이렇게쓰는 패키지 설치하기 위해 **pip install <설치경로>\<해당하는 pil 파일 다운로드 받고 그 다운로드받은 이름>** 
   - **pip install C:\Pillow-7.0.0-cp37-cp37m-win_amd64.whl** 라고 작성하기
 
+# windows 가상환경에 wget 설치하기
+- 먼저, **wget.exe**을 다운로드 한다 (참고 [3]링크 들어가서 받기)
+- 다운로드 받은 wget.exe 파일을 **C:\Windows\System32 폴더**에 넣어준다
+![image](https://user-images.githubusercontent.com/56099627/71944747-1d3ebf00-3208-11ea-8226-884333b0bfa5.png)  
+- 그런 후, wget을 실행해본다 (예제로 구글 이미지 로고 다운로드 받는거 해봄 : 잘 실행 되는 것을 확인함)
+
 참고  
 [1] https://nomis.tistory.com/115,  [Python] 설치 & pip 이용 방법  
-[2] https://zvi975.tistory.com/65, Anaconda에 Tensorflow 설치, 사용하기
+[2] https://zvi975.tistory.com/65, Anaconda에 Tensorflow 설치, 사용하기  
+[3] https://synchronized.tistory.com/entry/wget%EC%9D%84-%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90, wget을 윈도우에서 사용해보자!!
