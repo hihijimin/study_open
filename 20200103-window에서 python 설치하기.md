@@ -54,6 +54,14 @@
 ![image](https://user-images.githubusercontent.com/56099627/71882305-8f1af800-3177-11ea-8900-f7a6f9466d41.png)
 - 완료된 tensorflow 결과 화면
 
+### YOLO-v3 실행하기 위해선 tensorflow 1.12 버전이 있어야함
+- tensorflow 1.12 버전 설치 전, anaconda3-5.2.0-windows-x86_64.exe을 설치한다(파이썬 3.6) 아래 링크로 다운로드!
+  -링크: https://repo.anaconda.com/archive/Anaconda3-5.2.0-Windows-x86_64.exe
+![image](https://user-images.githubusercontent.com/56099627/71955306-43c22180-322b-11ea-90b5-597f81a72702.png)
+-원하는 tensorflow 버전(1.12.0) 설치방법 : **pip install tensorflow-gpu==1.12.0** 작성한다
+- import 했을 때 문제가 없는지 확인한다
+  - import tensorflow as tf , print(tf.__version__)
+
 # 가상환경에 jupyter, spyder 설치 하기
 - 일반적으로 바로 jupyter, spyder 실행하면 무조건 root 계정의 가상환경으로 바탕으로 작동하기 때문에  가상환경이 활성화된 상태에서 다음과 같이 입력해야 함
   - **conda install jupyter notebook** : jupyter notebook 설치
@@ -79,5 +87,6 @@
 참고  
 [1] https://nomis.tistory.com/115,  [Python] 설치 & pip 이용 방법  
 [2] https://pythonkim.tistory.com/137, 윈도우10 + 텐서플로 GPU 버전 설치
-[2] https://zvi975.tistory.com/65, Anaconda에 Tensorflow 설치, 사용하기  
-[3] https://synchronized.tistory.com/entry/wget%EC%9D%84-%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90, wget을 윈도우에서 사용해보자!!
+[3] https://gameseven.tistory.com/538, 아나콘다로 텐서플로우 설치방법
+[4] https://zvi975.tistory.com/65, Anaconda에 Tensorflow 설치, 사용하기  
+[5] https://synchronized.tistory.com/entry/wget%EC%9D%84-%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90, wget을 윈도우에서 사용해보자!!
