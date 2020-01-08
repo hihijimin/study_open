@@ -24,6 +24,13 @@
 - 생성된 가상환경이 활성화 시키기 : **activate <가상환경 이름>** 작성
   - 가상환경을 비활성화 방법: deacticate 작성
 
+# cudnn 설치하기
+![image](https://user-images.githubusercontent.com/56099627/71951429-5f72fb00-321e-11ea-9b1d-55650ce01e3e.png)
+- cuDnn 1.0 다운로드 하기 
+  -링크: https://developer.nvidia.com/cuda-downloads
+- **빠른 설치**로 진행
+![image](https://user-images.githubusercontent.com/56099627/71951523-aeb92b80-321e-11ea-9343-5b2b0227db42.png)
+
 # 가상환경에 Tensorflow 설치하기 
 - 참고로 cmd을 이용해 모듈을 설치할 때는 pip을 사용한다. 하지만 아나콘다에서는 conda을 사용하는 것이 좋다
   
@@ -60,5 +67,6 @@
 
 참고  
 [1] https://nomis.tistory.com/115,  [Python] 설치 & pip 이용 방법  
+[2] https://pythonkim.tistory.com/137, 윈도우10 + 텐서플로 GPU 버전 설치
 [2] https://zvi975.tistory.com/65, Anaconda에 Tensorflow 설치, 사용하기  
 [3] https://synchronized.tistory.com/entry/wget%EC%9D%84-%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90, wget을 윈도우에서 사용해보자!!
