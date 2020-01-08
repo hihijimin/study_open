@@ -86,6 +86,8 @@
 - **pip install opencv-contrib-python** 작성
 
 # Anaconda PIL(python image library) 설치하기
+![image](https://user-images.githubusercontent.com/56099627/71964489-049ecb00-3241-11ea-9ee6-12efaf1b7754.png)
+- **conda install pillow**
 ![image](https://user-images.githubusercontent.com/56099627/71885166-26367e80-317d-11ea-9cf0-548d70c6e843.png)
 - < from PIL import Image > 이렇게쓰는 패키지 설치하기 위해 **pip install <설치경로>\<해당하는 pil 파일 다운로드 받고 그 다운로드받은 이름>** 
   - **pip install C:\Pillow-7.0.0-cp37-cp37m-win_amd64.whl** 라고 작성하기
