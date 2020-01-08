@@ -40,6 +40,18 @@
   ![image](https://user-images.githubusercontent.com/56099627/71952116-df9a6000-3220-11ea-97ef-4f77e80d3d5f.png)
   - 압축을 푼 3개의 폴더의 내용을 해당 경로에 **덮어씌어 준다**. (bin, include, lib 폴더에는 각각 cudnn의 dll, lib, 헤더 파일이 생겼을 것임)
 
+# 가상환경 
+## 1. 가상환경 생성
+- **conda create -n 가상환경이름 python=3.6 ** 작성
+## 2. 가상환경 Activation
+- **activate 가상환경이름** 작성
+## 3. TensorFlow GPU 설치
+- **conda install -c anaconda tensorflow-gpu **  작성
+## 3-1. TensorFlow GPU 버전 설정하여 설치 시 
+- conda install -c anaconda tensorflow-gpu=1.x
+- conda install -c anaconda cudnn=7.x.x or ... 
+- conda install -c anaconda cudatoolkit=9.x or 10.x ... 
+- (필요시) conda install -c menpo opencv
 
 
 # 가상환경에 Tensorflow 설치하기 
@@ -87,6 +99,7 @@
 참고  
 [1] https://nomis.tistory.com/115,  [Python] 설치 & pip 이용 방법  
 [2] https://pythonkim.tistory.com/137, 윈도우10 + 텐서플로 GPU 버전 설치
-[3] https://gameseven.tistory.com/538, 아나콘다로 텐서플로우 설치방법
+[3] https://gameseven.tistory.com/538, 아나콘다로 텐서플로우 설치방법  
 [4] https://zvi975.tistory.com/65, Anaconda에 Tensorflow 설치, 사용하기  
-[5] https://synchronized.tistory.com/entry/wget%EC%9D%84-%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90, wget을 윈도우에서 사용해보자!!
+[5] https://synchronized.tistory.com/entry/wget%EC%9D%84-%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90, wget을 윈도우에서 사용해보자!!  
+[6] https://eehoeskrap.tistory.com/293, [TensorFlow] Anaconda 가상환경 이용하여 TensorFlow GPU 설치  
