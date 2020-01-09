@@ -86,6 +86,7 @@ pooling을 수행하지 않고도 receptive field를 크게 가져갈 수 있기
 [1] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation  
 [2] http://image-net.org/challenges/talks/2016/Multi-person%20pose%20estimation-CMU.pdf, openpose presentation slides 
 [3] https://github.com/vdumoulin/conv_arithmetic, Convolution arithmetic, Convolution animations  
+[4] https://m.blog.naver.com/PostView.nhn?blogId=worb1605&logNo=221266339261&proxyReferer=https%3A%2F%2Fwww.google.com%2F, Upsampling  
 참고  
 [1] Understanding Convolution for Semantic Segmentation, Panqu Wang  
 [2] https://3months.tistory.com/213, Segmentation과 Dilated Convolution  
