@@ -10,9 +10,6 @@ HDC은 3X3 연산량으로 5X5 영역까지 콘볼루션 할수 있는 방법.
 - (일반적인 방법)pooling-conv 이후, upsampling : 공간적인 손실 있음 - 업샘플링(디코딩) 하면 해상도 떨어짐  
 - Dilated conv : receptive field을 크게 가져가면서 convolution을 하면 정보의 손실을 최대화 하고 해상도 좋음  
   
-## convolution 비교
-![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)
-
 Dense upsampling conv 은 downdampling factor로 width, hight을 나눈다. d^2 개 만큼 feature map이 생성 된다(hXwX(d^2XL)). L은 클래스의 개수. 마지막에 이 feature map들을 H X W X L 으로 softmax layer을 사용하여 복원 시킨다.  
   
 이 알고리즘의 핵심 아이디어는  
@@ -51,7 +48,9 @@ Confidence map을 추출할땐 각 joint에 heatmap을 1개씩 배정했기 때�
   
 confidence map과 affinity field를 조합하여 완성된 human skeleton 을 만든다. 조합할때는 greedy relaxation 을 통해 각 part를 조합하게 된다.  
 
-  
+## convolution 
+![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)  
+<p align="center"> 2D convolution using a kernel size of 3, stride of 1 and padding</p>
   
 참고해서 보자  
 [1] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation  
