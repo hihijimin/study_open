@@ -10,6 +10,9 @@ HDC은 3X3 연산량으로 5X5 영역까지 콘볼루션 할수 있는 방법.
 - (일반적인 방법)pooling-conv 이후, upsampling : 공간적인 손실 있음 - 업샘플링(디코딩) 하면 해상도 떨어짐  
 - Dilated conv : receptive field을 크게 가져가면서 convolution을 하면 정보의 손실을 최대화 하고 해상도 좋음  
   
+## convolution 비교
+![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)
+
 Dense upsampling conv 은 downdampling factor로 width, hight을 나눈다. d^2 개 만큼 feature map이 생성 된다(hXwX(d^2XL)). L은 클래스의 개수. 마지막에 이 feature map들을 H X W X L 으로 softmax layer을 사용하여 복원 시킨다.  
   
 이 알고리즘의 핵심 아이디어는  
@@ -52,11 +55,13 @@ confidence map과 affinity field를 조합하여 완성된 human skeleton 을 �
   
 참고해서 보자  
 [1] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation  
+[2] http://image-net.org/challenges/talks/2016/Multi-person%20pose%20estimation-CMU.pdf, openpose presentation slides 
 참고  
-[1] Understanding Convolution for Semantic Segmentation, Panqu Wang
+[1] Understanding Convolution for Semantic Segmentation, Panqu Wang  
 [2] https://3months.tistory.com/213, Segmentation과 Dilated Convolution  
-[3] https://medium.com/@sh.tsang/review-resnet-duc-hdc-dense-upsampling-convolution-and-hybrid-dilated-convolution-semantic-c4208227b1ca, Review: ResNet-DUC-HDC — Dense Upsampling Convolution and Hybrid Dilated Convolution (Semantic Segmentation)
-[4] https://m.blog.naver.com/PostView.nhn?blogId=worb1605&logNo=221297566317&proxyReferer=https%3A%2F%2Fwww.google.com%2F, Open Pose
-[5] http://blog.naver.com/PostView.nhn?blogId=kyy0810&logNo=221426685008&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=true&from=search, [c++/머신러닝] pose extimation : openpose review
-[6] Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields, Zhe Cao
-[7] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation
+[3] https://medium.com/@sh.tsang/review-resnet-duc-hdc-dense-upsampling-convolution-and-hybrid-dilated-convolution-semantic-c4208227b1ca, Review: ResNet-DUC-HDC — Dense Upsampling Convolution and Hybrid Dilated Convolution (Semantic Segmentation)  
+[4] https://m.blog.naver.com/PostView.nhn?blogId=worb1605&logNo=221297566317&proxyReferer=https%3A%2F%2Fwww.google.com%2F, Open Pose  
+[5] http://blog.naver.com/PostView.nhn?blogId=kyy0810&logNo=221426685008&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=true&from=search, [c++/머신러닝] pose extimation : openpose review  
+[6] Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields, Zhe Cao  
+[7] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation  
+[8] https://zzsza.github.io/data/2018/02/23/introduction-convolution/, 딥러닝에서 사용되는 여러 유형의 Convolution 소개  
