@@ -51,6 +51,7 @@ confidence map과 affinity field를 조합하여 완성된 human skeleton 을 �
 ## convolution 
 ![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)
 <p align="center"> 2D convolution using a kernel size of 3, stride of 1 and padding</p>
+  
 - 파란색이 input이며 초록색이 output입니다
 - Kernel Size : kernel size는 convolution의 시야(view)를 결정합니다. 보통 2D에서 3x3 pixel로 사용합니다  
 - Stride : stride는 이미지를 횡단할 때 커널의 스텝 사이즈를 결정합니다. 기본값은 1이지만 보통 Max Pooling과 비슷하게 이미지를 다운샘플링하기 위해 Stride를 2로 사용할 수 있습니다  
@@ -60,10 +61,11 @@ confidence map과 affinity field를 조합하여 완성된 human skeleton 을 �
 ## Dilated Convolutions (확장된 Convolution)
 <img src="https://cdn-images-1.medium.com/max/1200/1*SVkgHoFoiMZkjy54zM_SUw.gif">
 <p align="center"> 2D convolution using a 3 kernel with a dilation rate of 2 and no padding </p>
+  
 - Dilated Convolution은 Convolutional layer에 또 다른 파라미터인 dilation rate를 도입했습니다. dilation rate은 커널 사이의 간격을 정의합니다. dilation rate가 2인 3x3 커널은 9개의 파라미터를 사용하면서 5x5 커널과 동일한 시야(view)를 가집니다.
 - 5x5 커널을 사용하고 두번째 열과 행을 모두 삭제하면 (3x3 커널을 사용한 경우 대비)동일한 계산 비용으로 더 넓은 시야를 제공합니다.
 - Dilated convolution은 특히 real-time segmentation 분야에서 주로 사용됩니다. 넓은 시야가 필요하고 여러 convolution이나 큰 커널을 사용할 여유가 없는 경우 사용합니다
-> 역자 : Dilated Convolution은 필터 내부에 zero padding을 추가해 강제로 receptive field를 늘리는 방법입니다. 위 그림에서 진한 파란 부분만 weight가 있고 나머지 부분은 0으로 채워집니다. (receptive field : 필터가 한번 보는 영역으로 사진의 feature를 추출하기 위해선 receptive field가 높을수록 좋습니다)
+>> 역자 : Dilated Convolution은 필터 내부에 zero padding을 추가해 강제로 receptive field를 늘리는 방법입니다. 위 그림에서 진한 파란 부분만 weight가 있고 나머지 부분은 0으로 채워집니다. (receptive field : 필터가 한번 보는 영역으로 사진의 feature를 추출하기 위해선 receptive field가 높을수록 좋습니다)
 pooling을 수행하지 않고도 receptive field를 크게 가져갈 수 있기 때문에 spatial dimension 손실이 적고 대부분의 weight가 0이기 때문에 연산의 효율이 좋습니다. 공간적 특징을 유지하기 때문에 Segmentation에서 많이 사용합니다
 
 ## Transposed Convolutions
