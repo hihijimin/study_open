@@ -49,7 +49,7 @@ Confidence map을 추출할땐 각 joint에 heatmap을 1개씩 배정했기 때�
 confidence map과 affinity field를 조합하여 완성된 human skeleton 을 만든다. 조합할때는 greedy relaxation 을 통해 각 part를 조합하게 된다.  
 
 ## convolution 
-![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)  
+<p>![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)</p>  
 <p align="center"> 2D convolution using a kernel size of 3, stride of 1 and padding</p>
   
 참고해서 보자  
