@@ -56,13 +56,35 @@ confidence map과 affinity field를 조합하여 완성된 human skeleton 을 �
 - Stride : stride는 이미지를 횡단할 때 커널의 스텝 사이즈를 결정합니다. 기본값은 1이지만 보통 Max Pooling과 비슷하게 이미지를 다운샘플링하기 위해 Stride를 2로 사용할 수 있습니다  
 - Padding : Padding은 샘플 테두리를 어떻게 조절할지를 결정합니다. 패딩된 Convolution은 input과 동일한 output 차원을 유지하는 반면, 패딩되지 않은 Convolution은 커널이 1보다 큰 경우 테두리의 일부를 잘라버릴 수 있습니다
 - Input & Output Channels : Convolution layer는 Input 채널의 특정 수(I)를 받아 output 채널의 특정 수(O)로 계산합니다. 이런 계층에서 필요한 파라미터의 수는 I*O*K로 계산할 수 있습니다. K는 커널의 수입니다  
-<p>
+
+## Dilated Convolutions (확장된 Convolution)
 <img src="https://cdn-images-1.medium.com/max/1200/1*SVkgHoFoiMZkjy54zM_SUw.gif">
-</p>
+<p align="center"> 2D convolution using a 3 kernel with a dilation rate of 2 and no padding </p>
+- Dilated Convolution은 Convolutional layer에 또 다른 파라미터인 dilation rate를 도입했습니다. dilation rate은 커널 사이의 간격을 정의합니다. dilation rate가 2인 3x3 커널은 9개의 파라미터를 사용하면서 5x5 커널과 동일한 시야(view)를 가집니다.
+- 5x5 커널을 사용하고 두번째 열과 행을 모두 삭제하면 (3x3 커널을 사용한 경우 대비)동일한 계산 비용으로 더 넓은 시야를 제공합니다.
+- Dilated convolution은 특히 real-time segmentation 분야에서 주로 사용됩니다. 넓은 시야가 필요하고 여러 convolution이나 큰 커널을 사용할 여유가 없는 경우 사용합니다
+> 역자 : Dilated Convolution은 필터 내부에 zero padding을 추가해 강제로 receptive field를 늘리는 방법입니다. 위 그림에서 진한 파란 부분만 weight가 있고 나머지 부분은 0으로 채워집니다. (receptive field : 필터가 한번 보는 영역으로 사진의 feature를 추출하기 위해선 receptive field가 높을수록 좋습니다)
+pooling을 수행하지 않고도 receptive field를 크게 가져갈 수 있기 때문에 spatial dimension 손실이 적고 대부분의 weight가 0이기 때문에 연산의 효율이 좋습니다. 공간적 특징을 유지하기 때문에 Segmentation에서 많이 사용합니다
+
+## Transposed Convolutions
+(a.k.a. deconvolutions or fractionally strided convolutions)  
+- Transposed Convolution은 deconvolutional layer와 동일한 공간 해상도를 생성하기 점은 유사하지만 실제 수행되는 수학 연산은 다릅니다. Transposed Convolutional layer는 정기적인 convolution을 수행하며 공간의 변화를 되돌립니다.
+<img src="https://cdn-images-1.medium.com/max/1200/1*BMngs93_rm2_BpJFH2mS0Q.gif">
+<p align="center"> 2D convolution with no padding, stride of 2 and kernel of 3</p>
+- 혼란스러울 수 있으므로 구체적인 예를 보겠습니다. convolution layer에 넣을 5x5 이미지가 있습니다. stride는 2, padding은 없고 kernel은 3x3입니다. 이 결과는 2x2 이미지가 생성됩니다.
+- 이 과정을 되돌리고 싶다면, 역 수학 연산을 위해 input의 각 픽셀으로부터 9개의 값을 뽑아야 합니다. 그 후에 우리는 stride가 2인 출력 이미지를 지나갑니다. 이 방법이 deconvolution입니다
+<img src="https://cdn-images-1.medium.com/max/1200/1*Lpn4nag_KRMfGkx1k6bV-g.gif">
+<a align="center"> Transposed 2D convolution with no padding, stride of 2 and kernel of 3 </p>
+- transposed convolution은 위와 같은 방법을 사용하지 않습니다. deconvolution과 공통점은 convolution 작업을 하면서 5x5 이미지의 output을 생성하는 것입니다. 이 작업을 하기 위해 input에 임의의 padding을 넣어야 합니다.
+- 상상할 수 있듯, 이 단계에선 위의 과정을 반대로 수행하지 않습니다.
+- 단순히 이전 공간 해상도를 재구성하고 convolution을 수행합니다. 수학적 역 관계는 아니지만 인코더-디코더 아키텍쳐의 경우 유용합니다. 이 방법은 2개의 별도 프로세스를 진행하는 것 대신 convolution된 이미지의 upscaling을 결합할 수 있습니다
+
+
 
 참고해서 보자  
 [1] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation  
 [2] http://image-net.org/challenges/talks/2016/Multi-person%20pose%20estimation-CMU.pdf, openpose presentation slides 
+[3] https://github.com/vdumoulin/conv_arithmetic, Convolution arithmetic, Convolution animations  
 참고  
 [1] Understanding Convolution for Semantic Segmentation, Panqu Wang  
 [2] https://3months.tistory.com/213, Segmentation과 Dilated Convolution  
