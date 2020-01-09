@@ -49,9 +49,17 @@ Confidence map을 추출할땐 각 joint에 heatmap을 1개씩 배정했기 때�
 confidence map과 affinity field를 조합하여 완성된 human skeleton 을 만든다. 조합할때는 greedy relaxation 을 통해 각 part를 조합하게 된다.  
 
 ## convolution 
-<p align="center"> ![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)
+![Alt Text](https://cdn-images-1.medium.com/max/1200/1*1okwhewf5KCtIPaFib4XaA.gif)
 <p align="center"> 2D convolution using a kernel size of 3, stride of 1 and padding</p>
-  
+- 파란색이 input이며 초록색이 output입니다
+- Kernel Size : kernel size는 convolution의 시야(view)를 결정합니다. 보통 2D에서 3x3 pixel로 사용합니다  
+- Stride : stride는 이미지를 횡단할 때 커널의 스텝 사이즈를 결정합니다. 기본값은 1이지만 보통 Max Pooling과 비슷하게 이미지를 다운샘플링하기 위해 Stride를 2로 사용할 수 있습니다  
+- Padding : Padding은 샘플 테두리를 어떻게 조절할지를 결정합니다. 패딩된 Convolution은 input과 동일한 output 차원을 유지하는 반면, 패딩되지 않은 Convolution은 커널이 1보다 큰 경우 테두리의 일부를 잘라버릴 수 있습니다
+- Input & Output Channels : Convolution layer는 Input 채널의 특정 수(I)를 받아 output 채널의 특정 수(O)로 계산합니다. 이런 계층에서 필요한 파라미터의 수는 I*O*K로 계산할 수 있습니다. K는 커널의 수입니다  
+<p>
+<img src="https://cdn-images-1.medium.com/max/1200/1*SVkgHoFoiMZkjy54zM_SUw.gif">
+</p>
+
 참고해서 보자  
 [1] https://modulabs-biomedical.github.io/FCN, Fully Convolutional Networks for Semantic Segmentation  
 [2] http://image-net.org/challenges/talks/2016/Multi-person%20pose%20estimation-CMU.pdf, openpose presentation slides 
