@@ -86,7 +86,8 @@ SGD는 여러 변형 함수의 최저점에 가까운 점을 찾을 가능성이
   
 
 참고해서 보자  
-https://seamless.tistory.com/38, 딥러닝 살펴보기 2탄  
+[1] https://seamless.tistory.com/38, 딥러닝 살펴보기 2탄  
+[2] https://www.kakaobrain.com/blog/113, 배치(batch) 크기에 따른 모델의 훈련 시간과 학습 곡선(learning curve)[2]의 상관관계, LARS의 특징, torchlars 개발 프로젝트  
 참고  
 [1] 밑바닥부터 시작하는 딥러닝 p93  
 [2] https://m.blog.naver.com/PostView.nhn?blogId=tjdudwo93&logNo=221325685474&proxyReferer=https%3A%2F%2Fwww.google.com%2F, 신경망의 핵심 parameter인 batch 그리고 epoch  
