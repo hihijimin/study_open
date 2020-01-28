@@ -61,3 +61,9 @@ def resize_png2jpg(png_path, base_width):
     png_to_jpg(png_path, img)
         
 resize_png2jpg("people.png", 1600)        
+
+# 파일명 바꾸기
+os.rename(path+old_file_name, path+new_file_name)
+예시:os.rename(file, path_name+'\\'+new_name)
+
+# 파일 삭제 하기
