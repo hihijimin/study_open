@@ -1,6 +1,6 @@
 참고  
-[1] https://github.com/qjadud1994/CRNN-Keras 자동차번호판 번호인식 CRNN
-[2] https://github.com/qjadud1994/Korean-license-plate-Generator, 자동차번호판(이미지) 생성 코드
+[1] https://github.com/qjadud1994/CRNN-Keras 자동차번호판 번호인식 CRNN  
+[2] https://github.com/qjadud1994/Korean-license-plate-Generator, 자동차번호판(이미지) 생성 코드  
     # Mpdel.py 코드 분석
     def get_Model(training):
     input_shape = (img_w, img_h, 1)     # (128, 64, 1)
@@ -75,7 +75,7 @@
     else:
         return Model(inputs=[inputs], outputs=y_pred)
         
-#######################################################
+#######################################################  
 00) training/adadelta/gradients/conv1/convolution_grad/Conv2BackpropFilter:0, shape=(3,3,1,64), flaot32  
 01) training/adadelta/gradients/conv1/BiasAdd_grad/BiasAddGrad:0, shape=(64,) float32
 02) training/adadelta/gradients/batch_nomalization_1/batchnorm/mul_grad/Mul_1:0 shape=64, flaot32
