@@ -1,3 +1,4 @@
+#
 def get_Model(training):
     input_shape = (img_w, img_h, 1)     # (128, 64, 1)
 
@@ -71,5 +72,5 @@ def get_Model(training):
     else:
         return Model(inputs=[inputs], outputs=y_pred)
         
-    #######################################################
-    train
+#######################################################
+train
