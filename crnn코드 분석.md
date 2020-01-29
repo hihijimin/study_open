@@ -1,5 +1,8 @@
-#
-def get_Model(training):
+참고  
+[1] https://github.com/qjadud1994/CRNN-Keras 자동차번호판 번호인식 CRNN
+[2] https://github.com/qjadud1994/Korean-license-plate-Generator, 자동차번호판(이미지) 생성 코드
+    # Mpdel.py 코드 분석
+    def get_Model(training):
     input_shape = (img_w, img_h, 1)     # (128, 64, 1)
 
     # Make Networkw
@@ -47,7 +50,7 @@ def get_Model(training):
 
     lstm1_merged = add([lstm_1, reversed_lstm_1b])  # (None, 32, 512)
     lstm1_merged = BatchNormalization()(lstm1_merged)
-    
+
     lstm_2 = LSTM(256, return_sequences=True, kernel_initializer='he_normal', name='lstm2')(lstm1_merged)
     lstm_2b = LSTM(256, return_sequences=True, go_backwards=True, kernel_initializer='he_normal', name='lstm2_b')(lstm1_merged)
     reversed_lstm_2b= Lambda(lambda inputTensor: K.reverse(inputTensor, axes=1)) (lstm_2b)
@@ -73,4 +76,51 @@ def get_Model(training):
         return Model(inputs=[inputs], outputs=y_pred)
         
 #######################################################
-train
+00) training/adadelta/gradients/conv1/convolution_grad/Conv2BackpropFilter:0, shape=(3,3,1,64), flaot32  
+01) training/adadelta/gradients/conv1/BiasAdd_grad/BiasAddGrad:0, shape=(64,) float32
+02) training/adadelta/gradients/batch_nomalization_1/batchnorm/mul_grad/Mul_1:0 shape=64, flaot32
+03) training/adadelta/gradients/batch_nomalization_1/batchnorm/sub_grad/Reshape:0 shape=64, flaot32
+04) training/adadelta/gradients/conv2/convolution_grad/Conv2DBackpropFilter:0, shape=(3,3,64,128), flaot32
+05) training/adadelta/gradients/conv2/BiasAdd_grad/BiasAddGrad:0, shape=(128), flaot32
+06) training/adadelta/gradients/batch_nomalization_2/batchnorm/mul_grad/Mul_1:0 shape=(128,), flaot32
+07) training/adadelta/gradients/batch_nomalization_2/batchnorm/sub_grad/Reshape:0 shape=(128,), flaot32
+08) training/adadelta/gradients/conv3/convolution_grad/Conv2DBackpropFilter:0, shape=(3,3,128,256), flaot32
+09) training/adadelta/gradients/conv3/BiasAdd_grad/BiasAddGrad:0, shape=(256,), flaot32
+10) training/adadelta/gradients/batch_nomalization_3/batchnorm/mul_grad/Mul_1:0 shape=(256,), flaot32
+11) training/adadelta/gradients/batch_nomalization_3/batchnorm/sub_grad/Reshape:0 shape=(256,), flaot32
+12) training/adadelta/gradients/conv4/convolution_grad/Conv2DBackpropFilter:0, shape=(3,3,256,256), flaot32
+13) training/adadelta/gradients/conv4/BiasAdd_grad/BiasAddGrad:0, shape=(256,), flaot32
+14) training/adadelta/gradients/batch_nomalization_4/batchnorm/mul_grad/Mul_1:0 shape=(256,), flaot32
+15) training/adadelta/gradients/batch_nomalization_4/batchnorm/sub_grad/Reshape:0 shape=(256,), flaot32
+16) training/adadelta/gradients/conv5/convolution_grad/Conv2DBackpropFilter:0, shape=(3,3,256,512), flaot32
+17) training/adadelta/gradients/conv5/BiasAdd_grad/BiasAddGrad:0, shape=(512,), flaot32
+18) training/adadelta/gradients/batch_nomalization_5/batchnorm/mul_grad/Mul_1:0 shape=(512,), flaot32
+19) training/adadelta/gradients/batch_nomalization_5/batchnorm/sub_grad/Reshape:0 shape=(512,), flaot32
+20) training/adadelta/gradients/conv6/convolution_grad/Conv2DBackpropFilter:0, shape=(3,3,512,512), flaot32
+21) training/adadelta/gradients/conv6/BiasAdd_grad/BiasAddGrad:0, shape=(512,), flaot32
+22) training/adadelta/gradients/batch_nomalization_6/batchnorm/mul_grad/Mul_1:0 shape=(512,), flaot32
+23) training/adadelta/gradients/batch_nomalization_6/batchnorm/sub_grad/Reshape:0 shape=(512,), flaot32
+24) training/adadelta/gradients/conv7/convolution_grad/Conv2DBackpropFilter:0, shape=(2,2,512,512), flaot32
+25) training/adadelta/gradients/conv7/BiasAdd_grad/BiasAddGrad:0, shape=(512,), flaot32
+26) training/adadelta/gradients/batch_nomalization_7/batchnorm/mul_grad/Mul_1:0 shape=(512,), flaot32
+27) training/adadelta/gradients/batch_nomalization_7/batchnorm/sub_grad/Reshape:0 shape=(512,), flaot32
+28) training/adadelta/gradients/dense1/transpose_grad/transpose:0, shape=(2048,64), float32
+29) training/adadelta/gradients/dense1/Reshape_3_grad/Reshape:0, shape=(64,), float32
+30) training/adadelta/gradients/AddN_36:0, shape=(64,1024), float32
+31) training/adadelta/gradients/AddN_35:0, shape=(256,1024), flaot32
+32) training/adadelta/gradients/AddN_34:0, shape=(1024,), flaot32
+33) training/adadelta/gradients/AddN_33:0, shape=(64,1024), flaot32
+34) training/adadelta/gradients/AddN_31:0, shape=(256,1024), float32
+35) training/adadelta/gradients/AddN_30:0, shape=(1024,), float32
+36) training/adadelta/gradients/batch_nomalization_8/batchnorm_1/mul_grad/Mul_1:0 shape=(256,), flaot32
+37) training/adadelta/gradients/batch_nomalization_8/batchnorm_1/sub_grad/Reshape:0 shape=(256,), flaot32
+38) training/adadelta/gradients/AddN_18:0, shape=(256,1024,), float32
+39) training/adadelta/gradients/AddN_17:0, shape=(256,1024,), float32
+40) training/adadelta/gradients/AddN_16:0, shape=(1024,), float32
+41) training/adadelta/gradients/AddN_15:0, shape=(256,1024,), float32
+42) training/adadelta/gradients/AddN_13:0, shape=(256,1024,), float32
+43) training/adadelta/gradients/AddN_12:0, shape=(1024,), float32
+44) training/adadelta/gradients/batch_nomalization_9/batchnorm_1/mul_grad/Mul_1:0 shape=(512,), flaot32
+45) training/adadelta/gradients/batch_nomalization_9/batchnorm_1/sub_grad/Reshape:0 shape=(512,), flaot32
+46) training/adadelta/gradients/dense2/transpose_grad/transpose:0, shape=(512,42), float32  
+47) training/adadelta/gradients/dense2/Reshape_3_grad/Reshape:0, shape=(42,), float32  
