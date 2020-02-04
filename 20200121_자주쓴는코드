@@ -67,3 +67,7 @@ os.rename(path+old_file_name, path+new_file_name)
 예시:os.rename(file, path_name+'\\'+new_name)
 
 # 파일 삭제 하기
+
+# 입력받아 처리하기
+new_name = input('입력')
+new_name_ = new_name+'a'
