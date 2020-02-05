@@ -97,7 +97,7 @@ pycham에서 예시:
     Process finished with exit code 0
 --------------------------------------
 
-명령어를 통해 링크(http://AI-SVN:6006)에 접속하여 pb파일을 tensorboard로 확인 가능하다
+명령어를 통해 링크(http://AI-SVN:6006)에 접속하여 pb파일을 tensorboard로 확인 가능하다  
 명령어: **tensorboard --logdir=./**
 
     (ahn) D:\CRNN-master\CRNN>tensorboard --logdir=./
