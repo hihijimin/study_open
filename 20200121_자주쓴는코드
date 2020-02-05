@@ -71,3 +71,10 @@ os.rename(path+old_file_name, path+new_file_name)
 # 입력받아 처리하기
 new_name = input('입력')
 new_name_ = new_name+'a'
+
+# 이미지 edge에지 강조
+img = cv2.imread(이미지)
+sharpening_2 = np.array([[-1, -1, -1, -1, -1], [-1, 2, 2, 2, -1],
+                                 [-1, 2, 9, 2, -1], [-1, 2, 2, 2, -1],
+                                 [-1, -1, -1, -1, -1]]) / 9.0
+img_out = cv2.filter2D(img , -1, sharpening_2)
