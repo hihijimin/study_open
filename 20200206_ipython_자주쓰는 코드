@@ -1,3 +1,11 @@
 # 주피터노트북 화면을 넓게 쓰기 위한 코드
 from IPython.core.display import display, HTML 
 display(HTML("<style>.container { width:100% !important; }</style>"))
+
+# 각 컬럼 width 최대로
+pd.set_option('display.max_colwidth', -1)
+# 각 로우 rows 500
+pd.set_option('display.max_rows', 500)
+# 각 컬럼 columns 500
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
