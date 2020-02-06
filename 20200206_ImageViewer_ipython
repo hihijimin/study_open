@@ -1,3 +1,6 @@
+# https://gist.github.com/JarnoRFB/63c8cc9407a905588f84047fd4975ddc
+# 위 링크에서 그대로 가져욤
+
 import ipywidgets as widgets
 from ipywidgets import AppLayout, Button, Layout, HTML
 from pathlib import Path
