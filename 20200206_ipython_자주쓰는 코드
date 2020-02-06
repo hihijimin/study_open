@@ -9,3 +9,44 @@ pd.set_option('display.max_rows', 500)
 # 각 컬럼 columns 500
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
+
+# ipywidget 예1) 이미지 받아서 edge 적용 UI
+from ipywidgets import interact, fixed
+import ipywidgets as widgets
+import matplotlib.pyplot as plt
+import cv2
+import numpy as np
+# Inline matplotlib and costume image size
+%pylab inline
+pylab.rcParams['figure.figsize'] = (10, 8)
+image = cv2.imread("D:/CRNN_log/Data/0204_data_change/1051279a.jpg")
+def showEdges(img, thresholds, blur, blurType):
+    """ Function called by interact """
+    if blur:
+        if blurType == 'Median':
+            img = cv2.medianBlur(img, 5)
+        elif blurType == 'Guassian':
+            img = cv2.GaussianBlur(img, (5, 5), 0)
+        elif blurType == 'Bilateral': 
+            img = cv2.bilateralFilter(img, 9, 75, 75)           
+    thresh1, thresh2 = thresholds
+    edges = cv2.Canny(img, thresh1, thresh2)
+    plt.imshow(edges, cmap = 'gray')    
+# Creating costume widget
+rangeSlider = widgets.IntRangeSlider(
+    value = [50, 200],
+    min = 0,
+    max = 255,
+    step = 1,
+    description = 'Thresholds',
+    continuous_update = False
+)
+# Using interact from ipywidgets
+# You have to specify the value of every parameter
+# or define the specific widget (rangeSlider)
+# Other parameters must be fixed
+interact(showEdges,
+         img = fixed(image),
+         thresholds = rangeSlider,
+         blur = True,
+         blurType = ['Median', 'Guassian', 'Bilateral'])
