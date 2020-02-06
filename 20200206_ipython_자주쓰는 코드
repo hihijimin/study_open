@@ -62,3 +62,9 @@ display(w)
 while True:
     w.value =((w.value+0.1) %10.0)
     time.sleep(0.05)
+
+
+
+참고
+[1] https://ipywidgets.readthedocs.io/en/latest/examples/Layout%20Templates.html
+[2] https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20List.html
