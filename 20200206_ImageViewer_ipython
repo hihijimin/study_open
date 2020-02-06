@@ -1,0 +1,104 @@
+import ipywidgets as widgets
+from ipywidgets import AppLayout, Button, Layout, HTML
+from pathlib import Path
+from typing import *
+import os
+
+A = TypeVar('A')
+
+class Cycle(Generic[A]):
+    def __init__(self, values: List[A]):
+        self._values = values
+        self._max_idx = len(values) - 1
+        self._current_idx = 0
+    
+    def next(self) -> A:
+        if self._current_idx == self._max_idx:
+            self._current_idx = 0
+        else:
+            self._current_idx += 1
+        return self._values[self._current_idx]
+    
+    def previous(self) -> A:
+        if self._current_idx == 0:
+            self._current_idx = self._max_idx
+        else:
+            self._current_idx -= 1
+        return self._values[self._current_idx]
+    
+    def __repr__(self):
+        return f"Cycle({self._values})"
+    
+def image_viewer(img_dir: os.PathLike = "D:/CRNN_log/Data/0204_data_change/", format: str = "jpg"):
+    """Create an image viewer widget to view the image of a certain format inside a directory.
+    
+    Args:
+        img_dir: The directory to look for images in.
+        format: The image format to consider.
+    """
+    header = widgets.HTML("<h1>Image Viewer</h1>", layout=Layout(height="auto"))
+
+    prev_button = widgets.Button(
+        description="Prev", icon="backward", layout=Layout(width="80%", height="30%")
+    )
+    
+    next_button = widgets.Button(
+        description="Next", icon="forward", layout=Layout(width="80%", height="30%")
+    )
+    
+    abs_img_dir = Path(img_dir).expanduser().absolute()
+    image_files = list(abs_img_dir.glob(f"*.{format}"))
+    if not image_files:
+        raise ValueError(f"No image for format {format} found in directory {abs_img_dir}.")
+    images = Cycle(image_files)
+    image = widgets.Image(
+        value=open(image_files[0], "rb").read(),
+        format=format,
+        width="80%",
+        height="100%",
+    )
+    
+    footer = widgets.HTML(f"<h4>{image_files[0]}</h4>", layout=Layout(height="auto"))
+
+    
+    def update_image(filename: str):
+        with open(filename, "rb") as f:
+            image.value = f.read()
+    
+    
+    def update_footer(filename: str):
+        footer.value = f"<h4>{filename}</h4>"
+
+        
+    def update_widgets(filename: str):
+        update_image(filename)
+        update_footer(filename)
+        
+        
+    def handle_next(button):
+        update_widgets(images.next())
+        
+        
+    def handle_prev(button):
+        update_widgets(images.previous())
+
+
+    prev_button.on_click(handle_prev)
+    next_button.on_click(handle_next) 
+    
+    app = AppLayout(
+        header=header,
+        left_sidebar=prev_button,
+        center=image,
+        right_sidebar=next_button,
+        footer=footer,
+        justify_items="center",
+        align_items="center",
+    )
+    
+    return app   
+    
+    
+    
+## 사용
+image_viewer()
