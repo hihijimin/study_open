@@ -27,3 +27,6 @@ https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/INSTALL.md
 
 설치한 결과  
 ![image](https://user-images.githubusercontent.com/56099627/74317849-7679af80-4dbf-11ea-89a6-c0c45f175a2c.png)  
+  
+명령어 : **(alpapose) D:\AlphaPose> python setup.py build develop**  
+![image](https://user-images.githubusercontent.com/56099627/74507535-0ba3b200-4f40-11ea-8046-23f1a23349d3.png)  
