@@ -30,3 +30,6 @@ https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/INSTALL.md
   
 명령어 : **(alpapose) D:\AlphaPose> python setup.py build develop**  
 ![image](https://user-images.githubusercontent.com/56099627/74507535-0ba3b200-4f40-11ea-8046-23f1a23349d3.png)  
+  
+명령어 : **pip install http://download.pytorch.org/whl/cu90/torch-1.1.0-cp36-cp36m-win_amd64.whl**
+![image](https://user-images.githubusercontent.com/56099627/74512015-aef9c480-4f4a-11ea-8daa-aa707ae37841.png)  
