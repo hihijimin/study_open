@@ -33,3 +33,25 @@ https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/INSTALL.md
   
 명령어 : **pip install http://download.pytorch.org/whl/cu90/torch-1.1.0-cp36-cp36m-win_amd64.whl**
 ![image](https://user-images.githubusercontent.com/56099627/74512015-aef9c480-4f4a-11ea-8daa-aa707ae37841.png)  
+
+
+참고
+https://gitmemory.com/Fang-Haoshu
+
+        ./scripts/inference.sh ./configs/coco/hrnet/256x192_w32_lr1e-3.yaml ./pretrained_models/hrnet_w32_256x192.pth ./222.mp4
+        ++ CONFIG=./configs/coco/hrnet/256x192_w32_lr1e-3.yaml
+        ++ CKPT=./pretrained_models/hrnet_w32_256x192.pth
+        ++ VIDEO=./222.mp4
+        ++ OUTDIR=./examples/res
+        ++ python scripts/demo_inference.py --cfg ./configs/coco/hrnet/256x192_w32_lr1e-3.yaml --checkpoint ./pretrained_models/hrnet_w32_256x192.pth --video ./222.mp4 --outdir ./examples/res --detector yolo --save_img --save_video
+        Loading pose model from ./pretrained_models/hrnet_w32_256x192.pth...
+        Loading YOLO model..
+        Network successfully loaded
+          0%|                                                                                                                                                                                     | 0/1510 [00:00<?, ?it/s]
+        Could not find encoder for codec id 27: Encoder not found
+        Try to use other video encoders...
+        100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1510/1510 [01:10<00:00, 21.44it/s]
+        ===========================> Finish Model Running.
+        ===========================> Rendering remaining images in the queue...
+        ===========================> If this step takes too long, you can enable the --vis_fast flag to use fast rendering (real-time).
+        Results have been written to json.
