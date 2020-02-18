@@ -29,4 +29,8 @@ cp Makefile.config.example Makefile.config (해당 폴더-파일 들어가서 �
     # We need to be able to find libpythonX.X.so or .dylib. 
     # PYTHON_LIB := /usr/lib PYTHON_LIB := $(ANACONDA_HOME)/lib
 
+# OpenBLAS 셋업
+참고 2  
+https://seonho.gitbooks.io/deep-learning-with-python/chap1/native/OpenBLAS.html  
+![image](https://user-images.githubusercontent.com/56099627/74723655-4da16080-527e-11ea-8f7c-bd4bdfec5602.png)  
 
