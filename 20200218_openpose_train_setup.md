@@ -46,7 +46,7 @@ D:/openpose_caffe_train-master/build
   - boost 다운로드 받는 공식 사이트 : https://www.boost.org/users/download/
 - step 2) 다운로드 받은 것을 압축 해제 한다음 (경로 결과: D:\boost_1_72_0 ) **boostrap.bat 실행 하면 b2.exe, cjam.exe 파일 생성됨**
   - 나의 경우엔 b2.exe, cjam.exe 파일이 ./ 경로에 바로 생성되지 않아서 검색해보니 ./../engine/ 경로에 이 두개 파일이 생성되어서 이것을 ./ 복사해서 경로 밖으로 빼어 주었음(빼준 이유는 다음 step 실행하기 위해서) 
-- step 3) 명령 프롬프트 **D:\boost_1_72_0>** 으로 들어간다. 그런후 아래 명령어를 실행하면 빌드 된다. 
+- step 3) 명령 프롬프트 **C:\Program Files (x86)\boost\boost_1_72_0>** 으로 들어간다. 그런후 아래 명령어를 실행하면 빌드 된다. 
   - 명령 프롬프트에서 명령어: **b2 --toolset=msvc-14.0 variant=debug,release address-model=64 threading=single,multi runtime-link=static,shared**
   - 32bit (x86) 빌드(vs2015) 쓰는 사람은 --toolset=msvc-14.0, address-model=32 이렇게 작성
   - 64bit (x86) 빌드(vs2015) 쓰는 사람은 --toolset=msvc-14.0, address-model=64 이렇게 작성 
