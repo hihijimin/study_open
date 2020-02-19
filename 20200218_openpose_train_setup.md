@@ -34,3 +34,22 @@ cp Makefile.config.example Makefile.config (해당 폴더-파일 들어가서 �
 https://seonho.gitbooks.io/deep-learning-with-python/chap1/native/OpenBLAS.html  
 ![image](https://user-images.githubusercontent.com/56099627/74723655-4da16080-527e-11ea-8f7c-bd4bdfec5602.png)  
 
+# boost 셋업
+D:/openpose_caffe_train-master  
+D:/openpose_caffe_train-master/build  
+이렇게 빌드 시키려고 하니 아래 그림과 같이 오류가 떴다.  
+보니, boost을 설치하랜다  
+![image](https://user-images.githubusercontent.com/56099627/74799580-488ef080-5314-11ea-9603-284f66abfb21.png)
+- 참고 1: https://wendys.tistory.com/115
+- 참고 2: https://redcoder.tistory.com/143
+- 1) boost 다운로드
+  - boost 다운로드 받는 공식 사이트 : https://www.boost.org/users/download/
+- 2) 다운로드 받은 것을 압축 해제 한다음 (경로 결과: D:\boost_1_72_0 ) **boostrap.bat 실행 하면 b2.exe, cjam.exe 파일 생성됨**
+  - 나의 경우엔 b2.exe, cjam.exe 파일이 ./ 경로에 바로 생성되지 않아서 검색해보니 ./../engine/ 경로에 이 두개 파일이 생성되어서 이것을 ./ 복사해서 경로 밖으로 빼어 주었음(빼준 이유는 다음 step 실행하기 위해서) 
+- 명령 프롬프트 **D:\boost_1_72_0>** 으로 들어간다. 그런후 아래 명령어를 실행하면 빌드 된다. 
+  - 명령 프롬프트에서 명령어: **b2 --toolset=msvc-14.0 variant=debug,release address-model=64 threading=single,multi runtime-link=static,shared**
+  - 32bit (x86) 빌드(vs2015) 쓰는 사람은 --toolset=msvc-14.0, address-model=32 이렇게 작성
+  - 64bit (x86) 빌드(vs2015) 쓰는 사람은 --toolset=msvc-14.0, address-model=64 이렇게 작성 
+- 참고! 참고 2 에서 알려준 방법인데 boost을 직접 빌드 하기 시르면 https://sourceforge.net/projects/boost/files/boost-binaries/ 으로 가서 빌드된 것을 다운로드 받으랜다.
+
+
