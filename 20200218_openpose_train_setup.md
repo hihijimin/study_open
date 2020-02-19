@@ -52,4 +52,12 @@ D:/openpose_caffe_train-master/build
   - 64bit (x86) 빌드(vs2015) 쓰는 사람은 --toolset=msvc-14.0, address-model=64 이렇게 작성 
 - 참고! 참고 2 에서 알려준 방법인데 boost을 직접 빌드 하기 시르면 https://sourceforge.net/projects/boost/files/boost-binaries/ 으로 가서 빌드된 것을 다운로드 받으랜다.
 
+두번째 에러
+https://sourceforge.net/projects/boost/files/boost-binaries/ 에서 **boost_1_71_0-msvc-14.0-64.exe**을 다운로드 받은 후,  
+C:/local/boost_1_17_0 경로로 설치 하였더니 아래 그림과 같은 에러 메세지 뜸  
+![image](https://user-images.githubusercontent.com/56099627/74816686-f3b49f80-533e-11ea-9da1-e06bb741867d.png)  
 
+- windows powershell 관리자 권한으로 들어가서 choco 을 설치함
+  - 명령어: PS C:\Windows\system32> **Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))**
+  - choco 버전 확인 : 명령어 **choco -v**, sudo 설치 명령어 : **choco install sudo**
+![image](https://user-images.githubusercontent.com/56099627/74817181-d6cc9c00-533f-11ea-899c-310e00c9ef4c.png)  
