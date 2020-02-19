@@ -13,6 +13,19 @@ https://tobeagoodmom.tistory.com/2174
 - 참고1: 설치하는 방법 매우 자세히 잘 나와있음!!
 https://baemincheon.tistory.com/21  
 
+![image](https://user-images.githubusercontent.com/56099627/74830132-cde6c500-5355-11ea-9ecf-cd6e4c29a617.png)  
+  
+![image](https://user-images.githubusercontent.com/56099627/74830178-ea82fd00-5355-11ea-84f1-143d0bc5dfb3.png)  
+
+
+
+
+
+
+
+
+
+
 git clone https://github.com/BVLC/caffe.git  
 cd caffe  
 cp Makefile.config.example Makefile.config (해당 폴더-파일 들어가서 수정하기!)  
