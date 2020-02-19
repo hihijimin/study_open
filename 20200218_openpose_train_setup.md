@@ -10,6 +10,9 @@ https://tobeagoodmom.tistory.com/2174
 - 4. CUDA 설치 되어 있다면 패스
 - 5. caffe 셋업
 # caffe 셋업
+- 참고1: 설치하는 방법 매우 자세히 잘 나와있음!!
+https://baemincheon.tistory.com/21  
+
 git clone https://github.com/BVLC/caffe.git  
 cd caffe  
 cp Makefile.config.example Makefile.config (해당 폴더-파일 들어가서 수정하기!)  
