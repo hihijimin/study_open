@@ -59,5 +59,6 @@ C:/local/boost_1_17_0 경로로 설치 하였더니 아래 그림과 같은 에�
 
 - windows powershell 관리자 권한으로 들어가서 choco 을 설치함
   - 명령어: PS C:\Windows\system32> **Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))**
-  - choco 버전 확인 : 명령어 **choco -v**, sudo 설치 명령어 : **choco install sudo**
+  - choco 버전 확인 : 명령어 **choco -v**, sudo 설치 명령어 : **choco install sudo**  
+  
 ![image](https://user-images.githubusercontent.com/56099627/74817181-d6cc9c00-533f-11ea-899c-310e00c9ef4c.png)  
