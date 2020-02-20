@@ -21,7 +21,7 @@ https://www.geek-share.com/detail/2748721992.html
 
 ![image](https://user-images.githubusercontent.com/56099627/74891412-5010d100-53ca-11ea-8c54-2806b53d4021.png)  
   
-- 이부분을 변경했음 그 결과
+- 이부분을 변경했음 그 결과  
 D:\caffe\cmake\WindowsDownloadPrebuiltDependencies.cmake 에서  
 이전(f060403fd1a7448d866d27c0e5b7dced39c0a607) -> 변경(d04c905437d24bf5fe629829ecbebb94713c6724)  
 
