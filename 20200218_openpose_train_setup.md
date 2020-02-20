@@ -12,16 +12,26 @@ https://tobeagoodmom.tistory.com/2174
 # caffe 셋업
 - 참고1: 설치하는 방법 매우 자세히 잘 나와있음!!
 https://baemincheon.tistory.com/21  
-
+- 참고2: 에러에 대처하는 방법 자세히 나와 있음(중국어)!!
+https://www.geek-share.com/detail/2748721992.html  
+  
 ![image](https://user-images.githubusercontent.com/56099627/74830132-cde6c500-5355-11ea-9ecf-cd6e4c29a617.png)  
   
 ![image](https://user-images.githubusercontent.com/56099627/74830178-ea82fd00-5355-11ea-84f1-143d0bc5dfb3.png)  
 
 ![image](https://user-images.githubusercontent.com/56099627/74891412-5010d100-53ca-11ea-8c54-2806b53d4021.png)  
   
+- 이부분을 변경했음 그 결과
+D:\caffe\cmake\WindowsDownloadPrebuiltDependencies.cmake 에서  
+이전(f060403fd1a7448d866d27c0e5b7dced39c0a607) -> 변경(d04c905437d24bf5fe629829ecbebb94713c6724)  
 
-
-
+    set(DEPENDENCIES_URL_1900_35 "${DEPENDENCIES_URL_BASE}/v${DEPENDENCIES_VERSION}/${DEPENDENCIES_NAME_1900_35}${DEPENDENCIES_FILE_EXT}")
+    set(DEPENDENCIES_SHA_1900_35 "d04c905437d24bf5fe629829ecbebb94713c6724")
+  
+![image](https://user-images.githubusercontent.com/56099627/74897614-fc5ab380-53da-11ea-9869-8cd837fadcb3.png)  
+![image](https://user-images.githubusercontent.com/56099627/74897659-1a281880-53db-11ea-81f9-f6ed2f7fdd6a.png)  
+![image](https://user-images.githubusercontent.com/56099627/74897720-43e13f80-53db-11ea-9706-cc2bb5b32904.png)  
+![image](https://user-images.githubusercontent.com/56099627/74897751-607d7780-53db-11ea-9e2b-a6aaddd640b8.png)  
 
 
 
