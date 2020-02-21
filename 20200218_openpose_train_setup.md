@@ -1,23 +1,219 @@
 참고 1  
 https://tobeagoodmom.tistory.com/2174  
-- 1. 가상환경 만들어주고 (파이썬 환경 셋업)
+1\. 가상환경 만들어주고 (파이썬 환경 셋업)
   - 명령어 **(base) C:\Users\humanict>conda create --name caffe_dev**
   - 가상환경 활성화 **(base) C:\Users\humanict>conda activate caffe_dev**
-- 2. opencv 셋업  
+2\. opencv 셋업  
   - **(caffe_dev) C:\Users\humanict>conda install opencv=4.2.0**
-- 3. 라이브러리 셋업
+3\. 라이브러리 셋업
   - **(caffe_dev) C:\Users\humanict>conda install scikit-image**  
-- 4. CUDA 설치 되어 있다면 패스
-- 5. caffe 셋업
+4\. CUDA 설치 되어 있다면 패스
+5\. caffe 셋업
 # caffe 셋업
 ### caffe 셋업 성공 케이스
-- 참고1: 여기서 caffe-window 다운로드 할것  
+- 참고1: caffe-window 다운로드  
 https://github.com/happynear/caffe-windows/tree/ms/windows  
 https://github.com/happynear/caffe-windows  
-- 참고2: 설명 잘된 블로그
+- 참고2: third party library 다운로드  
+https://drive.google.com/file/d/13dbvXmMosxozWbSgJdDdxH62YWqXLjoJ/view  
+- 참고3: 설명 잘된 블로그
 https://bearhouse0923.tistory.com/4  
-1\. https://github.com/happynear/caffe-windo 여기에서 caffe-window 다운로드 할것  
-2\.
+  
+1\. 참고1 (https://github.com/happynear/caffe-windo) 여기에서 caffe-window 다운로드 할것  
+2\. 위 참고2에서 thrid party library 다운로드 후, 압축 해제 한 후, caffe-window -> windows -> thridparty에 내용을 복사할 것
+![image](https://user-images.githubusercontent.com/56099627/74998404-fd074e80-549b-11ea-85f4-ce1705547713.png)  
+3\. caffe-window -> windows 폴더에서 **CommonSetting.prop.example**을 복사하여 **CommonSetting.prop**이라고 만들것  
+4\. CommonSetting.prop 내용 변경(바꿔 줘야 할게 은근 많음)  
+
+5\. caffe.sln(프로젝트) 빌드  
+libcaffe -> caffe -> caffe.binding -> pycaffe 순서로 빌드 진행  
+파이썬에서만 사용할 경우 release에서만 빌드 하면 됨  
+  빌드 환경은 release - x64 이고, 
+  <<--- MY CommonSettings 수정된 내용 --->>  
+  <CpuOnlyBuild>true</CpuOnlyBuild>  
+  <UseCuDNN>false</UseCuDNN>  
+  <UseNCCL>true</UseNCCL>  
+  <UseMKL>false</UseMKL>  
+  <CudaVersion>9.0</CudaVersion>  
+  <CudaArchitecture>compute_52,sm_52;compute_60,sm_60;</CudaArchitecture>  
+  <CuDnnPath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\</CuDnnPath>  
+  <PythonDir>C:\Users\humanict\Anaconda36</PythonDir>  
+   <ItemDefinitionGroup Condition="'$(CpuOnlyBuild)'=='true'">  
+  <ItemDefinitionGroup Condition="'$(UseCuDNN)'=='true'">  
+  <ItemDefinitionGroup Condition="'$(UseNCCL)'=='flase'">  
+  
+    <?xml version="1.0" encoding="utf-8"?>
+    <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+      <ImportGroup Label="PropertySheets" />
+      <PropertyGroup Label="UserMacros">
+        <BuildDir>$(SolutionDir)..\Build</BuildDir>
+        <!--NOTE: CpuOnlyBuild and UseCuDNN flags can't be set at the same time.-->
+        <CpuOnlyBuild>true</CpuOnlyBuild>
+        <UseCuDNN>false</UseCuDNN>
+        <UseNCCL>true</UseNCCL>
+        <UseMKL>false</UseMKL>
+        <CudaVersion>9.0</CudaVersion>
+        <!-- NOTE: If Python support is enabled, PythonDir (below) needs to be
+             set to the root of your Python installation. If your Python installation
+             does not contain debug libraries, debug build will not work. -->
+        <PythonSupport>true</PythonSupport>
+
+        <!-- NOTE: If Matlab support is enabled, MatlabDir (below) needs to be
+             set to the root of your Matlab installation. -->
+        <MatlabSupport>true</MatlabSupport>
+        <MXNetSupport>true</MXNetSupport>
+        <CudaDependencies>cufft.lib</CudaDependencies>
+        <BoostIncludeFolder>$(SolutionDir)thirdparty\Boost</BoostIncludeFolder>
+        <BoostLibraryFolder>$(SolutionDir)thirdparty\Boost\lib64-msvc-14.0</BoostLibraryFolder>
+        <HDF5Root>$(SolutionDir)thirdparty\HDF5</HDF5Root>
+        <GFlagsRoot>$(SolutionDir)thirdparty\GFlags</GFlagsRoot>
+        <GLogRoot>$(SolutionDir)thirdparty\Glog</GLogRoot>
+        <ProtobufRoot>$(SolutionDir)thirdparty\Protobuf</ProtobufRoot>
+        <ProtocDir>$(ProtobufRoot)\bin\</ProtocDir>
+        <OpenCVRoot>$(SolutionDir)thirdparty\OpenCV</OpenCVRoot>
+        <LMDBRoot>$(SolutionDir)thirdparty\LMDB</LMDBRoot>
+        <OpenBLASRoot>$(SolutionDir)thirdparty\OpenBLAS</OpenBLASRoot>
+        <LevelDBRoot>$(SolutionDir)thirdparty\LEVELDB</LevelDBRoot>
+        <NCCLRoot>$(SolutionDir)thirdparty\NCCL</NCCLRoot>
+        <MKLRoot>D:\ThirdPartyLibrary\IntelSWTools\compilers_and_libraries_2017.4.210\windows\mkl</MKLRoot>
+        <MXNetRoot>D:\deepLearning\mxnet</MXNetRoot>
+
+        <!-- Set CUDA architecture suitable for your GPU.
+             Setting proper architecture is important to mimize your run and compile time. -->
+        <CudaArchitecture>compute_52,sm_52;compute_60,sm_60;</CudaArchitecture>
+
+        <!-- CuDNN 3 and 4 are supported -->
+        <CuDnnPath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\</CuDnnPath>
+        <ScriptsDir>$(SolutionDir)\scripts</ScriptsDir>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(CpuOnlyBuild)'=='false'">
+        <CudaDependencies>cublas.lib;cuda.lib;curand.lib;cudart.lib</CudaDependencies>
+      </PropertyGroup>
+
+      <PropertyGroup Condition="'$(UseCuDNN)'=='true'">
+        <CudaDependencies>cudnn.lib;$(CudaDependencies)</CudaDependencies>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(UseCuDNN)'=='true' And $(CuDnnPath)!=''">
+        <LibraryPath>$(CuDnnPath)\lib\x64;$(LibraryPath)</LibraryPath>
+        <IncludePath>$(CuDnnPath)\include;$(IncludePath)</IncludePath>
+      </PropertyGroup>
+
+      <PropertyGroup Condition="'$(UseNCCL)'=='true' And $(NCCLRoot)!=''">
+        <CudaDependencies>nccl.lib;$(CudaDependencies)</CudaDependencies>
+        <LibraryPath>$(NCCLRoot)\lib;$(LibraryPath)</LibraryPath>
+        <IncludePath>$(NCCLRoot)\include;$(IncludePath)</IncludePath>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(UseMKL)'=='true' And $(MKLRoot)!=''">
+        <LibraryPath>$(MKLRoot)\lib\intel64_win;$(LibraryPath)</LibraryPath>
+        <IncludePath>$(MKLRoot)\include;$(IncludePath)</IncludePath>
+        <AdditionalDependencies>mkl_rt.lib;$(AdditionalDependencies)</AdditionalDependencies>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(UseMKL)'=='false' Or $(MKLRoot)==''">
+        <LibraryPath>$(OpenBLASRoot)\lib;$(LibraryPath)</LibraryPath>
+        <IncludePath>$(OpenBLASRoot)\include;$(IncludePath)</IncludePath>
+        <AdditionalDependencies>libopenblas.dll.a;$(AdditionalDependencies)</AdditionalDependencies>
+      </PropertyGroup>
+
+      <PropertyGroup>
+        <OutDir>$(BuildDir)\$(Platform)\$(Configuration)\</OutDir>
+        <IntDir>$(BuildDir)\Int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+      </PropertyGroup>
+      <PropertyGroup>
+        <LibraryPath>$(OutDir);$(CUDA_PATH)\lib\$(Platform);$(BoostLibraryFolder);$(HDF5Root)\lib;$(GFlagsRoot)\lib;$(GLogRoot)\lib;$(ProtobufRoot)\lib;$(OpenCVRoot)\x64\vc14\lib;$(LMDBRoot)\lib;$(LevelDBRoot)\lib;$(LibraryPath)</LibraryPath>
+        <IncludePath>$(SolutionDir)..\include;$(SolutionDir)..\include\caffe\proto;$(CUDA_PATH)\include;$(BoostIncludeFolder);$(HDF5Root)\include;$(GFlagsRoot)\include;$(GLogRoot)\include;$(ProtobufRoot)\include;$(OpenCVRoot)\include;$(LMDBRoot)\include;$(LevelDBRoot)\include;$(IncludePath)</IncludePath>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(PythonSupport)'=='true'">
+        <PythonDir>C:\Users\humanict\Anaconda36</PythonDir>
+        <LibraryPath>$(PythonDir)\libs;$(LibraryPath)</LibraryPath>
+        <IncludePath>$(PythonDir)\include;$(IncludePath)</IncludePath>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(MatlabSupport)'=='true'">
+        <MatlabDir>C:\Program Files\MATLAB\R2016a</MatlabDir>
+        <LibraryPath>$(MatlabDir)\extern\lib\win64\microsoft;$(LibraryPath)</LibraryPath>
+        <IncludePath>$(MatlabDir)\extern\include;$(IncludePath)</IncludePath>
+      </PropertyGroup>
+      <ItemDefinitionGroup Condition="'$(CpuOnlyBuild)'=='true'">
+        <ClCompile>
+          <PreprocessorDefinitions>CPU_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ClCompile>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup Condition="'$(UseCuDNN)'=='true'">
+        <ClCompile>
+          <PreprocessorDefinitions>USE_CUDNN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ClCompile>
+        <CudaCompile>
+          <Defines>USE_CUDNN</Defines>
+        </CudaCompile>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup Condition="'$(UseNCCL)'=='flase'">
+        <ClCompile>
+          <PreprocessorDefinitions>USE_NCCL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ClCompile>
+        <CudaCompile>
+          <Defines>USE_NCCL</Defines>
+        </CudaCompile>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup Condition="'$(UseMKL)'=='true'">
+        <ClCompile>
+          <PreprocessorDefinitions>USE_MKL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ClCompile>
+        <CudaCompile>
+          <Defines>USE_MKL</Defines>
+        </CudaCompile>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup Condition="'$(PythonSupport)'=='true'">
+        <ClCompile>
+          <PreprocessorDefinitions>WITH_PYTHON_LAYER;BOOST_PYTHON_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ClCompile>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup Condition="'$(MatlabSupport)'=='true'">
+        <ClCompile>
+          <PreprocessorDefinitions>MATLAB_MEX_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ClCompile>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup>
+        <ClCompile>
+          <MinimalRebuild>false</MinimalRebuild>
+          <MultiProcessorCompilation>true</MultiProcessorCompilation>
+          <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;USE_OPENCV;USE_LEVELDB;USE_LMDB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+          <TreatWarningAsError>false</TreatWarningAsError>
+        </ClCompile>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <ClCompile>
+          <Optimization>Full</Optimization>
+          <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+          <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+          <FunctionLevelLinking>true</FunctionLevelLinking>
+          <DisableSpecificWarnings>4819;</DisableSpecificWarnings>
+        </ClCompile>
+        <Link>
+          <EnableCOMDATFolding>true</EnableCOMDATFolding>
+          <GenerateDebugInformation>true</GenerateDebugInformation>
+          <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+          <OptimizeReferences>true</OptimizeReferences>
+          <AdditionalDependencies>leveldb.lib;Advapi32.lib;Shlwapi.lib;lmdb.lib;opencv_world310.lib;libprotobuf.lib;glog.lib;gflags.lib;hdf5_tools.lib;hdf5_hl_fortran.lib;hdf5_fortran.lib;hdf5_hl_f90cstub.lib;hdf5_f90cstub.lib;hdf5_cpp.lib;hdf5_hl_cpp.lib;hdf5_hl.lib;hdf5.lib;zlib.lib;szip.lib;$(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+      </ItemDefinitionGroup>
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <ClCompile>
+          <Optimization>Disabled</Optimization>
+          <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+          <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+          <DisableSpecificWarnings>4819;</DisableSpecificWarnings>
+        </ClCompile>
+        <Link>
+          <GenerateDebugInformation>true</GenerateDebugInformation>
+          <AdditionalDependencies>leveldbd.lib;Advapi32.lib;Shlwapi.lib;lmdbd.lib;opencv_world310d.lib;libprotobufd.lib;glogd.lib;gflagsd.lib;hdf5_tools.lib;hdf5_hl_fortran.lib;hdf5_fortran.lib;hdf5_hl_f90cstub.lib;hdf5_f90cstub.lib;hdf5_cpp.lib;hdf5_hl_cpp.lib;hdf5_hl.lib;hdf5.lib;zlib.lib;szip.lib;$(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+      </ItemDefinitionGroup>
+    </Project>  
+
+6/. 각 빌드 후, 발생한 에러는 인터넷 서치하면서 해결 !
+7/. python에서 caffe 사용하기 위한 환경 설정
+  빌드한 pycaffe 폴더를 환경 변수 내 PYTHONPATH 에 새로 추가한다
+  그런 후, python에서 import caffe 해서 테스트 해본다
+  테스트 예시 : python -c "import caffe; print(caffe.__version__)"
 
 -------------------------------------------------------
 ### caffe 셋업 잘 안된 케이스
