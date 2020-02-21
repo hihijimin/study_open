@@ -30,17 +30,18 @@ libcaffe -> caffe -> caffe.binding -> pycaffe 순서로 빌드 진행
 파이썬에서만 사용할 경우 release에서만 빌드 하면 됨  
   빌드 환경은 release - x64 이고, 
   <<--- MY CommonSettings 수정된 내용 --->>  
-  <CpuOnlyBuild>true</CpuOnlyBuild>  
-  <UseCuDNN>false</UseCuDNN>  
-  <UseNCCL>true</UseNCCL>  
-  <UseMKL>false</UseMKL>  
-  <CudaVersion>9.0</CudaVersion>  
-  <CudaArchitecture>compute_52,sm_52;compute_60,sm_60;</CudaArchitecture>  
-  <CuDnnPath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\</CuDnnPath>  
-  <PythonDir>C:\Users\humanict\Anaconda36</PythonDir>  
-   <ItemDefinitionGroup Condition="'$(CpuOnlyBuild)'=='true'">  
-  <ItemDefinitionGroup Condition="'$(UseCuDNN)'=='true'">  
-  <ItemDefinitionGroup Condition="'$(UseNCCL)'=='flase'">  
+  
+    <CpuOnlyBuild>true</CpuOnlyBuild>  
+    <UseCuDNN>false</UseCuDNN>  
+    <UseNCCL>true</UseNCCL>  
+    <UseMKL>false</UseMKL>  
+    <CudaVersion>9.0</CudaVersion>  
+    <CudaArchitecture>compute_52,sm_52;compute_60,sm_60;</CudaArchitecture>  
+    <CuDnnPath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\</CuDnnPath>  
+    <PythonDir>C:\Users\humanict\Anaconda36</PythonDir>  
+     <ItemDefinitionGroup Condition="'$(CpuOnlyBuild)'=='true'">  
+    <ItemDefinitionGroup Condition="'$(UseCuDNN)'=='true'">  
+    <ItemDefinitionGroup Condition="'$(UseNCCL)'=='flase'">  
   
     <?xml version="1.0" encoding="utf-8"?>
     <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -48,7 +49,7 @@ libcaffe -> caffe -> caffe.binding -> pycaffe 순서로 빌드 진행
       <PropertyGroup Label="UserMacros">
         <BuildDir>$(SolutionDir)..\Build</BuildDir>
         <!--NOTE: CpuOnlyBuild and UseCuDNN flags can't be set at the same time.-->
-        **<CpuOnlyBuild>true</CpuOnlyBuild>**
+        <CpuOnlyBuild>true</CpuOnlyBuild>
         <UseCuDNN>false</UseCuDNN>
         <UseNCCL>true</UseNCCL>
         <UseMKL>false</UseMKL>
@@ -210,10 +211,12 @@ libcaffe -> caffe -> caffe.binding -> pycaffe 순서로 빌드 진행
     </Project>  
 
 6/. 각 빌드 후, 발생한 에러는 인터넷 서치하면서 해결 !
-7/. python에서 caffe 사용하기 위한 환경 설정
-  빌드한 pycaffe 폴더를 환경 변수 내 PYTHONPATH 에 새로 추가한다
-  그런 후, python에서 import caffe 해서 테스트 해본다
-  테스트 예시 : python -c "import caffe; print(caffe.__version__)"
+7/. 빌드(컴파일) **끝나면 C:\Library\caffe-windows\caffe-windows\Build\x64\Release\pycaffe 가 생성된다.  
+여기 안의 caffe 폴더를 통채로 C:\Anaconda3\lib\site-package 안에 복사한다**  
+8/. python에서 caffe 사용하기 위한 환경 설정  
+  빌드한 pycaffe 폴더를 환경 변수 내 PYTHONPATH 에 새로 추가한다  
+  그런 후, python에서 import caffe 해서 테스트 해본다  
+  테스트 예시 : python -c "import caffe; print(caffe.__version__)"  
 
 -------------------------------------------------------
 ### caffe 셋업 잘 안된 케이스
