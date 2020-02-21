@@ -10,6 +10,17 @@ https://tobeagoodmom.tistory.com/2174
 - 4. CUDA 설치 되어 있다면 패스
 - 5. caffe 셋업
 # caffe 셋업
+### caffe 셋업 성공 케이스
+- 참고1: 여기서 caffe-window 다운로드 할것  
+https://github.com/happynear/caffe-windows/tree/ms/windows  
+https://github.com/happynear/caffe-windows  
+- 참고2: 설명 잘된 블로그
+https://bearhouse0923.tistory.com/4  
+1\. https://github.com/happynear/caffe-windo 여기에서 caffe-window 다운로드 할것  
+2\.
+
+-------------------------------------------------------
+### caffe 셋업 잘 안된 케이스
 - 참고1: 설치하는 방법 매우 자세히 잘 나와있음!!
 https://baemincheon.tistory.com/21  
 - 참고2: 에러에 대처하는 방법 자세히 나와 있음(중국어)!!
@@ -36,6 +47,9 @@ D:\caffe\cmake\WindowsDownloadPrebuiltDependencies.cmake 에서
 
 
 
+
+------------------------------------------------------
+### caffe 셋업 잘 안된 케이스
 
 git clone https://github.com/BVLC/caffe.git  
 cd caffe  
