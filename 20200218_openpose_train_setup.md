@@ -20,16 +20,18 @@ https://drive.google.com/file/d/13dbvXmMosxozWbSgJdDdxH62YWqXLjoJ/view
 https://bearhouse0923.tistory.com/4  
   
 1\. 참고1 (https://github.com/happynear/caffe-windo) 여기에서 caffe-window 다운로드 할것  
-2\. 위 참고2에서 thrid party library 다운로드 후, 압축 해제 한 후, caffe-window -> windows -> thridparty에 내용을 복사할 것
+2\. 위 참고2에서 thrid party library 다운로드 후, 압축 해제 한 후, caffe-window -> windows -> thridparty에 내용을 복사할 것  
 ![image](https://user-images.githubusercontent.com/56099627/74998404-fd074e80-549b-11ea-85f4-ce1705547713.png)  
+
 3\. caffe-window -> windows 폴더에서 **CommonSetting.prop.example**을 복사하여 **CommonSetting.prop**이라고 만들것  
 4\. CommonSetting.prop 내용 변경(바꿔 줘야 할게 은근 많음)  
 
 5\. caffe.sln(프로젝트) 빌드  
 libcaffe -> caffe -> caffe.binding -> pycaffe 순서로 빌드 진행  
 파이썬에서만 사용할 경우 release에서만 빌드 하면 됨  
-  빌드 환경은 release - x64 이고, 
-  <<--- MY CommonSettings 수정된 내용 --->>  
+  빌드 환경은 release - x64 이고,  
+  
+<<--- MY CommonSettings 수정된 내용 --->>  
   
     <CpuOnlyBuild>true</CpuOnlyBuild>  
     <UseCuDNN>false</UseCuDNN>  
@@ -42,7 +44,9 @@ libcaffe -> caffe -> caffe.binding -> pycaffe 순서로 빌드 진행
      <ItemDefinitionGroup Condition="'$(CpuOnlyBuild)'=='true'">  
     <ItemDefinitionGroup Condition="'$(UseCuDNN)'=='true'">  
     <ItemDefinitionGroup Condition="'$(UseNCCL)'=='flase'">  
-  
+ 
+<<--- MY CommonSettings 전체 내용 --->>  
+ 
     <?xml version="1.0" encoding="utf-8"?>
     <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
       <ImportGroup Label="PropertySheets" />
