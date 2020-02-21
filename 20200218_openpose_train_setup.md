@@ -48,7 +48,7 @@ libcaffe -> caffe -> caffe.binding -> pycaffe 순서로 빌드 진행
       <PropertyGroup Label="UserMacros">
         <BuildDir>$(SolutionDir)..\Build</BuildDir>
         <!--NOTE: CpuOnlyBuild and UseCuDNN flags can't be set at the same time.-->
-        <CpuOnlyBuild>true</CpuOnlyBuild>
+        **<CpuOnlyBuild>true</CpuOnlyBuild>**
         <UseCuDNN>false</UseCuDNN>
         <UseNCCL>true</UseNCCL>
         <UseMKL>false</UseMKL>
