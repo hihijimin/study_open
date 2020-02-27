@@ -52,7 +52,8 @@
 - conda install -c anaconda cudnn=7.x.x or ... 
 - conda install -c anaconda cudatoolkit=9.x or 10.x ... 
 - (필요시) conda install -c menpo opencv
-
+- 원하는 버전 tensorflow 설치 명령어: pip install --ignore-installed --upgrade tensorflow==1.4.0  
+![image](https://user-images.githubusercontent.com/56099627/75418128-0732bc80-5976-11ea-8f15-973773e846a0.png)  
 
 # 가상환경에 Tensorflow 설치하기 
 - 참고로 cmd을 이용해 모듈을 설치할 때는 pip을 사용한다. 하지만 아나콘다에서는 conda을 사용하는 것이 좋다
