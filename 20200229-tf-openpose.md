@@ -8,3 +8,13 @@ https://github.com/ildoonet/tf-pose-estimation 을 보고 설치하기!
 ![image](https://user-images.githubusercontent.com/56099627/75567325-b1086b00-5a94-11ea-8358-78f8a8a34bd2.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75567385-caa9b280-5a94-11ea-98c4-d7418abe2a5f.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75567449-e614bd80-5a94-11ea-8e55-256baa5d6e93.png)  
+-에러수정    
+![image](https://user-images.githubusercontent.com/56099627/75607031-50316f00-5b36-11ea-9a28-455bfb0936b4.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607046-78b96900-5b36-11ea-9a65-e23e125b26a0.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607065-a7374400-5b36-11ea-8cb2-d48554189aca.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607083-c59d3f80-5b36-11ea-8329-e1fc145c1dbe.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607096-dbab0000-5b36-11ea-90b5-0908eeed7015.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607113-19a82400-5b37-11ea-8ce9-32cf776334f4.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607130-3f352d80-5b37-11ea-83c3-f76a69b3bb74.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607138-5411c100-5b37-11ea-86ff-db8d69738560.png)  
+![image](https://user-images.githubusercontent.com/56099627/75607150-6db30880-5b37-11ea-9be6-e097fc0da948.png)  
