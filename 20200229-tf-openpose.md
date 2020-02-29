@@ -29,3 +29,12 @@ https://github.com/ildoonet/tf-pose-estimation/tree/master/tf_pose/pafprocess%20
 그런 후, 아래 그림처럼 설치  
 ![image](https://user-images.githubusercontent.com/56099627/75610596-fd67af80-5b55-11ea-9076-3028e6b0db1d.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75610622-2a1bc700-5b56-11ea-81da-8603e3cdc108.png)  
+- 추가 패키지 설치
+![image](https://user-images.githubusercontent.com/56099627/75611486-43c10c80-5b5e-11ea-9bc4-46846234b43f.png)  
+![image](https://user-images.githubusercontent.com/56099627/75611520-7bc84f80-5b5e-11ea-8d27-64ce54c8c2e2.png)  
+![image](https://user-images.githubusercontent.com/56099627/75611535-a4e8e000-5b5e-11ea-8f52-b2fa5f1392c9.png)  
+![image](https://user-images.githubusercontent.com/56099627/75611540-c1851800-5b5e-11ea-89cd-d8f71ba348da.png)  
+![image](https://user-images.githubusercontent.com/56099627/75611548-de215000-5b5e-11ea-9c78-1ea3e5accd28.png)  
+![image](https://user-images.githubusercontent.com/56099627/75611570-00b36900-5b5f-11ea-9572-d659011e082e.png)  
+![image](https://user-images.githubusercontent.com/56099627/75611586-22aceb80-5b5f-11ea-809d-4a4cd90d8fc1.png)  
+![image](https://user-images.githubusercontent.com/56099627/75611600-3b1d0600-5b5f-11ea-8ce5-147aed98ffc5.png)  
