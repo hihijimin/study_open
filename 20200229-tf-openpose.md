@@ -18,3 +18,5 @@ https://github.com/ildoonet/tf-pose-estimation 을 보고 설치하기!
 ![image](https://user-images.githubusercontent.com/56099627/75607130-3f352d80-5b37-11ea-83c3-f76a69b3bb74.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75607138-5411c100-5b37-11ea-86ff-db8d69738560.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75607150-6db30880-5b37-11ea-9be6-e097fc0da948.png)  
+-에러수정  
+![image](https://user-images.githubusercontent.com/56099627/75608132-29783600-5b40-11ea-8943-09a8eb2621cd.png)  
