@@ -20,3 +20,7 @@ https://github.com/ildoonet/tf-pose-estimation 을 보고 설치하기!
 ![image](https://user-images.githubusercontent.com/56099627/75607150-6db30880-5b37-11ea-9be6-e097fc0da948.png)  
 -에러수정  
 ![image](https://user-images.githubusercontent.com/56099627/75608132-29783600-5b40-11ea-8943-09a8eb2621cd.png)  
+![image](https://user-images.githubusercontent.com/56099627/75610291-58e46e00-5b53-11ea-875f-01ddea8dd2fd.png)  
+-> 해당 파일에 들어가서 주석 처리 했음
+![image](https://user-images.githubusercontent.com/56099627/75610306-79acc380-5b53-11ea-87ed-9106088d07c7.png)  
+-> swig을 관리자 권한으로 powersell에서 설치 하고 
