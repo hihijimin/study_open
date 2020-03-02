@@ -78,3 +78,10 @@ And then try to run make from cocoapi\PythonAPI\pycocotools again.
 ![image](https://user-images.githubusercontent.com/56099627/75665214-2a7fa380-5cb7-11ea-8139-acb3dfc6f1fd.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75665256-3f5c3700-5cb7-11ea-9c72-501b0f3f33c4.png)  
 
+-cocodataset 다운로드 하기  
+-gustil 설치하기  
+참고사이트: https://ukayzm.github.io/cocodataset/  
+참고사이트: https://cloud.google.com/storage/docs/gsutil_install?hl=ko#windowsk%E3%85%8F  
+![image](https://user-images.githubusercontent.com/56099627/75673703-e72d3100-5cc6-11ea-9d3c-54a9a9f972b4.png) 
+![image](https://user-images.githubusercontent.com/56099627/75673872-4ab75e80-5cc7-11ea-9de8-5b7332b13722.png)  
+![image](https://user-images.githubusercontent.com/56099627/75673955-79cdd000-5cc7-11ea-86a7-e650cdd2130b.png)
