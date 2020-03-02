@@ -63,4 +63,5 @@ And then try to run make from cocoapi\PythonAPI\pycocotools again.
 ![image](https://user-images.githubusercontent.com/56099627/75663977-16d33d80-5cb5-11ea-8fcd-de7460273659.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75664156-59951580-5cb5-11ea-9b07-c279418d3eed.png)  
 -수정후 train 명령어 build 결과(requirement.txt에서 pycocotools을 포함한 셋팅된 가상환경)  
-![image](https://user-images.githubusercontent.com/56099627/75664381-bc86ac80-5cb5-11ea-97d1-d900b42b9b52.png)
+![image](https://user-images.githubusercontent.com/56099627/75664381-bc86ac80-5cb5-11ea-97d1-d900b42b9b52.png)  
+![image](https://user-images.githubusercontent.com/56099627/75664595-0b344680-5cb6-11ea-9f97-02debaf91cd3.png)  
