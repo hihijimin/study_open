@@ -49,3 +49,12 @@ tkinter 참고자료:: https://light-tree.tistory.com/61
 -명령어: python -c "import matplotlib; print(matplotlib.rcsetup.all_backends)"
 -이 명령어로 matplotlib backend들을 조회할수 있다
 ![image](https://user-images.githubusercontent.com/56099627/75612159-59d1cb80-5b64-11ea-9d90-c83d1ff0e5ba.png)  
+-train 할때 발생 하는 에러  
+-First go to cocoapi\PythonAPI\setup.py and change line 14 from:  
+extra_compile_args=['-Wno-cpp', '-Wno-unused-function', '-std=c99'],  
+to  
+extra_compile_args={'gcc': ['/Qstd=c99']},  
+as pointed out in this issue: CharlesShang/FastMaskRCNN#173  
+And then try to run make from cocoapi\PythonAPI\pycocotools again.  
+참고사이트: https://github.com/cocodataset/cocoapi/issues/51  
+![image](https://user-images.githubusercontent.com/56099627/75663702-9ca2b900-5cb4-11ea-9121-3343dea4f870.png)  
