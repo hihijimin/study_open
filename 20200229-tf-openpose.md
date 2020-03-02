@@ -85,3 +85,7 @@ And then try to run make from cocoapi\PythonAPI\pycocotools again.
 ![image](https://user-images.githubusercontent.com/56099627/75673703-e72d3100-5cc6-11ea-9d3c-54a9a9f972b4.png) 
 ![image](https://user-images.githubusercontent.com/56099627/75673872-4ab75e80-5cc7-11ea-9de8-5b7332b13722.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75673955-79cdd000-5cc7-11ea-86a7-e650cdd2130b.png)
+-gsutil 로 cocodataset 다운로드 에러나서 wget으로 다운로드 함  
+참고사이트: https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9  
+![image](https://user-images.githubusercontent.com/56099627/75675063-b7335d00-5cc9-11ea-8471-9045cffdc54c.png)  
+![image](https://user-images.githubusercontent.com/56099627/75675116-d631ef00-5cc9-11ea-8735-238d5f4825a7.png)  
