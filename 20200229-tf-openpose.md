@@ -16,6 +16,8 @@ https://github.com/ildoonet/tf-pose-estimation 을 보고 설치하기!
 ![image](https://user-images.githubusercontent.com/56099627/75607096-dbab0000-5b36-11ea-90b5-0908eeed7015.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75607113-19a82400-5b37-11ea-8ce9-32cf776334f4.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75607130-3f352d80-5b37-11ea-83c3-f76a69b3bb74.png)  
+-참고사이트에 가서 찾아 다운로드하기 : opencv_python‑4.1.2+contrib‑cp36‑cp36m‑win_amd64.whl
+참고 사이트: https://www.lfd.uci.edu/~gohlke/pythonlibs/
 ![image](https://user-images.githubusercontent.com/56099627/75607138-5411c100-5b37-11ea-86ff-db8d69738560.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75607150-6db30880-5b37-11ea-9be6-e097fc0da948.png)  
 -에러수정  
