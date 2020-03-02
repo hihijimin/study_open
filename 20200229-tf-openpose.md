@@ -38,3 +38,14 @@ https://github.com/ildoonet/tf-pose-estimation/tree/master/tf_pose/pafprocess%20
 ![image](https://user-images.githubusercontent.com/56099627/75611570-00b36900-5b5f-11ea-9572-d659011e082e.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75611586-22aceb80-5b5f-11ea-809d-4a4cd90d8fc1.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75611600-3b1d0600-5b5f-11ea-8ce5-147aed98ffc5.png)  
+-설치를 모두 다 했으니 이미지 넣고 결과를 보자!  
+-명령여: python run.py --model=mobilenet_thin --resize=432x368 --image=./images/p1.jpg  
+-근데 에러발생 : plt.show()을 할 수 없다.  
+  -> install tkinter (python 용 GUI)
+tkinter 참고자료:: https://light-tree.tistory.com/61  
+![image](https://user-images.githubusercontent.com/56099627/75611844-80423780-5b61-11ea-9f6e-3b853a42f9fa.png)  
+..중략..
+![image](https://user-images.githubusercontent.com/56099627/75611861-9ea83300-5b61-11ea-9c1e-6460f40c8034.png)  
+-명령어: python -c "import matplotlib; print(matplotlib.rcsetup.all_backends)"
+-이 명령어로 matplotlib backend들을 조회할수 있다
+![image](https://user-images.githubusercontent.com/56099627/75612159-59d1cb80-5b64-11ea-9d90-c83d1ff0e5ba.png)  
