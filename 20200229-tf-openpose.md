@@ -49,6 +49,12 @@ tkinter 참고자료:: https://light-tree.tistory.com/61
 -명령어: python -c "import matplotlib; print(matplotlib.rcsetup.all_backends)"
 -이 명령어로 matplotlib backend들을 조회할수 있다
 ![image](https://user-images.githubusercontent.com/56099627/75612159-59d1cb80-5b64-11ea-9d90-c83d1ff0e5ba.png)  
+$ git clone https://github.com/cocodataset/cocoapi
+$ cd cocoapi/PythonAPI
+$ python3 setup.py build_ext --inplace
+$ python3 setup.py build_ext install
+참고사이트: https://github.com/ildoonet/tf-pose-estimation/blob/master/etcs/training.md
+  
 -train 할때 발생 하는 에러  
 -First go to cocoapi\PythonAPI\setup.py and change line 14 from:  
 extra_compile_args=['-Wno-cpp', '-Wno-unused-function', '-std=c99'],  
@@ -65,3 +71,8 @@ And then try to run make from cocoapi\PythonAPI\pycocotools again.
 -수정후 train 명령어 build 결과(requirement.txt에서 pycocotools을 포함한 셋팅된 가상환경)  
 ![image](https://user-images.githubusercontent.com/56099627/75664381-bc86ac80-5cb5-11ea-97d1-d900b42b9b52.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75664595-0b344680-5cb6-11ea-9f97-02debaf91cd3.png)  
+-$ python3 setup.py build_ext --inplace
+-$ python3 setup.py build_ext install
+![image](https://user-images.githubusercontent.com/56099627/75665214-2a7fa380-5cb7-11ea-8139-acb3dfc6f1fd.png)  
+![image](https://user-images.githubusercontent.com/56099627/75665256-3f5c3700-5cb7-11ea-9c72-501b0f3f33c4.png)  
+
