@@ -58,3 +58,6 @@ as pointed out in this issue: CharlesShang/FastMaskRCNN#173
 And then try to run make from cocoapi\PythonAPI\pycocotools again.  
 참고사이트: https://github.com/cocodataset/cocoapi/issues/51  
 ![image](https://user-images.githubusercontent.com/56099627/75663702-9ca2b900-5cb4-11ea-9121-3343dea4f870.png)  
+- 수정후 train 명령어 build 결과  
+![image](https://user-images.githubusercontent.com/56099627/75663880-eb505300-5cb4-11ea-80a6-6326b78e7efc.png)  
+![image](https://user-images.githubusercontent.com/56099627/75663977-16d33d80-5cb5-11ea-8fcd-de7460273659.png)  
