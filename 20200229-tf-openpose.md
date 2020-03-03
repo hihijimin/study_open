@@ -89,3 +89,9 @@ And then try to run make from cocoapi\PythonAPI\pycocotools again.
 참고사이트: https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9  
 ![image](https://user-images.githubusercontent.com/56099627/75675063-b7335d00-5cc9-11ea-8471-9045cffdc54c.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75675116-d631ef00-5cc9-11ea-8735-238d5f4825a7.png)  
+-coco api 설치해야 coco annotation .json 파일 쉽게 확인 가능함
+-cocodataset 다운로드 후에는 jq-win64.exe을 다운로드 하여 json파일에 들어있는 구성을 이쁘게 확인 할수 있다..
+참고사이트: https://ukayzm.github.io/cocodataset/  
+![image](https://user-images.githubusercontent.com/56099627/75784557-b53ecc00-5da5-11ea-9603-840d1eabbb9c.png)  
+-coco api 빌드 후, pycocoDemo.ipynb 화면
+![image](https://user-images.githubusercontent.com/56099627/75784827-22eaf800-5da6-11ea-8f44-140e3df13185.png)  
