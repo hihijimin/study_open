@@ -94,4 +94,4 @@ And then try to run make from cocoapi\PythonAPI\pycocotools again.
 참고사이트: https://ukayzm.github.io/cocodataset/  
 ![image](https://user-images.githubusercontent.com/56099627/75784557-b53ecc00-5da5-11ea-9603-840d1eabbb9c.png)  
 -coco api 빌드 후, pycocoDemo.ipynb 화면
-![image](https://user-images.githubusercontent.com/56099627/75784827-22eaf800-5da6-11ea-8f44-140e3df13185.png)  
+![image](https://user-images.githubusercontent.com/56099627/75785107-90972400-5da6-11ea-8b9c-5521ca20cda6.png)  
