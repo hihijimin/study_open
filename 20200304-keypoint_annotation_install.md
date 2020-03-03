@@ -1,8 +1,8 @@
-# supervisely 
+-supervisely 
 참고사이트: https://app.supervise.ly/ 에 들어가 회원가입하고 activity email을 받은 후, 프로젝트 생성한다
 내컴퓨터로부터 db을 load 시킨다
 ---------------------------------------------------------------------------------------------
-# mongodb
+-mongodb
 참고사이트: https://github.com/visipedia/annotation_tools  
 참고사이트: https://eehoeskrap.tistory.com/353  
   
