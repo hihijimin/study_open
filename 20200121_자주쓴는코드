@@ -78,3 +78,7 @@ sharpening_2 = np.array([[-1, -1, -1, -1, -1], [-1, 2, 2, 2, -1],
                                  [-1, 2, 9, 2, -1], [-1, 2, 2, 2, -1],
                                  [-1, -1, -1, -1, -1]]) / 9.0
 img_out = cv2.filter2D(img , -1, sharpening_2)
+
+# for문 마다 변수이름 바꾸기
+for i in range(0,len(coco_kps.loadAnns(annIds))):
+    globals()['personkey_{}'.format(i)]=coco_kps.loadAnns(annIds)[i]['keypoints']
