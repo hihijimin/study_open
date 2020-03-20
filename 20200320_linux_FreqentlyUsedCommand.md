@@ -4,3 +4,6 @@ $ sudo ln -s /usr/bin/python3 /usr/bin/python
 : link-file to copy newlink-newfile  
 : 만약 target_dir이 이미 존재한다면 그 안에 새로운 링크를 만들게 된다.  
 
+Numpy 버전이 1.17 보다 낮아야합니다.  
+다음을 실행해보셔요 ~!  
+pip install "numpy<1.17"  
