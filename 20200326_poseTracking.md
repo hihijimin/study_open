@@ -7,3 +7,6 @@ https://github.com/aarac/DeepBehavior
 
 posetrack blog  
 https://eehoeskrap.tistory.com/341  
+
+slideshare) pose- posetrack-  
+https://www.slideshare.net/ssuser2ff343/human-behavior-understanding-from-humanoriented-analysis-to-action-recognition-ii  
