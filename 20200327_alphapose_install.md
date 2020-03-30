@@ -26,7 +26,5 @@ commend: conda install pytorch==1.1.0 torchvision==0.3.0
     sudo apt-get install libyaml-dev
     python setup.py build develop
 
-install pytorch in enviroment of conda, cuda-10
-https://sando0.tistory.com/98
-
+https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch  
 
