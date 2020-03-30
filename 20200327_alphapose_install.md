@@ -1,5 +1,6 @@
 alphapose github  
-https://github.com/MVIG-SJTU/AlphaPose  
+(global) https://github.com/MVIG-SJTU/AlphaPose  
+(windows) https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch  
 
 create conda for AlphPose ~~
 ![image](https://user-images.githubusercontent.com/56099627/77866693-0cce3b80-726f-11ea-9097-6e11f35818c6.png)  
@@ -26,5 +27,4 @@ commend: conda install pytorch==1.1.0 torchvision==0.3.0
     sudo apt-get install libyaml-dev
     python setup.py build develop
 
-https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch  
 
