@@ -17,3 +17,5 @@ HRNet-Object-Detection
 https://github.com/HRNet/HRNet-Object-Detection  
 
 This code is developed using on **Python 3.6 and PyTorch 1.0.0** on Ubuntu 16.04 with NVIDIA GPUs.  
+https://pytorch.org/get-started/previous-versions/
+command: conda install pytorch==1.0.0 torchvision==0.2.1 cuda100 -c pytorch 
