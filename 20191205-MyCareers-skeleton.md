@@ -70,14 +70,16 @@ pooling을 수행하지 않고도 receptive field를 크게 가져갈 수 있기
 
 ## Transposed Convolutions
 (a.k.a. deconvolutions or fractionally strided convolutions)  
-- Transposed Convolution은 deconvolutional layer와 동일한 공간 해상도를 생성하기 점은 유사하지만 실제 수행되는 수학 연산은 다릅니다. Transposed Convolutional layer는 정기적인 convolution을 수행하며 공간의 변화를 되돌립니다.  
+- Transposed Convolution은 deconvolutional layer와 동일한 공간 해상도를 생성하기 점은 유사하지만 실제 수행되는 수학 연산은 다릅니다.  Transposed Convolutional layer는 정기적인 convolution을 수행하며 공간의 변화를 되돌립니다.  
 <img src="https://cdn-images-1.medium.com/max/1200/1*BMngs93_rm2_BpJFH2mS0Q.gif">
-<p align="center"> 2D convolution with no padding, stride of 2 and kernel of 3</p>
+<p align="center"> 2D convolution with no padding, stride of 2 and kernel of 3</p>  
+  
 - 혼란스러울 수 있으므로 구체적인 예를 보겠습니다. convolution layer에 넣을 5x5 이미지가 있습니다. stride는 2, padding은 없고 kernel은 3x3입니다. 이 결과는 2x2 이미지가 생성됩니다.  
 - 이 과정을 되돌리고 싶다면, 역 수학 연산을 위해 input의 각 픽셀으로부터 9개의 값을 뽑아야 합니다. 그 후에 우리는 stride가 2인 출력 이미지를 지나갑니다. 이 방법이 deconvolution입니다  
-<img src="https://cdn-images-1.medium.com/max/1200/1*Lpn4nag_KRMfGkx1k6bV-g.gif">
-<p align="center"> Transposed 2D convolution with no padding, stride of 2 and kernel of 3 </p>
-<p align="center"> 인풋 데이터를 2칸 띄어 놓는것을 stride 2이고 filter가 곧 kernel 이므로 kernel 사이즈가 3 </p>
+<img src="https://cdn-images-1.medium.com/max/1200/1*Lpn4nag_KRMfGkx1k6bV-g.gif">  
+<p align="center"> Transposed 2D convolution with no padding, stride of 2 and kernel of 3 </p>  
+<p align="center"> 인풋 데이터를 2칸 띄어 놓는것을 stride 2이고 filter가 곧 kernel 이므로 kernel 사이즈가 3 </p>  
+  
 - transposed convolution은 위와 같은 방법을 사용하지 않습니다. deconvolution과 공통점은 convolution 작업을 하면서 5x5 이미지의 output을 생성하는 것입니다. 이 작업을 하기 위해 input에 임의의 padding을 넣어야 합니다.  
 - 상상할 수 있듯, 이 단계에선 위의 과정을 반대로 수행하지 않습니다.  
 - 단순히 이전 공간 해상도를 재구성하고 convolution을 수행합니다. 수학적 역 관계는 아니지만 인코더-디코더 아키텍쳐의 경우 유용합니다. 이 방법은 2개의 별도 프로세스를 진행하는 것 대신 convolution된 이미지의 upscaling을 결합할 수 있습니다  
