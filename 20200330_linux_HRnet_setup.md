@@ -37,7 +37,11 @@ L Install dependencies
   pip install -r requirements.txt  
   ![image](https://user-images.githubusercontent.com/56099627/78127392-0bf40000-744f-11ea-97b1-c7fb7186cfad.png) L dataset DOWNLOAD  
   https://github.com/jian667/face-dataset  
-  
+L test.py 진행 중 error: " scipy.misc import imresize " 만나면 아래 처럼 해결!  
+
+    " scipy.misc import imresize "  에러가 발생한다면 scipy버전이 최신 버전이기 때문입니다. 
+    1.3.0 이상 버전 부터 imresize를 제거 했기 때문에 로드할 수 없는 상태이구요 
+    아나콘다 명령프롬프트(cmd)창을 열어서  명령어 : pip install scipy==1.2.0 
   
 ------------------------------------------------------
 ## video-realtime poseEstimation  
