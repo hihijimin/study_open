@@ -44,3 +44,7 @@ TensorRT-5.1.5.0 (CUDA 10.0)
 $ cd TensorRT-5.1.x.x/python (for python 3.6)  
 $ sudo pip3 install tensorrt-5.1.5.0-cp36-none-linux_x86_64.whl  
 ![image](https://user-images.githubusercontent.com/56099627/79957639-d629c080-84bc-11ea-8e66-e46977cf7d35.png)  
+$ cd TensorRT-5.1.x.x/uff (for python 3.6)  
+$ sudo pip3 install uff-0.6.3-py2.py3-none-any.whl  
+![image](https://user-images.githubusercontent.com/56099627/79958257-adee9180-84bd-11ea-8f20-0ab71fee377d.png)  
+
