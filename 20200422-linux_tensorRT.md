@@ -40,3 +40,7 @@ TensorRT-5.1.5.0 (CUDA 10.0)
     $ tree-d
     $ python
       import tensorrt as trt
+      
+$ cd TensorRT-5.1.x.x/python (for python 3.6)  
+$ sudo pip3 install tensorrt-5.1.5.0-cp36-none-linux_x86_64.whl  
+![image](https://user-images.githubusercontent.com/56099627/79957639-d629c080-84bc-11ea-8e66-e46977cf7d35.png)  
