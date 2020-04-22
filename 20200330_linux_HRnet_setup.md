@@ -48,3 +48,6 @@ L test.py 진행 중 error: " scipy.misc import imresize " 만나면 아래 처�
 ------------------------------------------------------
 ## video-realtime poseEstimation  
 https://github.com/lxy5513/videopose  
+
+## TensorRT Pose Estimation
+https://github.com/NVIDIA-AI-IOT/trt_pose  
