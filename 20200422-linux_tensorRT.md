@@ -54,3 +54,29 @@ sudo pip3 install graphsurgeon-0.4.1-py2.py3-none-any.whl
 
 tensorrt sample_mnist 실행해보기  
 ![image](https://user-images.githubusercontent.com/56099627/79963785-c910cf80-84c4-11ea-8b91-80d052a70b3d.png)  
+
+
+tensorrt 설치 전 pycuda 설치해야함  
+https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html  
+위 사이트에 들어가 보면 pycuda 설치하라고 나와있음 (아래 내용 증거)  
+2. Getting Started  
+Ensure you are familiar with the following installation requirements and notes.  
+The Windows zip package for TensorRT does not provide Python support. Python may be supported in the future.
+**If you are using the TensorRT Python API and PyCUDA isn’t already installed on your system, see Installing PyCUDA. If you encounter any issues with PyCUDA usage, you may need to recompile it yourself. For more information, see Installing PyCUDA on Linux.**  
+pycuda 설치는 링크(**Installing PyCUDA on Linux.**) 따라가보면 https://wiki.tiker.net/PyCuda/Installation/Linux 여기 사이트가 나옴 
+여기 사이트 순서대로 설치해주면 됌  
+
+다운로드 파일: tar xzvf pycuda-2019.1.2.tar.gz  
+다운로드 파일 사이트: https://pypi.org/project/pycuda/#files  
+![image](https://user-images.githubusercontent.com/56099627/79968729-80104980-84cb-11ea-802a-5eb15b53a2ff.png)  
+내꺼 쿠다 경로: CUDA_HOME=/usr/local/cuda-10.0  
+python configure.py --cuda-root=/usr/local/cuda-10.0  
+  
+$ cd pycuda-VERSION # if you're not there already  
+$ python configure.py --cuda-root=/usr/local/cuda-10.0  
+$ su -c "make install"  
+Step 4: Test PyCUDA  
+![image](https://user-images.githubusercontent.com/56099627/79969037-e7c69480-84cb-11ea-84d8-594f8d9a06f5.png)  
+
+
+
