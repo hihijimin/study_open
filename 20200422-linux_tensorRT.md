@@ -53,6 +53,7 @@ $ sudo pip3 install graphsurgeon-0.4.1-py2.py3-none-any.whl
 ![image](https://user-images.githubusercontent.com/56099627/79959887-a8924680-84bf-11ea-80a9-d1237d0093c5.png)  
 tensorrt 설치된 cuda&tensorrt 패키지 보기  
 $ dpkg -l | grep TensorRT  
+![image](https://user-images.githubusercontent.com/56099627/80086576-df865c00-8594-11ea-822b-0aa1d860433f.png)  
   
 tensorrt sample_mnist 실행해보기  
 ![image](https://user-images.githubusercontent.com/56099627/79963785-c910cf80-84c4-11ea-8b91-80d052a70b3d.png)  
