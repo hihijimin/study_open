@@ -49,9 +49,11 @@ $ sudo pip3 install uff-0.6.3-py2.py3-none-any.whl
 ![image](https://user-images.githubusercontent.com/56099627/79958257-adee9180-84bd-11ea-8f20-0ab71fee377d.png)  
 $ which convert-to-uff  
 ![image](https://user-images.githubusercontent.com/56099627/79959801-84366a00-84bf-11ea-8538-5a99d3ea8d84.png)  
-sudo pip3 install graphsurgeon-0.4.1-py2.py3-none-any.whl  
+$ sudo pip3 install graphsurgeon-0.4.1-py2.py3-none-any.whl  
 ![image](https://user-images.githubusercontent.com/56099627/79959887-a8924680-84bf-11ea-80a9-d1237d0093c5.png)  
-
+tensorrt 설치된 cuda&tensorrt 패키지 보기  
+$ dpkg -l | grep TensorRT  
+  
 tensorrt sample_mnist 실행해보기  
 ![image](https://user-images.githubusercontent.com/56099627/79963785-c910cf80-84c4-11ea-8b91-80d052a70b3d.png)  
 
