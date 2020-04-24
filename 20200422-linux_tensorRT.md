@@ -58,6 +58,7 @@ $ dpkg -l | grep TensorRT
 tensorrt sample_mnist 실행해보기  
 ![image](https://user-images.githubusercontent.com/56099627/79963785-c910cf80-84c4-11ea-8b91-80d052a70b3d.png)  
 
+import tensorflow.contrib.tensorrt
 
 tensorrt 설치 전 pycuda 설치해야함  
 https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html  
