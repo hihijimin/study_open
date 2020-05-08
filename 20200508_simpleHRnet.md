@@ -42,23 +42,35 @@ $ sh download_weights.sh
   
 ## 에러발생
 1. FileNotFoundError: [Errno 2] No such file or directory: 'ffprobe': 'ffprobe'
-`/home/jimin/anaconda3/envs/simplepose/bin/python /media/jimin/D/simple-HRNet/scripts/live-demo.py
-Traceback (most recent call last):
-  File "/media/jimin/D/simple-HRNet/scripts/live-demo.py", line 185, in <module>
-    main(**args.__dict__)
-  File "/media/jimin/D/simple-HRNet/scripts/live-demo.py", line 35, in main
-    rotation_code = check_video_rotation(filename)
-  File "/media/jimin/D/simple-HRNet/misc/visualization.py", line 268, in check_video_rotation
-    meta_dict = ffmpeg.probe(filename)
-  File "/home/jimin/anaconda3/envs/simplepose/lib/python3.6/site-packages/ffmpeg/_probe.py", line 20, in probe
-    p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-  File "/home/jimin/anaconda3/envs/simplepose/lib/python3.6/subprocess.py", line 729, in __init__
-    restore_signals, start_new_session)
-  File "/home/jimin/anaconda3/envs/simplepose/lib/python3.6/subprocess.py", line 1364, in _execute_child
-    raise child_exception_type(errno_num, err_msg, err_filename)
-FileNotFoundError: [Errno 2] No such file or directory: 'ffprobe': 'ffprobe'
 
-Process finished with exit code 1`
+  /home/jimin/anaconda3/envs/simplepose/bin/python /media/jimin/D/simple-HRNet/scripts/live-demo.py
+  Traceback (most recent call last):
+    File "/media/jimin/D/simple-HRNet/scripts/live-demo.py", line 185, in <module>
+      main(**args.__dict__)
+    File "/media/jimin/D/simple-HRNet/scripts/live-demo.py", line 35, in main
+      rotation_code = check_video_rotation(filename)
+    File "/media/jimin/D/simple-HRNet/misc/visualization.py", line 268, in check_video_rotation
+      meta_dict = ffmpeg.probe(filename)
+    File "/home/jimin/anaconda3/envs/simplepose/lib/python3.6/site-packages/ffmpeg/_probe.py", line 20, in probe
+      p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    File "/home/jimin/anaconda3/envs/simplepose/lib/python3.6/subprocess.py", line 729, in __init__
+      restore_signals, start_new_session)
+    File "/home/jimin/anaconda3/envs/simplepose/lib/python3.6/subprocess.py", line 1364, in _execute_child
+      raise child_exception_type(errno_num, err_msg, err_filename)
+  FileNotFoundError: [Errno 2] No such file or directory: 'ffprobe': 'ffprobe'
 
-https://stackoverflow.com/questions/57350259/filenotfounderror-errno-2-no-such-file-or-directory-ffprobe-ffprobe   
+  Process finished with exit code 1
+
+참고사이트:
+https://stackoverflow.com/questions/57350259/filenotfounderror-errno-2-no-such-file-or-directory-ffprobe-ffprobe 
+
+해결  
+https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg  
+우분투에서 FFmpeg 설치  
+$ sudo add-apt-repository ppa:mc3man/trusty-media  
+$ sudo apt-get update  
+$ sudo apt-get install ffmpeg  
+$ sudo apt-get install frei0r-plugins  
+우분투에서 ffprobe 설치  
+$ pip install ffprobe  
 ![image](https://user-images.githubusercontent.com/56099627/81368771-9ce38880-912b-11ea-92a9-6c03c9f9d744.png)  
