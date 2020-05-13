@@ -46,6 +46,15 @@ L test.py 진행 중 error: " scipy.misc import imresize " 만나면 아래 처�
     onda install Scipy = 1.1.0 because imread has been deprecated in scipy 1.2.0+
   
 ------------------------------------------------------
+## PyTorch 설치 후 GPU를 사용가능여부와 cuda 버전이 알맞게 설치되었는지 확인
+>>> import torch  
+>>> print(torch.cuda.is_available())  
+True  
+>>> print(torch.version.cuda)  
+10.0.130  
+  
+![image](https://user-images.githubusercontent.com/56099627/81780612-c50b2700-9531-11ea-88b7-354240b5b897.png)  
+  
 ## video-realtime poseEstimation  
 https://github.com/lxy5513/videopose  
 
