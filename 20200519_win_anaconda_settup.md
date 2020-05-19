@@ -13,3 +13,6 @@ Select installation Type(Just Me(recommended))선택 -> 설칫할 경로는 원�
 ## opencv 설치
 $ pip install opencv-contrib-python  
 ![image](https://user-images.githubusercontent.com/56099627/82297623-e1a1d600-99ed-11ea-9622-8ce7ad6e490a.png)  
+
+## cuda 설치
+
