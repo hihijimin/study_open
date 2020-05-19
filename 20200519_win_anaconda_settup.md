@@ -14,5 +14,10 @@ Select installation Type(Just Me(recommended))선택 -> 설칫할 경로는 원�
 $ pip install opencv-contrib-python  
 ![image](https://user-images.githubusercontent.com/56099627/82297623-e1a1d600-99ed-11ea-9622-8ce7ad6e490a.png)  
 
+## anaconda 가상환경 만들기
+$ conda create -n hrnet_pose python=3.6  
+![image](https://user-images.githubusercontent.com/56099627/82298695-778a3080-99ef-11ea-8c0e-5b2019201527.png)  
+![image](https://user-images.githubusercontent.com/56099627/82298772-938dd200-99ef-11ea-835e-093d80090346.png)  
+
 ## cuda 설치
 
