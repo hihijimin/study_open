@@ -20,4 +20,6 @@ $ conda create -n hrnet_pose python=3.6
 ![image](https://user-images.githubusercontent.com/56099627/82298772-938dd200-99ef-11ea-835e-093d80090346.png)  
 
 ## cuda 설치
-
+nvidia 사이트 가서 cuda 9.0 파일 다운로드 하기(링크 없음)  
+![image](https://user-images.githubusercontent.com/56099627/82300488-e2d50200-99f1-11ea-9ae5-c18a0f5d5e39.png)  
+(참고: 경로를 D 드라이브로 설정해서 설치해도 C 드라이브에 설치 됌)  
