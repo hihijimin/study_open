@@ -9,3 +9,7 @@ Select installation Type(Just Me(recommended))선택 -> 설칫할 경로는 원�
 - 설치된 앱 중에서 anaconda prompt 에 들어가서 $ conda install python=3.6 이라 작성한다(python =3.6 설치하기 위해)  
 ![image](https://user-images.githubusercontent.com/56099627/82296200-cf269d00-99eb-11ea-8d73-32561c5f0ea8.png)  
 ![image](https://user-images.githubusercontent.com/56099627/82296311-f8dfc400-99eb-11ea-90fe-862479eae4d0.png)  
+
+## opencv 설치
+$ pip install opencv-contrib-python  
+![image](https://user-images.githubusercontent.com/56099627/82297623-e1a1d600-99ed-11ea-9622-8ce7ad6e490a.png)  
