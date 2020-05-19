@@ -26,6 +26,6 @@ nvidia 사이트 가서 cuda 9.0 파일 다운로드 하기(링크 없음)
 + cudnn 다운로드  
 CUDNN 다운로드 사이트: https://developer.nvidia.com/rdp/cudnn-download  
 ![image](https://user-images.githubusercontent.com/56099627/82305664-e455f880-99f8-11ea-8515-aea2e217f4d3.png)  
--경로" C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 " 에 cudnn 다운로드 받은것을 덮어쓰기 해준다.  
+- 경로" C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 " 에 cudnn 다운로드 받은것을 덮어쓰기 해준다.  
 
 
