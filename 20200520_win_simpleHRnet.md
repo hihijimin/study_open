@@ -9,5 +9,5 @@ $ pip install opencv-contrib-python
 ![image](https://user-images.githubusercontent.com/56099627/82406846-9d244200-9aa2-11ea-8d1f-554deb6b0117.png)  
 2) torch 설치  
 $ 
-: (requirements)
+: (requirements) torch>=1.4.0, torchvision>=0.5.0  
 
