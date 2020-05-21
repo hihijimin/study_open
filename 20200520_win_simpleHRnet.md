@@ -18,12 +18,14 @@ requirements.txt list
     tensorboardX>=1.4
 
 1) opencv 설치  
-: numpy, opencv-python 함께 설치됨  
+: numpy, opencv-contrib-python 함께 설치됨  
 
 $ pip install opencv-contrib-python  
 (numpy 패키지 까지 같이 설치됨)  
 : (requirements) numpy>=1.16, opencv-python>=3.4  
 ![image](https://user-images.githubusercontent.com/56099627/82406846-9d244200-9aa2-11ea-8d1f-554deb6b0117.png)  
+$ pip install opencv-python  
+![image](https://user-images.githubusercontent.com/56099627/82530832-227a2600-9b79-11ea-8ff4-0f7e97c1d2cd.png)  
 
 2) torch 설치  
 : torch, torchvusion, future, pillow 함께 설치됨  
