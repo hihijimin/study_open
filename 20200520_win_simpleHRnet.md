@@ -46,6 +46,11 @@ pip 설치
 $ pip install torch==1.5.0+cu92 torchvision==0.6.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
 ![image](https://user-images.githubusercontent.com/56099627/82527467-800a7480-9b71-11ea-9d34-34cc4bb9e58f.png)  
 
+==> cuda 10.1으로 재설치 한 후, pip으로 torch 설치  
+pip 설치  
+$ pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html  
+![image](https://user-images.githubusercontent.com/56099627/83504106-0f634080-a4ff-11ea-9581-cc1369247a69.png)  
+
 3) ffmpeg-python (0.2.0)  
 $ pip install ffmpeg-python  
 ![image](https://user-images.githubusercontent.com/56099627/82528953-e2b13f80-9b74-11ea-8215-342d59e5d612.png)  
