@@ -83,3 +83,12 @@ $ pip install tensorboard
 $ pip install tensorboardX  
 ![image](https://user-images.githubusercontent.com/56099627/82530601-a41d8400-9b78-11ea-98d8-0d680f6434e4.png)  
 
+## 아나콘다에 opencv 설치하기
+https://anaconda.org/conda-forge/opencv  
+
+        To install this package with conda run one of the following:
+        conda install -c conda-forge opencv
+        conda install -c conda-forge/label/gcc7 opencv
+        conda install -c conda-forge/label/broken opencv
+        conda install -c conda-forge/label/cf201901 opencv
+        conda install -c conda-forge/label/cf202003 opencv
