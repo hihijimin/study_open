@@ -15,6 +15,7 @@ https://github.com/ildoonet/tf-pose-estimation 을 보고 설치하기!
 ![image](https://user-images.githubusercontent.com/56099627/75607083-c59d3f80-5b36-11ea-8329-e1fc145c1dbe.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75607096-dbab0000-5b36-11ea-90b5-0908eeed7015.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75607113-19a82400-5b37-11ea-8ce9-32cf776334f4.png) 
+cuda 8.0에서 
 $ pip install https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.4.0-cp36-cp36m-win_amd64.whl  
 ![image](https://user-images.githubusercontent.com/56099627/75607130-3f352d80-5b37-11ea-83c3-f76a69b3bb74.png)  
 -참고사이트에 가서 찾아 다운로드하기 : opencv_python‑4.1.2+contrib‑cp36‑cp36m‑win_amd64.whl  
