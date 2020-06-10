@@ -26,7 +26,9 @@ $ pip install https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_g
 -에러발생: error: Unable to find vcvarsall.bat  
 ![image](https://user-images.githubusercontent.com/56099627/84219213-f5cb8580-ab0a-11ea-9d6f-fef146b280b0.png)  
 --> (해결) visualcppbuildtools_full.exe 다운로드 받아서 설치해줬더니 잘 해결됨  
-https://yellowtopaz.tistory.com/191  
+https://yellowtopaz.tistory.com/191
+--> 해결 후 인증  
+![image](https://user-images.githubusercontent.com/56099627/84219520-b0f41e80-ab0b-11ea-8e10-634d25f202be.png)  
 
 -에러수정  
 ![image](https://user-images.githubusercontent.com/56099627/75608132-29783600-5b40-11ea-8943-09a8eb2621cd.png)  
