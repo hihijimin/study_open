@@ -36,7 +36,7 @@ https://yellowtopaz.tistory.com/191
 -> 해당 파일에 들어가서 주석 처리 했음  
 ![image](https://user-images.githubusercontent.com/56099627/75610306-79acc380-5b53-11ea-87ed-9106088d07c7.png)  
 -> swig을 관리자 권한으로 powersell에서 설치 하고  
-https://github.com/ildoonet/tf-pose-estimation/tree/master/tf_pose/pafprocess%20ins 을 참고하여 swig 설치하라  
+https://github.com/ildoonet/tf-pose-estimation/issues/554 을 참고하여 swig 설치하라  
 -환경변수에 시스템환경변수PATH에 C:\Libs\swigwin-4.0.1 을 추가한다.(컴터를 다시켜기 하면 환경변수에 적용한거 활성화 될거임)  
 그런 후, 아래 그림처럼 설치  
 ![image](https://user-images.githubusercontent.com/56099627/75610596-fd67af80-5b55-11ea-9076-3028e6b0db1d.png)  
