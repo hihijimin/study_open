@@ -26,7 +26,7 @@ $ pip install https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_g
 -에러발생: error: Unable to find vcvarsall.bat  
 ![image](https://user-images.githubusercontent.com/56099627/84219213-f5cb8580-ab0a-11ea-9d6f-fef146b280b0.png)  
 --> (해결) visualcppbuildtools_full.exe 다운로드 받아서 설치해줬더니 잘 해결됨  
-https://yellowtopaz.tistory.com/191
+https://yellowtopaz.tistory.com/191  
 --> 해결 후 인증  
 ![image](https://user-images.githubusercontent.com/56099627/84219520-b0f41e80-ab0b-11ea-8e10-634d25f202be.png)  
 
@@ -37,7 +37,10 @@ https://yellowtopaz.tistory.com/191
 ![image](https://user-images.githubusercontent.com/56099627/75610306-79acc380-5b53-11ea-87ed-9106088d07c7.png)  
 -> swig을 관리자 권한으로 powersell에서 설치 하고  
 https://github.com/ildoonet/tf-pose-estimation/issues/554 을 참고하여 swig 설치하라  
+http://blog.daum.net/purume77/7332107  을 참고하여 swig 설치하라  
 -환경변수에 시스템환경변수PATH에 C:\Libs\swigwin-4.0.1 을 추가한다.(컴터를 다시켜기 하면 환경변수에 적용한거 활성화 될거임)  
+![image](https://user-images.githubusercontent.com/56099627/84231624-81eca580-ab29-11ea-88d1-c6da442cc382.png)  
+
 그런 후, 아래 그림처럼 설치  
 ![image](https://user-images.githubusercontent.com/56099627/75610596-fd67af80-5b55-11ea-9076-3028e6b0db1d.png)  
 ![image](https://user-images.githubusercontent.com/56099627/75610622-2a1bc700-5b56-11ea-81da-8603e3cdc108.png)  
