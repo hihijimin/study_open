@@ -4,7 +4,7 @@ HRnet2019버전으로 pose estimation 한 것임
 https://github.com/stefanopini/simple-HRNet  
   
 1. 설치 시작  
-1-0. pytorch, torchvision 설치
+1-0. pytorch, torchvision 설치  
 onlyCPU  
 $ conda install pytorch==1.5.0 torchvision==0.6.0 cpuonly -c pytorch   
 ![image](https://user-images.githubusercontent.com/56099627/84871915-1b80fd80-b0bc-11ea-822f-bde89796613c.png)  
