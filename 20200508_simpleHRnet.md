@@ -29,13 +29,13 @@ $ pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.py
     https://varhowto.com/how-to-install-pytorch-with-cuda-10-0/
 
     1. Check if CUDA 10.0 is installed
-    cat /usr/local/cuda/version.txt
+    $ cat /usr/local/cuda/version.txt
 
     2. [For pip] Run pip install with specified version and -f
-    pip install torch==1.5.0+cu100 torchvision==0.6.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
+    $ pip install torch==1.5.0+cu100 torchvision==0.6.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
 
     3. [For conda] Run conda install with cudatoolkit
-    conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
+    $ conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
 
     4. Verify PyTorch is installed
     Run Python with
@@ -47,8 +47,8 @@ $ pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.py
     5. Verify PyTorch is using CUDA 10.0
     Run Python with
 
-  import torch
-  torch.cuda.is_available()
+    import torch
+    torch.cuda.is_available()
   
 1-1. $ pip install -r requirements.txt 실행
 ![image](https://user-images.githubusercontent.com/56099627/81363128-8c2c1600-911d-11ea-90f1-c6fe01cf569e.png)  
