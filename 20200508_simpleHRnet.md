@@ -4,10 +4,26 @@ HRnet2019버전으로 pose estimation 한 것임
 https://github.com/stefanopini/simple-HRNet  
   
 1. 설치 시작  
+1-0. pytorch, torchvision 설치
 onlyCPU  
 $ conda install pytorch==1.5.0 torchvision==0.6.0 cpuonly -c pytorch   
-pip torch 설치  
+![image](https://user-images.githubusercontent.com/56099627/84871915-1b80fd80-b0bc-11ea-822f-bde89796613c.png)  
+conda 연동 설치  
+$ conda install pytorch torchvision cudatoolkit=10.0  
+![image](https://user-images.githubusercontent.com/56099627/84872136-761a5980-b0bc-11ea-8d97-c9ba6b3a2e04.png)  
+pip 설치  
 $ pip install torch==1.5.0 torchvision==0.6.0  
+![image](https://user-images.githubusercontent.com/56099627/84872273-a530cb00-b0bc-11ea-8f47-0a561c18335d.png)  
+pip + cuda 설치(원하는 버전: torch==1.5.0 torchvision==0.6.0)  
+$ pip install torch==1.5.0+cu100 torchvision==0.6.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html  
+![image](https://user-images.githubusercontent.com/56099627/84872415-d7dac380-b0bc-11ea-81b3-d570d39afd0c.png)  
+![image](https://user-images.githubusercontent.com/56099627/84872612-12dcf700-b0bd-11ea-9556-dfbd9146cde2.png)  
+-> 에러발생: 설치된 cuda 버전과 설치하고자 하는  torch 버전이 맞지 않다는 메세지  
+pip + cuda10.0 설치 (원하는 버전 수정: torch==1.4.0 torchvision==0.5.0)  
+$ pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html  
+-> 안정적으로 설치됨  
+![image](https://user-images.githubusercontent.com/56099627/84872856-5f283700-b0bd-11ea-8197-c3463468bfe8.png)  
+![image](https://user-images.githubusercontent.com/56099627/84872938-75ce8e00-b0bd-11ea-80ba-0706072737d1.png)  
 
 1-1. $ pip install -r requirements.txt 실행
 ![image](https://user-images.githubusercontent.com/56099627/81363128-8c2c1600-911d-11ea-90f1-c6fe01cf569e.png)  
