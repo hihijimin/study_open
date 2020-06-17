@@ -6,6 +6,9 @@ https://github.com/stefanopini/simple-HRNet
 1. 설치 시작  
 onlyCPU  
 $ conda install pytorch==1.5.0 torchvision==0.6.0 cpuonly -c pytorch   
+pip torch 설치  
+$ pip install torch==1.5.0 torchvision==0.6.0  
+
 1-1. $ pip install -r requirements.txt 실행
 ![image](https://user-images.githubusercontent.com/56099627/81363128-8c2c1600-911d-11ea-90f1-c6fe01cf569e.png)  
 ![image](https://user-images.githubusercontent.com/56099627/81365837-2ee79300-9124-11ea-8130-b41e0bb62815.png)  
