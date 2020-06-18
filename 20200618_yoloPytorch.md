@@ -13,7 +13,7 @@ Where:
 - for example: `<x> = <absolute_x> / <image_width> or <height> = <absolute_height> / <image_height>`
 - atention: `<x> <y>` - are center of rectangle (are not top-left corner)
   
-For example for img1.jpg you will be created img1.txt containing:
+For example for `img1.jpg` you will be created `img1.txt` containing:
 ```
 1 0.716797 0.395833 0.216406 0.147222
 0 0.687109 0.379167 0.255469 0.158333
