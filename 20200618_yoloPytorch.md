@@ -35,3 +35,18 @@ For example for `img1.jpg` you will be created `img1.txt` containing:
 0 0.687109 0.379167 0.255469 0.158333
 1 0.420312 0.395833 0.140625 0.166667
 ```
+
+### 학습
+error message 1: **module 'tensorboard.summary._tf.summary' has no attribute 'FileWriter'**
+```
+Traceback (most recent call last):
+  File "/media/humani/5c5d0d82-9f8b-48ea-ae45-a8d930d14008/PyTorch-YOLOv3/train_modify.py", line 42, in <module>
+    logger = Logger("logs")
+  File "/media/humani/5c5d0d82-9f8b-48ea-ae45-a8d930d14008/PyTorch-YOLOv3/utils/logger.py", line 7, in __init__
+    self.writer = tf.summary.FileWriter(log_dir)
+AttributeError: module 'tensorboard.summary._tf.summary' has no attribute 'FileWriter'
+```
+해결: https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/327 참고  
+try to use **tf.summary.create_file_writer('log_dir')** in tensorflow 2.0  
+(logger.py 원본) self.writer = tf.summary.FileWriter(log_dir)  
+--> (logger.py 바꾸기) self.writer = tf.summary.create_file_writer('log_dir')  
