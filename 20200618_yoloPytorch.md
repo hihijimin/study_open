@@ -52,6 +52,7 @@ try to use **tf.summary.create_file_writer('log_dir')** in tensorflow 2.0
 --> (logger.py 바꾸기) self.writer = tf.summary.create_file_writer('log_dir')  
 
 ```
+# logger.py 
 import tensorflow as tf
 
 class Logger(object):
