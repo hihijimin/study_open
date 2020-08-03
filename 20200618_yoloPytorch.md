@@ -2,7 +2,7 @@
 simple_HRNetpose에서 yolo3 모델을 업데이트 하기 위해서 pytorch-based yolo 환경 셋팅, detector 실행, training 하기 위한 준비들  
 https://github.com/eriklindernoren/PyTorch-YOLOv3  
 
-- $ pip install -r requirements.txt 
+- $ pip install -r requirements.txt  
 requirements.txt 에서 빼서 따로 torch & torchvision 설치해줌 $ 
 ```
 numpy
