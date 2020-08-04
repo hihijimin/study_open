@@ -27,3 +27,14 @@ https://hiseon.me/linux/ubuntu/install-docker/
 - 도커에 nvidia toolkit 10.2 설치  
 $ docker run --gpus all nvidia/cuda:10.2-base nvidia-smi  
 ![image](https://user-images.githubusercontent.com/56099627/89255755-6bf8ee00-d65d-11ea-949b-4f00751ae892.png)  
+
+### docker 이미지 레파지토리에 올리고 삭제하기
+- 레파지토리 로그인 하기  
+![image](https://user-images.githubusercontent.com/56099627/89258912-1a079680-d664-11ea-95ee-2e2cac7a6466.png)  
+- 로컬 이미지에 태그 설정 & 이미지 올리기  
+$ docker tag <업로드할 이미지의 ID> <이용자ID>/<생성된 리파지토리 이름>:<임의의 태그이름>  
+$ docker tag 69ba6d511482 hihijimin/dockerlab:base  
+이미지 올리기 $ docker push hihijimin/dockerlab:base  
+![image](https://user-images.githubusercontent.com/56099627/89259251-dbbea700-d664-11ea-9e84-1aab87a9af62.png)  
+
+- 이미지 올리기
