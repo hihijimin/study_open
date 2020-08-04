@@ -24,6 +24,7 @@ $ sudo usermod -aG docker jimin
 
 ### nvidia docker 설치하기  
 https://hiseon.me/linux/ubuntu/install-docker/  
+https://hub.docker.com/r/nvidia/cuda/tags/  
 - 도커에 nvidia toolkit 10.2 설치  
 $ docker run --gpus all nvidia/cuda:10.2-base nvidia-smi  
 ![image](https://user-images.githubusercontent.com/56099627/89255755-6bf8ee00-d65d-11ea-949b-4f00751ae892.png)  
