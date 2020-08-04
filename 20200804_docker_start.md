@@ -38,3 +38,12 @@ $ docker tag 69ba6d511482 hihijimin/dockerlab:base
 ![image](https://user-images.githubusercontent.com/56099627/89259251-dbbea700-d664-11ea-9e84-1aab87a9af62.png)  
 - 이미지 삭제  
 ![image](https://user-images.githubusercontent.com/56099627/89259713-dca40880-d665-11ea-8bbc-8de8ca648c9b.png)  
+
+### docker 실행
+'''
+--rm: 프로세스 종료시 컨테이너 자동 제거, -it: -i와 -t을 동시에 사용한것임 터미널 입력을 위한 옵션(컨테이너의 표준 입력과 로컬 컴퓨터의 키보드 입력을 연결)
+'''
+- nvidia/cuda:10.2 실행  
+$ docker run --rm -it nvidia/cuda:10.2-base  
+- local 경로와 docker의 nvidia/cuda:10.2 에 연결? 하여 실행  
+$ docker run --rm -it -v /media/jimin/D/project:/project  nvidia/cuda:10.2-base  
