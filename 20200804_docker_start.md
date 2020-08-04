@@ -48,3 +48,6 @@ $ docker run --rm -it nvidia/cuda:10.2-base
 - local 경로와 docker의 nvidia/cuda:10.2 에 연결? 하여 실행  
 $ docker run --rm -it -v /media/jimin/D/project:/project  nvidia/cuda:10.2-base  
 ![image](https://user-images.githubusercontent.com/56099627/89272044-8a201780-d678-11ea-97e6-09de7e65e085.png)  
+- python image 설치 & 실행  
+$ docker run -it python  
+![image](https://user-images.githubusercontent.com/56099627/89280062-12a3b580-d683-11ea-9a35-e796dcbccabe.png)  
