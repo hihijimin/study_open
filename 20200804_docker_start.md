@@ -36,5 +36,5 @@ $ docker tag <업로드할 이미지의 ID> <이용자ID>/<생성된 리파지�
 $ docker tag 69ba6d511482 hihijimin/dockerlab:base  
 이미지 올리기 $ docker push hihijimin/dockerlab:base  
 ![image](https://user-images.githubusercontent.com/56099627/89259251-dbbea700-d664-11ea-9e84-1aab87a9af62.png)  
-
-- 이미지 올리기
+- 이미지 삭제  
+![image](https://user-images.githubusercontent.com/56099627/89259713-dca40880-d665-11ea-8bbc-8de8ca648c9b.png)  
