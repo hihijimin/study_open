@@ -71,3 +71,13 @@ $ apt-get install -y wget vim git gcc  build-essential
 $ wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh  
 $ bash Anaconda3-2020.07-Linux-x86_64.sh  
 ![image](https://user-images.githubusercontent.com/56099627/90592994-e14dec80-e221-11ea-8ebf-6992ceadb8d5.png)  
+
+### 자주 들어가는 docker-container 접속
+1. 새로운 container 만들기  
+$ docker run -it [container ID 혹은 names]  
+- container 이름 변경 : $ docker rename [컨테이너 이름] [바꾸고자 하는 컨테이너 이름]  
+- container 삭제 : $ docker rm [컨테이너 이름]  
+2. 만든 container에 다시 접속  
+실행 가능한 컨테이너 확인 $ docker ps  
+$ docker start [컨테이너 이름]  
+$ docker attach [컨테이너 이름]  
