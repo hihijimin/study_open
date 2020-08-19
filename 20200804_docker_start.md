@@ -66,5 +66,5 @@ $ apt-get dist-upgrade -y
 $ apt-get install -y wget vim git gcc  build-essential  
 ![image](https://user-images.githubusercontent.com/56099627/90592623-fbd39600-e220-11ea-85a6-fd372f655007.png)  
 3. ananconda 설치  
-$ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh  
-$ bash Anaconda3-2019.03-Linux-x86_64.sh  
+$ wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh  
+$ bash Anaconda3-2020.07-Linux-x86_64.sh  
