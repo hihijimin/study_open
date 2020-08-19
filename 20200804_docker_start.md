@@ -68,3 +68,4 @@ $ apt-get install -y wget vim git gcc  build-essential
 3. ananconda 설치  
 $ wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh  
 $ bash Anaconda3-2020.07-Linux-x86_64.sh  
+![image](https://user-images.githubusercontent.com/56099627/90592994-e14dec80-e221-11ea-8ebf-6992ceadb8d5.png)  
