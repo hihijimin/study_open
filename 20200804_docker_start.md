@@ -52,3 +52,18 @@ $ docker run --rm -it -v /media/jimin/D/project:/project  nvidia/cuda:10.2-base
 - python image 설치 & 실행  
 $ docker run -it python  
 ![image](https://user-images.githubusercontent.com/56099627/89280062-12a3b580-d683-11ea-9a35-e796dcbccabe.png)  
+
+### nvidia-docker 개발환경 셋팅
+참고: https://jybaek.tistory.com/791  
+1. 컨테이너 접속 하기  
+
+2. sources.list 셋팅 필수 패키지를 설치  
+- sources.list 셋팅(기본적인 필요한 패키지를 다운로드 하기 위해)  
+$ sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list  
+$ apt-get update  
+$ apt-get dist-upgrade -y  
+- 위 셋팅이 끝났으면 필수 패키지를 설치한다  
+$ apt-get install -y wget vim git gcc  build-essential  
+3. ananconda 설치  
+$ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh  
+$ bash Anaconda3-2019.03-Linux-x86_64.sh  
