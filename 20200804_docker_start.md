@@ -89,4 +89,7 @@ http://dveamer.github.io/backend/DockerImageDirectory.html
 $ sudo lsof | grep /var/lib/docker  
 '/var/lib/docker' 디렉토리에 위치한 여러파일들을 dockerd, docker-co 프로세스들이 사용중인 것을 확인할 수 있음  
 ![image](https://user-images.githubusercontent.com/56099627/90712640-731b2f80-e2de-11ea-8d74-336d43aecb33.png)  
-2. 
+2. Docker 프로세스 중지  
+$ sudo service docker stop  
+![image](https://user-images.githubusercontent.com/56099627/90712828-d6a55d00-e2de-11ea-8914-25265d9b22b1.png)
+3. 
