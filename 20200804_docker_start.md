@@ -93,3 +93,16 @@ $ sudo lsof | grep /var/lib/docker
 $ sudo service docker stop  
 ![image](https://user-images.githubusercontent.com/56099627/90712828-d6a55d00-e2de-11ea-8914-25265d9b22b1.png)
 3. 
+
+### sudo service docker stop 후 다시 접속 하고 자 할때 
+**issue: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?**
+https://velog.io/@pop8682/Docker-Cannot-connect-to-the-Docker-daemon-at-unixvarrundocker.sock.-Is-the-docker-daemon-running-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0  
+- 해결 방안  
+간단하게 정리하자면 Docker daemon을 돌려주기만 하면된다.  
+방금처럼 dockerd를 매번 실행하기는 번거러우니 아래 두 라인을 도커 설치 이후 입력하면 편할 것이다.  
+$ systemctl start docker  
+docker를 daemon으로 실행하라는 명령어로 dockerd와 같지만 로그없이 실행한다고 보면 편하다  
+$ systemctl enable docker  
+컴퓨터가 새로 시작하거나 부팅시 자동으로 docker daemon을 실행하라는 명령어이다.  
+![image](https://user-images.githubusercontent.com/56099627/90713572-98a93880-e2e0-11ea-81e9-c831996d0c45.png)  
+
