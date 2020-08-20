@@ -78,6 +78,13 @@ $ apt-get install -y wget vim git gcc  build-essential
 $ wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh  
 $ bash Anaconda3-2020.07-Linux-x86_64.sh  
 ![image](https://user-images.githubusercontent.com/56099627/90592994-e14dec80-e221-11ea-8ebf-6992ceadb8d5.png)  
+4. pip & python 설치
+$ apt install python-pip  
+$ apt install python3-pip  
+5. jupyter notebook 설치 & 실행  
+$ pip install notebook  
+$ jupyter notebook --ip=127.0.0.1  
+![image](https://user-images.githubusercontent.com/56099627/90755199-dd9b9200-e315-11ea-91fe-a1614a07c299.png)  
 
 ### 자주 들어가는 docker-container 접속
 1. 새로운 container 만들기  
