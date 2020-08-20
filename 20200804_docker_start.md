@@ -117,3 +117,13 @@ $ systemctl enable docker
 컴퓨터가 새로 시작하거나 부팅시 자동으로 docker daemon을 실행하라는 명령어이다.  
 ![image](https://user-images.githubusercontent.com/56099627/90713572-98a93880-e2e0-11ea-81e9-c831996d0c45.png)  
 
+### docker image 지울때 에러
+https://nirsa.tistory.com/61  
+**Error response from daemon: conflict: unable to remove repository reference "python:latest" (must force) - container 01715923a951 is using its referenced image 4e2d08f34f6d**  
+- 문제 발생
+![image](https://user-images.githubusercontent.com/56099627/90725811-af10bd80-e2fb-11ea-9b52-f6d45f974ae8.png)  
+해당 에러는 이미지 busy box를 삭제 할 때에 어떠한 컨테이너가 이미 삭제할 이미지를 참조중이기 때문에(컨테이너의 실행 유무는 상관없이) 발생하는 에러 
+해당 ID 를 가진 컨테이너를 확인 $ docker container ls -a  
+python:latest (이미지)는 컨테이너 ID 01715923a951을 가지고 있습니다. 잘 보시면 IMAGE 필드에 삭제하려는 busybox를 바라보고 있는 컨테이너들이 있는데, 결국 이 **컨테이너을 모두 삭제해주어야 이미지를 삭제할 수 있음**
+- 결과 확인  
+![image](https://user-images.githubusercontent.com/56099627/90726382-9654d780-e2fc-11ea-9572-c37e07ae0dcf.png)  
