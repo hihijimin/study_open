@@ -81,3 +81,12 @@ $ docker run -it [container ID 혹은 names]
 실행 가능한 컨테이너 확인 $ docker ps  
 $ docker start [컨테이너 이름]  
 $ docker attach [컨테이너 이름]  
+
+### docker 저장위치 변경
+https://yookeun.github.io/docker/2018/10/29/docker-change/  
+http://dveamer.github.io/backend/DockerImageDirectory.html  
+1. 위치 변경 전 확인(꼭 sudo로 해야함)  
+$ sudo lsof | grep /var/lib/docker  
+'/var/lib/docker' 디렉토리에 위치한 여러파일들을 dockerd, docker-co 프로세스들이 사용중인 것을 확인할 수 있음  
+![image](https://user-images.githubusercontent.com/56099627/90712640-731b2f80-e2de-11ea-8d74-336d43aecb33.png)  
+2. 
