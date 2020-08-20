@@ -28,10 +28,13 @@ https://hub.docker.com/r/nvidia/cuda/tags/
 - 도커에 nvidia toolkit 10.2 설치  
 1. https://hub.docker.com/r/nvidia/cuda/tags/ 에 들어가서 원하는 버전 선택하여 컨테이너 이미지 다운로드 하기
 2. 아래의 명령어는 CUDA Toolkit 10.2 버전의 컨테이너 이미지를 다운 받고($ docker pull nvidia/cuda:10.2-base), nvidia-smi 명령어를 실행한 예제  
-$ docker run --gpus all nvidia/cuda:10.2-base nvidia-smi 
+$ docker run --gpus all nvidia/cuda:10.2-base nvidia-smi  
+![image](https://user-images.githubusercontent.com/56099627/89255755-6bf8ee00-d65d-11ea-949b-4f00751ae892.png)  
 /bin/bash 명령어를 실행한 예제  
 $ docker run --rm -it nvidia/cuda:10.2-base /bin/bash
-![image](https://user-images.githubusercontent.com/56099627/89255755-6bf8ee00-d65d-11ea-949b-4f00751ae892.png)  
+다양한 조건을 포함한 /bin/bash 명령어를 실행한 예제  
+$ docker run -it --gpus all --name simple_pose -p 8888:8888 nvidia/cuda:10.2-base /bin/bash  
+![image](https://user-images.githubusercontent.com/56099627/90747373-c8ba0100-e30b-11ea-8200-ec478fcefbb8.png)  
 
 ### docker 이미지 레파지토리에 올리고 삭제하기
 - 레파지토리 로그인 하기  
