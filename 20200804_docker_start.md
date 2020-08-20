@@ -125,5 +125,7 @@ https://nirsa.tistory.com/61
 해당 에러는 이미지 busy box를 삭제 할 때에 어떠한 컨테이너가 이미 삭제할 이미지를 참조중이기 때문에(컨테이너의 실행 유무는 상관없이) 발생하는 에러 
 해당 ID 를 가진 컨테이너를 확인 $ docker container ls -a  
 python:latest (이미지)는 컨테이너 ID 01715923a951을 가지고 있습니다. 잘 보시면 IMAGE 필드에 삭제하려는 busybox를 바라보고 있는 컨테이너들이 있는데, 결국 이 **컨테이너을 모두 삭제해주어야 이미지를 삭제할 수 있음**
+도커 이미지 삭제 $ docker rmi [IMAGE ID 혹은 REPOSITORY:TAG]  
+컨테이너 ID 삭제 $ docker rm [NAME]  
 - 결과 확인  
 ![image](https://user-images.githubusercontent.com/56099627/90726382-9654d780-e2fc-11ea-9572-c37e07ae0dcf.png)  
