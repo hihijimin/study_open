@@ -89,10 +89,21 @@ http://dveamer.github.io/backend/DockerImageDirectory.html
 $ sudo lsof | grep /var/lib/docker  
 '/var/lib/docker' 디렉토리에 위치한 여러파일들을 dockerd, docker-co 프로세스들이 사용중인 것을 확인할 수 있음  
 ![image](https://user-images.githubusercontent.com/56099627/90712640-731b2f80-e2de-11ea-8d74-336d43aecb33.png)  
-2. Docker 프로세스 중지  
-$ sudo service docker stop  
-![image](https://user-images.githubusercontent.com/56099627/90712828-d6a55d00-e2de-11ea-8914-25265d9b22b1.png)
-3. 
+2. docker 실행 서비스에서 설정변경 & Docker 프로세스 중지  
+/lib/systemd/system/docker.service 파일을 열고 아래 내용을 수정한다.  
+#ExecStart=/usr/bin/dockerd -H fd://  
+ExecStart=/usr/bin/dockerd -g /home/ykkim/docker -H fd://  
+수정이 되면 도커를 중지시킨다.  
+$ sudo systemctl stop docker  
+$ sudo systemctl daemon-reload  
+![image](https://user-images.githubusercontent.com/56099627/90723669-293f4300-e2f8-11ea-8c16-ea2c6bc7b225.png)  
+3. Docker NEW 저장 경로 만들기 & NEW 경로로 Docker 복제  
+도커 데이터가 저장될 경로를 먼저 만들어주어야 한다.  
+$ mkdir /home/ykkim/docker  
+그런 다음 기존에 docker 경로를 위 경로로 통째로 복제해준다.  
+$ sudo rsync -aqxP /var/lib/docker /home/ykkim/docker  
+4. 마지막 이제 도커를 실행  
+$ sudo systemctl start docker  
 
 ### sudo service docker stop 후 다시 접속 하고 자 할때 
 **issue: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?**
