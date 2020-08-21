@@ -9,8 +9,12 @@ https://m.blog.naver.com/kimmingul/220639741333
 ![image](https://user-images.githubusercontent.com/56099627/90863680-74c22180-e3ca-11ea-8148-448095a20633.png)
 
 ### 2TB 이상 하드디스크 일때 마운트 방법
-https://topis.me/109
-1. DOS 파티션으로는 2테라까지만 지원하니 GPT로 포맷하라는 안내가 메세지가 나오면 GPT으로 바꿔주면 된다 
-![image](https://user-images.githubusercontent.com/56099627/90866268-9c1aed80-e3ce-11ea-878a-8d6069244fde.png)
-2. 
+https://topis.me/109  
+1. DOS 파티션으로는 2테라까지만 지원하니 GPT로 포맷하라는 안내가 메세지가 나오면 GPT으로 바꿔주면 된다  
+![image](https://user-images.githubusercontent.com/56099627/90866268-9c1aed80-e3ce-11ea-878a-8d6069244fde.png)  
+2. 확인(하지만 여전히 linux filesystem 이라고 되어 있을 것임 하지만 GPT으로 된게 맞음)  
+![image](https://user-images.githubusercontent.com/56099627/90867799-e8ffc380-e3d0-11ea-874b-6867215537d5.png)  
+3. 설정된 GPT 하드디스크를 포맷하기  
+![image](https://user-images.githubusercontent.com/56099627/90867963-22d0ca00-e3d1-11ea-802a-b9e6ef592ad9.png)  
+
 
