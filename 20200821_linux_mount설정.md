@@ -7,3 +7,7 @@ https://m.blog.naver.com/kimmingul/220639741333
 ![image](https://user-images.githubusercontent.com/56099627/90863631-5825e980-e3ca-11ea-8302-51777e8625d0.png)  
 
 ![image](https://user-images.githubusercontent.com/56099627/90863680-74c22180-e3ca-11ea-8148-448095a20633.png)
+
+### 2TB 이상 하드디스크 일때 마운트 방법
+https://topis.me/109
+
