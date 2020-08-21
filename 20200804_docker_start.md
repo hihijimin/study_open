@@ -105,8 +105,9 @@ $ sudo lsof | grep /var/lib/docker
 ![image](https://user-images.githubusercontent.com/56099627/90712640-731b2f80-e2de-11ea-8d74-336d43aecb33.png)  
 2. docker 실행 서비스에서 설정변경 & Docker 프로세스 중지  
 /lib/systemd/system/docker.service 파일을 열고 아래 내용을 수정한다.  
-#ExecStart=/usr/bin/dockerd -H fd://  
-ExecStart=/usr/bin/dockerd -g /home/ykkim/docker -H fd://  
+#ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock  
+#ExecStart=/usr/bin/dockerd -g /New_dir/docker -H fd:// --containerd=/run/containerd/containerd.sock  
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root=/data/  
 수정이 되면 도커를 중지시킨다.  
 $ sudo systemctl stop docker  
 $ sudo systemctl daemon-reload  
