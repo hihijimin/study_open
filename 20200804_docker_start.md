@@ -99,6 +99,7 @@ $ docker attach [컨테이너 이름]
 ### docker 저장위치 변경
 https://yookeun.github.io/docker/2018/10/29/docker-change/  
 http://dveamer.github.io/backend/DockerImageDirectory.html  
+https://hooni-playground.com/2019/12/05/docker-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%9C%84%EC%B9%98-%EB%B3%80%EA%B2%BD/ 
 1. 위치 변경 전 확인(꼭 sudo로 해야함)  
 $ sudo lsof | grep /var/lib/docker  
 '/var/lib/docker' 디렉토리에 위치한 여러파일들을 dockerd, docker-co 프로세스들이 사용중인 것을 확인할 수 있음  
@@ -117,6 +118,13 @@ $ sudo systemctl daemon-reload
 $ mkdir /home/ykkim/docker  
 그런 다음 기존에 docker 경로를 위 경로로 통째로 복제해준다.  
 $ sudo rsync -aqxP /var/lib/docker /home/ykkim/docker  
+3-1. 도커 설정 파일을 만든다  
+$ sudo vim /etc/docker/daemon.json  
+```
+{
+    "data-root": "/storage/repository/docker"
+}
+```
 4. 마지막 이제 도커를 실행  
 $ sudo systemctl start docker  
 5. 잘 옮겨졌는지 확인
