@@ -119,6 +119,10 @@ $ mkdir /home/ykkim/docker
 $ sudo rsync -aqxP /var/lib/docker /home/ykkim/docker  
 4. 마지막 이제 도커를 실행  
 $ sudo systemctl start docker  
+5. 잘 옮겨졌는지 확인
+$ ps -ef | grep docker  
+$ docker info | grep Root  
+![image](https://user-images.githubusercontent.com/56099627/90994606-3d36bd80-e5f4-11ea-9345-9ceed2802ef6.png)  
 
 ### sudo service docker stop 후 다시 접속 하고 자 할때 
 **issue: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?**
