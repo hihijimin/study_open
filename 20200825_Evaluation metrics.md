@@ -22,4 +22,9 @@ https://github.com/cbsudux/Human-Pose-Estimation-101
 - PCK is used for 2D and 3D (PCK3D)  
 - Higher the better  
 
+### YOLO Evaluation metrics
+https://towardsdatascience.com/evaluating-performance-of-an-object-detection-model-137a349c517b  
+https://cyoungesuno.tistory.com/entry/CNN-YOLO-%EC%A0%95%ED%99%95%EB%8F%84-%EC%A0%95%EB%B0%80%EB%8F%84-%EC%9E%AC%ED%98%84%EC%9C%A8-%EC%9D%98%EB%AF%B8-Accuracy-Precision-Recall-mAP  
+1. precision? 검출결과가 얼마나 정확한지를 표현, recall? 얼마나 잘 검출 했는지 표현  
+
 
