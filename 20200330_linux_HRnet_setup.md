@@ -27,6 +27,8 @@ $ cd CrowdPose/crowdpose-api/PythonAPI
 $ sh install.sh
 $ python setup.py install --user
 ```
+![image](https://user-images.githubusercontent.com/56099627/91399341-c9f1ad80-e878-11ea-8c81-5220b84d2a66.png)  
+
 ## HRNet-Object-Detection  
 https://github.com/HRNet/HRNet-Object-Detection  
 
