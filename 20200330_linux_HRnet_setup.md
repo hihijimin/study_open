@@ -13,6 +13,20 @@ the latest version pytorch
 conda install pytorch torchvision cudatoolkit=10.0  
 ![image](https://user-images.githubusercontent.com/56099627/78003556-ce6e7480-7373-11ea-9ddd-581c63e53585.png)  
 
+**COAPI & CrowdPoseAPI 설치**  
+Install COCOAPI:  
+```
+$ cd cocoapi/PythonAPI
+$ make
+$ make install
+$ python setup.py install --user
+```
+Install CrowdPoseAPI:  
+```
+$ cd CrowdPose/crowdpose-api/PythonAPI
+$ sh install.sh
+$ python setup.py install --user
+```
 ## HRNet-Object-Detection  
 https://github.com/HRNet/HRNet-Object-Detection  
 
