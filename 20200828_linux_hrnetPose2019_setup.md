@@ -57,3 +57,5 @@ https://blog.csdn.net/dong_liuqi/article/details/106526403
 /home/jimin/anaconda3/envs/hrnet_pose/lib/python3.6/site-packages/torchvision/ops/poolers.py:216:  
 2. idx_in_level = torch.nonzero(levels == level).squeeze(1) ==> idx_in_level = torch.nonzero(levels == level, as_tuple=False).squeeze(1)  
 
+/home/jimin/anaconda3/envs/hrnet_pose/lib/python3.6/site-packages/torchvision/models/detection/roi_heads.py:703: 
+3. inds = torch.nonzero(scores > self.score_thresh).squeeze(1) ==> inds = torch.nonzero(scores > self.score_thresh, as_tuple=False).squeeze(1)  
