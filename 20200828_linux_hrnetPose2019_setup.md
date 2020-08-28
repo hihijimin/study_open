@@ -33,3 +33,9 @@ $ make
 $ make install
 $ python setup.py install --user
 ```
+## inference 실행 
+https://github.com/leoxiaobin/deep-high-resolution-net.pytorch/tree/master/demo  
+```
+parser.add_argument('--cfg', type=str, default='./experiments/coco/hrnet/w32_384x288_adam_lr1e-3.yaml')  
+--writeBoxFrames TEST.MODEL_FILE ./models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
+```
