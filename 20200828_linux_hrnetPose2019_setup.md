@@ -33,9 +33,26 @@ $ make
 $ make install
 $ python setup.py install --user
 ```
-## inference 실행 
+### inference 실행 
 https://github.com/leoxiaobin/deep-high-resolution-net.pytorch/tree/master/demo  
 ```
 parser.add_argument('--cfg', type=str, default='./experiments/coco/hrnet/w32_384x288_adam_lr1e-3.yaml')  
 --writeBoxFrames TEST.MODEL_FILE ./models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
 ```
+
+### inference 실행시 warning 문제 해결
+```
+/home/jimin/anaconda3/envs/hrnet_pose/lib/python3.6/site-packages/torchvision/ops/poolers.py:216: UserWarning: This overload of nonzero is deprecated:
+	nonzero(Tensor input, *, Tensor out)
+Consider using one of the following signatures instead:
+	nonzero(Tensor input, *, bool as_tuple) (Triggered internally at  /pytorch/torch/csrc/utils/python_arg_parser.cpp:766.)
+  idx_in_level = torch.nonzero(levels == level).squeeze(1)
+```
+**해결방법:**  
+https://blog.csdn.net/dong_liuqi/article/details/106526403  
+
+/home/jimin/anaconda3/envs/hrnet_pose/lib/python3.6/site-packages/torchvision/ops/boxes.py:216:  
+1) keep = keep.nonzero().squeeze(1) ==> keep = keep.nonzero(as_tuple=False).squeeze(1)  
+/home/jimin/anaconda3/envs/hrnet_pose/lib/python3.6/site-packages/torchvision/ops/poolers.py:216:  
+2) idx_in_level = torch.nonzero(levels == level).squeeze(1) ==> idx_in_level = torch.nonzero(levels == level, as_tuple=False).squeeze(1)  
+
