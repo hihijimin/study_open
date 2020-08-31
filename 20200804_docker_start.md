@@ -83,9 +83,11 @@ $ apt install python-pip
 $ apt install python3-pip  
 5. jupyter notebook 설치 & 실행  
 $ pip install notebook  
-$ jupyter notebook --ip=127.0.0.1  
+$ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root  
 ![image](https://user-images.githubusercontent.com/56099627/90755199-dd9b9200-e315-11ea-91fe-a1614a07c299.png)  
-
+아래와 같이 docker 오픈할 때 --ip 와 -port 가 jupyter notebook 실행시 일치해야 함  
+![image](https://user-images.githubusercontent.com/56099627/91705759-5de4b180-ebb8-11ea-93e5-8386dcb999c9.png)  
+![image](https://user-images.githubusercontent.com/56099627/91705802-6e952780-ebb8-11ea-84b7-a3ed8b7925d8.png)  
 ### 자주 들어가는 docker-container 접속
 1. 새로운 container 만들기  
 $ docker run -it [container ID 혹은 names]  
