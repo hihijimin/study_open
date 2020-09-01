@@ -35,6 +35,14 @@ $ docker run --rm -it nvidia/cuda:10.2-base /bin/bash
 다양한 조건을 포함한 /bin/bash 명령어를 실행한 예제  
 $ docker run -it --gpus all --name simple_pose -p 8888:8888 nvidia/cuda:10.2-base /bin/bash  
 ![image](https://user-images.githubusercontent.com/56099627/90747520-fc952680-e30b-11ea-9727-524f7af68418.png)  
+- 종료된 contatiner에 다시 접속하기
+```
+1. $ docker ps -a 으로 컨테이너가 있는지 확인한다
+2. $ docker start [container_ID] 
+3. $ docker ps 으로 컨테이너가 실행 되었는지 확인한다
+4. $ docker exec -it [contatiner_ID] /bin/bash
+```
+![image](https://user-images.githubusercontent.com/56099627/91792155-d3e82780-ec4f-11ea-94bd-4db909430f05.png)  
 
 ### docker 이미지 레파지토리에 올리고 삭제하기
 - 레파지토리 로그인 하기  
