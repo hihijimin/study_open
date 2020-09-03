@@ -78,3 +78,5 @@ class Logger(object):
         # summary = tf.Summary(value=[tf.Summary.Value(tag=tag, simple_value=value) for tag, value in tag_value_pairs])
         # self.writer.add_summary(summary, step)
 ```
+### multi-gpu training  
+https://github.com/zhangyongshun/Training_YOLOv3_with_Multi-GPUs
