@@ -35,7 +35,7 @@ $ docker run --rm -it nvidia/cuda:10.2-base /bin/bash
 다양한 조건을 포함한 /bin/bash 명령어를 실행한 예제  
 $ docker run -it --gpus all --name simple_pose -p 8888:8888 nvidia/cuda:10.2-base /bin/bash  
 ![image](https://user-images.githubusercontent.com/56099627/90747520-fc952680-e30b-11ea-9727-524f7af68418.png)  
-- 종료된 contatiner에 다시 접속하기
+- **종료된 contatiner에 다시 접속하기**
 ```
 1. $ docker ps -a 으로 컨테이너가 있는지 확인한다
 2. $ docker start [container_ID] 
@@ -90,12 +90,18 @@ $ bash Anaconda3-2020.07-Linux-x86_64.sh
 $ apt install python-pip  
 $ apt install python3-pip  
 5. jupyter notebook 설치 & 실행  
-$ pip install notebook  
+$ pip3 install notebook  
 $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root  
 ![image](https://user-images.githubusercontent.com/56099627/90755199-dd9b9200-e315-11ea-91fe-a1614a07c299.png)  
-아래와 같이 docker 오픈할 때 --ip 와 -port 가 jupyter notebook 실행시 일치해야 함  
+**아래와 같이 docker 오픈할 때 --ip 와 -port 가 jupyter notebook 실행시 일치해야 함**  
 ![image](https://user-images.githubusercontent.com/56099627/91705759-5de4b180-ebb8-11ea-93e5-8386dcb999c9.png)  
 ![image](https://user-images.githubusercontent.com/56099627/91705802-6e952780-ebb8-11ea-84b7-a3ed8b7925d8.png)  
+- **패키지 설치시 에러 발생**  
+(업데이트 안해줘서 생긴듯?) 해결 방법: $ **apt update**  
+<에러발생 예시>  
+![image](https://user-images.githubusercontent.com/56099627/93560537-5ba69380-f9bd-11ea-87c3-afa429ffe76b.png)  
+<결과 예시>  
+![image](https://user-images.githubusercontent.com/56099627/93560750-ce177380-f9bd-11ea-90c1-6fcc71a7a373.png)  
 ### 자주 들어가는 docker-container 접속
 1. 새로운 container 만들기  
 $ docker run -it [container ID 혹은 names]  
