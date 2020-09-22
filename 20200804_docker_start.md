@@ -22,28 +22,6 @@ $ sudo usermod -aG docker jimin
 (참고: https://github.com/palantir/gradle-docker/issues/188 )
 ![image](https://user-images.githubusercontent.com/56099627/89254188-8af58100-d659-11ea-9b6b-4d959ea29681.png)  
 
-### nvidia docker 설치하기  
-https://hiseon.me/linux/ubuntu/install-docker/  
-https://hub.docker.com/r/nvidia/cuda/tags/  
-- 도커에 nvidia toolkit 10.2 설치  
-1. https://hub.docker.com/r/nvidia/cuda/tags/ 에 들어가서 원하는 버전 선택하여 컨테이너 이미지 다운로드 하기
-2. 아래의 명령어는 CUDA Toolkit 10.2 버전의 컨테이너 이미지를 다운 받고($ docker pull nvidia/cuda:10.2-base), nvidia-smi 명령어를 실행한 예제  
-$ docker run --gpus all nvidia/cuda:10.2-base nvidia-smi  
-![image](https://user-images.githubusercontent.com/56099627/89255755-6bf8ee00-d65d-11ea-949b-4f00751ae892.png)  
-/bin/bash 명령어를 실행한 예제  
-$ docker run --rm -it nvidia/cuda:10.2-base /bin/bash
-다양한 조건을 포함한 /bin/bash 명령어를 실행한 예제  
-$ docker run -it --gpus all --name simple_pose -p 8888:8888 nvidia/cuda:10.2-base /bin/bash  
-![image](https://user-images.githubusercontent.com/56099627/90747520-fc952680-e30b-11ea-9727-524f7af68418.png)  
-- **종료된 contatiner에 다시 접속하기**
-```
-1. $ docker ps -a 으로 컨테이너가 있는지 확인한다
-2. $ docker start [container_ID] 
-3. $ docker ps 으로 컨테이너가 실행 되었는지 확인한다
-4. $ docker exec -it [contatiner_ID] /bin/bash
-```
-![image](https://user-images.githubusercontent.com/56099627/91792155-d3e82780-ec4f-11ea-94bd-4db909430f05.png)  
-
 ### docker 이미지 레파지토리에 올리고 삭제하기
 - 레파지토리 로그인 하기  
 ![image](https://user-images.githubusercontent.com/56099627/89258912-1a079680-d664-11ea-95ee-2e2cac7a6466.png)  
@@ -55,22 +33,31 @@ $ docker tag 69ba6d511482 hihijimin/dockerlab:base
 - 이미지 삭제  
 ![image](https://user-images.githubusercontent.com/56099627/89259713-dca40880-d665-11ea-8bbc-8de8ca648c9b.png)  
 
-### docker 실행
+### **종료된 contatiner에 다시 접속하기**
+```
+1. $ docker ps -a 으로 컨테이너가 있는지 확인한다
+2. $ docker start [container_ID] 
+3. $ docker ps 으로 컨테이너가 실행 되었는지 확인한다
+4. $ docker exec -it [contatiner_ID] /bin/bash
+```
+
+### docker 실행 & nvidia-docker 개발환경 셋팅
+https://hiseon.me/linux/ubuntu/install-docker/  
+https://hub.docker.com/r/nvidia/cuda/tags/  
+https://jybaek.tistory.com/791  
 ```
 --rm: 프로세스 종료시 컨테이너 자동 제거, -it: -i와 -t을 동시에 사용한것임 터미널 입력을 위한 옵션(컨테이너의 표준 입력과 로컬 컴퓨터의 키보드 입력을 연결)
 ```
-- nvidia/cuda:10.2 실행  
-도커 일회성으로 접속 하기 $ docker run --rm -it nvidia/cuda:10.2-base  
-도커 접속 하기 $ docker run -it nvidia/cuda:10.2-base  
-- local 경로와 docker의 nvidia/cuda:10.2 에 연결? 하여 실행  
-$ docker run --rm -it -v /media/jimin/D/project:/project  nvidia/cuda:10.2-base  
-![image](https://user-images.githubusercontent.com/56099627/89272044-8a201780-d678-11ea-97e6-09de7e65e085.png)  
-- python image 설치 & 실행  
-$ docker run -it python  
-![image](https://user-images.githubusercontent.com/56099627/89280062-12a3b580-d683-11ea-9a35-e796dcbccabe.png)  
+- 도커에 nvidia toolkit 10.2 설치  
+1. https://hub.docker.com/r/nvidia/cuda/tags/ 에 들어가서 원하는 버전 선택하여 컨테이너 이미지 다운로드 하기
+2. 아래의 명령어는 CUDA Toolkit 10.2 버전의 컨테이너 이미지를 다운 받고($ docker pull nvidia/cuda:10.2-base), nvidia-smi 명령어를 실행
+/bin/bash 명령어를 실행한 예제  
+$ docker run -it nvidia/cuda:10.2-base /bin/bash
+container_name, port 정보 포함한 /bin/bash 명령어를 실행한 예제  
+$ docker run -it --gpus all --name simple_pose -p 8888:8888 nvidia/cuda:10.2-base /bin/bash  
+![image](https://user-images.githubusercontent.com/56099627/90747520-fc952680-e30b-11ea-9727-524f7af68418.png)  
 
-### nvidia-docker 개발환경 셋팅
-참고: https://jybaek.tistory.com/791  
+![image](https://user-images.githubusercontent.com/56099627/91792155-d3e82780-ec4f-11ea-94bd-4db909430f05.png) 
 1. 컨테이너 접속 하기  
 (일회성을 접속하지 않기 위해 --rm 빼기)  
 ![image](https://user-images.githubusercontent.com/56099627/90592528-bf079f00-e220-11ea-99ec-b880c44cb70c.png)  
@@ -82,7 +69,7 @@ $ apt-get dist-upgrade -y
 - 위 셋팅이 끝났으면 필수 패키지를 설치한다  
 $ apt-get install -y wget vim git gcc  build-essential  
 ![image](https://user-images.githubusercontent.com/56099627/90592623-fbd39600-e220-11ea-85a6-fd372f655007.png)  
-3. ananconda 설치  
+3. ananconda 설치(선택)  
 $ wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh  
 $ bash Anaconda3-2020.07-Linux-x86_64.sh  
 ![image](https://user-images.githubusercontent.com/56099627/90592994-e14dec80-e221-11ea-8ebf-6992ceadb8d5.png)  
