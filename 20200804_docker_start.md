@@ -56,8 +56,6 @@ $ docker run -it nvidia/cuda:10.2-base /bin/bash
 container_name, port 정보 포함한 /bin/bash 명령어를 실행한 예제  
 $ docker run -it --gpus all --name simple_pose -p 8888:8888 nvidia/cuda:10.2-base /bin/bash  
 ![image](https://user-images.githubusercontent.com/56099627/90747520-fc952680-e30b-11ea-9727-524f7af68418.png)  
-
-![image](https://user-images.githubusercontent.com/56099627/91792155-d3e82780-ec4f-11ea-94bd-4db909430f05.png) 
 1. 컨테이너 접속 하기  
 (일회성을 접속하지 않기 위해 --rm 빼기)  
 ![image](https://user-images.githubusercontent.com/56099627/90592528-bf079f00-e220-11ea-99ec-b880c44cb70c.png)  
