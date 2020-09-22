@@ -52,7 +52,7 @@ https://jybaek.tistory.com/791
 1. https://hub.docker.com/r/nvidia/cuda/tags/ 에 들어가서 원하는 버전 선택하여 컨테이너 이미지 다운로드 하기
 2. 아래의 명령어는 CUDA Toolkit 10.2 버전의 컨테이너 이미지를 다운 받고($ docker pull nvidia/cuda:10.2-base), nvidia-smi 명령어를 실행
 /bin/bash 명령어를 실행한 예제  
-$ docker run -it nvidia/cuda:10.2-base /bin/bash
+$ docker run -it nvidia/cuda:10.2-base /bin/bash  
 container_name, port 정보 포함한 /bin/bash 명령어를 실행한 예제  
 $ docker run -it --gpus all --name simple_pose -p 8888:8888 nvidia/cuda:10.2-base /bin/bash  
 ![image](https://user-images.githubusercontent.com/56099627/90747520-fc952680-e30b-11ea-9727-524f7af68418.png)  
