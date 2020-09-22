@@ -41,6 +41,11 @@ $ docker tag 69ba6d511482 hihijimin/dockerlab:base
 4. $ docker exec -it [contatiner_ID] /bin/bash
 ```
 
+### container 강제?종료 시키기
+$ docker kill [containner ID]   → 현재 실행중인 모든 컨테이너 강제 종료  
+$ docker stop [containner ID]   → 현재 실행중인 모든 컨테이너 종료  
+![image](https://user-images.githubusercontent.com/56099627/93839538-34efa200-fcc8-11ea-94f3-e01a829f807a.png)
+  
 ### docker 실행 & nvidia-docker 개발환경 셋팅
 https://hiseon.me/linux/ubuntu/install-docker/  
 https://hub.docker.com/r/nvidia/cuda/tags/  
@@ -87,15 +92,6 @@ $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root
 ![image](https://user-images.githubusercontent.com/56099627/93560537-5ba69380-f9bd-11ea-87c3-afa429ffe76b.png)  
 <결과 예시>  
 ![image](https://user-images.githubusercontent.com/56099627/93560750-ce177380-f9bd-11ea-90c1-6fcc71a7a373.png)  
-### 자주 들어가는 docker-container 접속
-1. 새로운 container 만들기  
-$ docker run -it [container ID 혹은 names]  
-- container 이름 변경 : $ docker rename [컨테이너 이름] [바꾸고자 하는 컨테이너 이름]  
-- container 삭제 : $ docker rm [컨테이너 이름]  
-2. 만든 container에 다시 접속  
-실행 가능한 컨테이너 확인 $ docker ps  
-$ docker start [컨테이너 이름]  
-$ docker attach [컨테이너 이름]  
 
 ### docker 저장위치 변경
 https://yookeun.github.io/docker/2018/10/29/docker-change/  
