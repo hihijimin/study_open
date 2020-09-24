@@ -28,9 +28,12 @@ $ sudo usermod -aG docker jimin
 2. 도커 이미지 commit 하여 새로운 도커 이미지 만들기  
 $ docker commit <레파지토리 이름> <만들고자 할 이름>:<만들고자하는 Tag>  
 ![image](https://user-images.githubusercontent.com/56099627/94108972-37462d80-fe7b-11ea-87ae-98f4821d23bc.png)
-** 만약에 도커 허브에 이미지 올리기 위해선 Repasitory 이름과 dockerhub ID/이미지 이름 이 일치해야 한다!**  
-** Repasitory 이름, dockerhub ID/이미지 이름 불일치 한다면, "denied: requested access to the resource is denied " 라는 메세지와 함께 도커 허브에 이미지가 올라가지 않는다**  
+**만약에 도커 허브에 이미지 올리기 위해선 Repasitory 이름과 dockerhub ID/이미지 이름 이 일치해야 한다!**  
+**Repasitory 이름, dockerhub ID/이미지 이름 불일치 한다면, "denied: requested access to the resource is denied " 라는 메세지와 함께 도커 허브에 이미지가 올라가지 않는다**  
+실패 예시  
 ![image](https://user-images.githubusercontent.com/56099627/94109850-922c5480-fe7c-11ea-976e-90da9b363797.png)  
+성공 예시  
+![image](https://user-images.githubusercontent.com/56099627/94110070-fa7b3600-fe7c-11ea-83f1-f9443ce496db.png)  
 2-2. (선택) 로컬 이미지에 태그 설정  
 $ docker tag <업로드할 이미지의 ID> <이미지 이름>:<새로운 태그이름>   
 ![image](https://user-images.githubusercontent.com/56099627/94109153-868c5e00-fe7b-11ea-9c40-61830cc1839e.png)  
