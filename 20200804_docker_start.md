@@ -22,15 +22,22 @@ $ sudo usermod -aG docker jimin
 (참고: https://github.com/palantir/gradle-docker/issues/188 )
 ![image](https://user-images.githubusercontent.com/56099627/89254188-8af58100-d659-11ea-9b6b-4d959ea29681.png)  
 
-### docker 이미지 레파지토리에 올리고 삭제하기
-- 레파지토리 로그인 하기  
+### docker hub 이미지 레파지토리에 올리고 삭제하기
+1. 레파지토리 로그인 하기  
 ![image](https://user-images.githubusercontent.com/56099627/89258912-1a079680-d664-11ea-95ee-2e2cac7a6466.png)  
-- 로컬 이미지에 태그 설정 & 이미지 올리기  
-$ docker tag <업로드할 이미지의 ID> <이미지 이름>:<새로운 태그이름>    
-이미지 올리기 $ docker push hihijimin/dockerlab:base  
+2. 도커 이미지 commit 하여 새로운 도커 이미지 만들기  
+$ docker commit <레파지토리 이름> <만들고자 할 이름>:<만들고자하는 Tag>  
+![image](https://user-images.githubusercontent.com/56099627/94108972-37462d80-fe7b-11ea-87ae-98f4821d23bc.png)
+** 만약에 도커 허브에 이미지 올리기 위해선 Repasitory 이름과 dockerhub ID/이미지 이름 이 일치해야 한다!**  
+** Repasitory 이름, dockerhub ID/이미지 이름 불일치 한다면, "denied: requested access to the resource is denied " 라는 메세지와 함께 도커 허브에 이미지가 올라가지 않는다**  
+![image](https://user-images.githubusercontent.com/56099627/94109850-922c5480-fe7c-11ea-976e-90da9b363797.png)  
+2-2. (선택) 로컬 이미지에 태그 설정  
+$ docker tag <업로드할 이미지의 ID> <이미지 이름>:<새로운 태그이름>   
+![image](https://user-images.githubusercontent.com/56099627/94109153-868c5e00-fe7b-11ea-9c40-61830cc1839e.png)  
+3. 이미지 올리기  
+$ docker push <docker hub ID>/<>
+$ docker push hihijimin/dockerlab:base  
 ![image](https://user-images.githubusercontent.com/56099627/89259251-dbbea700-d664-11ea-9e84-1aab87a9af62.png)  
-- 이미지 삭제  
-![image](https://user-images.githubusercontent.com/56099627/89259713-dca40880-d665-11ea-8bbc-8de8ca648c9b.png)  
 
 ### **종료된 contatiner에 다시 접속하기**
 ```
