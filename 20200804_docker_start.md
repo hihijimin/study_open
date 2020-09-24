@@ -26,8 +26,7 @@ $ sudo usermod -aG docker jimin
 - 레파지토리 로그인 하기  
 ![image](https://user-images.githubusercontent.com/56099627/89258912-1a079680-d664-11ea-95ee-2e2cac7a6466.png)  
 - 로컬 이미지에 태그 설정 & 이미지 올리기  
-$ docker tag <업로드할 이미지의 ID> <이용자ID>/<생성된 리파지토리 이름>:<임의의 태그이름>  
-$ docker tag 69ba6d511482 hihijimin/dockerlab:base  
+$ docker tag <업로드할 이미지의 ID> <이미지 이름>:<새로운 태그이름>    
 이미지 올리기 $ docker push hihijimin/dockerlab:base  
 ![image](https://user-images.githubusercontent.com/56099627/89259251-dbbea700-d664-11ea-9e84-1aab87a9af62.png)  
 - 이미지 삭제  
