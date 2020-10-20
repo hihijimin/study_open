@@ -1,7 +1,5 @@
 # Relu
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />  
-- \Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-<img src="https://latex.codecogs.com/gif.latex?\Large&space;y=\left\{\begin{matrix} x (x>0) \\ 0 (x\leq 0) \end{matrix}\right." title="y=\left\{\begin{matrix} x (x>0) \\ 0 (x\leq 0) \end{matrix}\right." />  
+
   
 # Sigmoid  
 <img src="https://latex.codecogs.com/gif.latex?y=\frac{1}{1+e^{-x}}" title="y=\frac{1}{1+e^{-x}}" />  
