@@ -1,5 +1,5 @@
 # Relu
-<img src="https://latex.codecogs.com/gif.latex?y=\left\{\begin{matrix}&space;x&space;(x>0)&space;\\&space;0&space;(x\leq&space;0)&space;\end{matrix}\right." /> 
+![수식](http://latex.codecogs.com/gif.latex?Concentration%3D%5Cfrac%7BTotalTemplate%7D%7BTotalVolume%7D)
 <img src="https://latex.codecogs.com/gif.latex?y=\left\{\begin{matrix}&space;x&space;(x>0)&space;\\&space;0&space;(x\leq&space;0)&space;\end{matrix}\right." title="y=\left\{\begin{matrix} x (x>0) \\ 0 (x\leq 0) \end{matrix}\right." />  
   
 # Sigmoid  
