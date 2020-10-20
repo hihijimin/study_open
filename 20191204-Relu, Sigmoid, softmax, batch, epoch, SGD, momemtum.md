@@ -1,8 +1,8 @@
-# Relu
+![image](https://user-images.githubusercontent.com/56099627/96572081-611e3300-1307-11eb-9064-9becaad62a0a.png)
 
+# Relu
   
 # Sigmoid  
-<img src="https://latex.codecogs.com/gif.latex?y=\frac{1}{1+e^{-x}}" title="y=\frac{1}{1+e^{-x}}" />  
 <img src="https://latex.codecogs.com/gif.latex?y=\frac{1}{1&plus;e^{-x}}" title="y=\frac{1}{1+e^{-x}}" />  
   
 # softmax 함수 구현시 단점(문제점)  
