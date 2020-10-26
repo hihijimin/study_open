@@ -1,3 +1,10 @@
+## 이론 설명
+http://blog.naver.com/PostView.nhn?blogId=sogangori&logNo=220993971883&parentCategoryNo=6&categoryNo=&viewDate=&isShowPopularPosts=true&from=search  
+https://seongkyun.github.io/papers/2019/11/20/yolov3/  
+https://hoya012.github.io/blog/Tutorials-of-Object-Detection-Using-Deep-Learning-GaussianYOLOv3/  
+https://mickael-k.tistory.com/27  
+https://ropiens.tistory.com/43  
+
 ## pytorch-based yolo3
 simple_HRNetpose에서 yolo3 모델을 업데이트 하기 위해서 pytorch-based yolo 환경 셋팅, detector 실행, training 하기 위한 준비들  
 https://github.com/eriklindernoren/PyTorch-YOLOv3  
