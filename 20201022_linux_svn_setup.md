@@ -19,6 +19,7 @@ $ svn commit [filename]
 파일삭제: https://dejavuqa.tistory.com/133  
 $ svn delete 'Doc Files'  
 $ svn commit -m "delete Doc Files Folder"  
+![image](https://user-images.githubusercontent.com/56099627/97265914-cbd0f080-186a-11eb-9533-d747eb1ce86e.png)  
 
 ```
 * 환경설정 참고: 
