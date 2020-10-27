@@ -21,6 +21,9 @@ $ svn delete 'Doc Files'
 $ svn commit -m "delete Doc Files Folder"  
 ![image](https://user-images.githubusercontent.com/56099627/97265914-cbd0f080-186a-11eb-9533-d747eb1ce86e.png)  
 
+5. 파일 업데이트  
+$ svn update  
+![image](https://user-images.githubusercontent.com/56099627/97267615-c5904380-186d-11eb-991d-c911d7e831e5.png)  
 ```
 * 환경설정 참고: 
 svn commit [filename] 할때 .bashrc에 환경설정해 줘야만 vim 으로 실행 한다
