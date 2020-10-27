@@ -13,6 +13,11 @@ $ svn add svn_test (실제 파일은 .txt 이지만 .txt은 생략해서~)
 $ svn commit [filename]   
 ![image](https://user-images.githubusercontent.com/56099627/96854650-b472bb80-1496-11eb-9271-d4412e479813.png)  
 ![image](https://user-images.githubusercontent.com/56099627/96854364-5c3bb980-1496-11eb-84b0-2ca2b38cbb06.png)  
+
+파일삭제: https://dejavuqa.tistory.com/133  
+$ svn delete 'Doc Files' 
+$ svn commit -m "delete Doc Files Folder"  
+
 ```
 * 환경설정 참고: 
 svn commit [filename] 할때 .bashrc에 환경설정해 줘야만 vim 으로 실행 한다
