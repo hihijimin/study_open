@@ -7,6 +7,7 @@ $ sudo svnadmin create /home/svn/nglerepo
 2. 체크아웃: local 에 svn 파일 가져오기  
 체크아웃: https://dejavuqa.tistory.com/124?category=266924  
 $ svn checkout --username [username] --password [password] svn://000.000.0.00/svn  
+
 3. 커밋 (file 경로는 체크아웃하여 local에 svn 저장된 위치에 커밋할 파일이 있어야함)  
 커밋: https://dejavuqa.tistory.com/145?category=266924  
 $ svn add svn_test (실제 파일은 .txt 이지만 .txt은 생략해서~)  
@@ -14,8 +15,9 @@ $ svn commit [filename]
 ![image](https://user-images.githubusercontent.com/56099627/96854650-b472bb80-1496-11eb-9271-d4412e479813.png)  
 ![image](https://user-images.githubusercontent.com/56099627/96854364-5c3bb980-1496-11eb-84b0-2ca2b38cbb06.png)  
 
+4. 
 파일삭제: https://dejavuqa.tistory.com/133  
-$ svn delete 'Doc Files' 
+$ svn delete 'Doc Files'  
 $ svn commit -m "delete Doc Files Folder"  
 
 ```
