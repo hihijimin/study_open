@@ -26,7 +26,8 @@ $ sudo usermod -aG docker jimin
 1. 레파지토리 로그인 하기  
 ![image](https://user-images.githubusercontent.com/56099627/89258912-1a079680-d664-11ea-95ee-2e2cac7a6466.png)  
 2. 도커 이미지 commit 하여 새로운 도커 이미지 만들기  
-$ docker commit <레파지토리 이름> <만들고자 할 이름>:<만들고자하는 Tag>  
+$ docker commit <container ID> <만들고자 할 이미지 이름>:<만들고자하는 Tag>  
+![image](https://user-images.githubusercontent.com/56099627/97673340-f7541500-1ace-11eb-9576-8d61da78771e.png)  
 ![image](https://user-images.githubusercontent.com/56099627/94108972-37462d80-fe7b-11ea-87ae-98f4821d23bc.png)
 **만약에 도커 허브에 이미지 올리기 위해선 Repasitory 이름과 dockerhub ID/이미지 이름 이 일치해야 한다!**  
 **Repasitory 이름, dockerhub ID/이미지 이름 불일치 한다면, "denied: requested access to the resource is denied " 라는 메세지와 함께 도커 허브에 이미지가 올라가지 않는다**  
