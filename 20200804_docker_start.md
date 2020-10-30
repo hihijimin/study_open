@@ -102,6 +102,9 @@ $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root
 <결과 예시>  
 ![image](https://user-images.githubusercontent.com/56099627/93560750-ce177380-f9bd-11ea-90c1-6fcc71a7a373.png)  
 
+### docker option 
+http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter20/28  
+
 ### docker local-docker 파일올리기
 참고: https://itholic.github.io/docker-copy/  
 1. 로컬파일을 도커에 복사(특정 경로)  
