@@ -53,6 +53,9 @@ $ netstat -natp | grep LISTEN
 ![image](https://user-images.githubusercontent.com/56099627/98207803-93729600-1f7f-11eb-997c-59d8182afd28.png)  
 
 ### filezila 설치
-$ sudo add-apt-repository ppa;n-muench/programs-ppa  
-$ sudo apt-get update  
+1. 터미널에서 명령어으로 설치  
+(생략가능)$ sudo apt-get update  
 $ sudo apt-get install filezilla  
+![image](https://user-images.githubusercontent.com/56099627/98220342-7e9efe00-1f91-11eb-924a-fdcf5523afed.png)  
+2. 프로그램 리스트에서 ui 확인  
+![image](https://user-images.githubusercontent.com/56099627/98220536-c45bc680-1f91-11eb-838e-2486d7fe453c.png)  
