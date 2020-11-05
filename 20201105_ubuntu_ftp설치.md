@@ -51,3 +51,8 @@ $ service vsftpd restart
 (참고) 이 서버에서 연결가능한 포트번호 보기  
 $ netstat -natp | grep LISTEN  
 ![image](https://user-images.githubusercontent.com/56099627/98207803-93729600-1f7f-11eb-997c-59d8182afd28.png)  
+
+### filezila 설치
+$ sudo add-apt-repository ppa;n-muench/programs-ppa  
+$ sudo apt-get update  
+$ sudo apt-get install filezilla  
