@@ -1,5 +1,7 @@
 ### CNN에 대한 설명이 자세한 블로그
 http://taewan.kim/post/cnn/  
+https://cding.tistory.com/5  
+https://tykimos.github.io/2017/01/27/CNN_Layer_Talk/  
 
 # CNN (Convolutional Neural Network)
 **CNN 개발 역사??**  
