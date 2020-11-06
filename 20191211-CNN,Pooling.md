@@ -1,3 +1,6 @@
+### CNN에 대한 설명이 자세한 블로그
+http://taewan.kim/post/cnn/  
+
 # CNN (Convolutional Neural Network)
 **CNN 개발 역사??**  
 초창기 CNN 개발한 분들이 고양이가 보는 것 마다 자극 받는 뇌의 위치가 다른것을 보고 아이디어를 얻어 CNN을 만들었다한다.  
