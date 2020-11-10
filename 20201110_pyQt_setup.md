@@ -18,6 +18,11 @@ $ ./qt-opensource-linux-x64-5.14.2.run
 
 - 환경변수 수정
 
+### Qt 삭제
+https://m.blog.naver.com/PostView.nhn?blogId=pipecivil&logNo=220239067094&proxyReferer=https:%2F%2Fwww.google.com%2F  
+- 설치한 Qt 경로에 들어가서 **MaintenanceTool 실행**하여 **Remove all components**를 해주면 설치한 Qt가 삭제 된다.  
+
+
 
 
 
