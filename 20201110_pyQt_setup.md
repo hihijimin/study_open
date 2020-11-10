@@ -1,7 +1,7 @@
 https://webnautes.tistory.com/1413  
 ### 셋업 
 1. qt 설치 파일 다운로드  
-공식 사이트(http://download.qt.io/archive/qt/)에 들어가 리눅스용 설치파일(qt-opensource-linux-x64-5.14.2.run) 다운로드  
+공식 사이트(http://download.qt.io/archive/qt/) 에 들어가 리눅스용 설치파일(qt-opensource-linux-x64-5.14.2.run) 다운로드  
 
 2. 필수 파일 설치 및 업데이트
 - 패키지 리스트 업데이트: $ sudo apt-get update
