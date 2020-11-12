@@ -152,6 +152,18 @@ $ ps -ef | grep docker
 $ docker info | grep Root  
 ![image](https://user-images.githubusercontent.com/56099627/90994606-3d36bd80-e5f4-11ea-9345-9ceed2802ef6.png)  
 
+### docker 설치하고 첫번째 run 할때 발생 에러
+**issue: docker: Error response from daemon: could not select device driver "" with capabilities: [[gpu]].
+ERRO[0000] error waiting for container: context canceled**  
+https://github.com/NVIDIA/nvidia-docker/issues/1034  
+- 해결방안: **$ sudo systemctl restart docker**  
+- 에러 & 해결 인증  
+![image](https://user-images.githubusercontent.com/56099627/98921012-26797600-2514-11eb-9998-0004a1ddbce3.png)  
+![image](https://user-images.githubusercontent.com/56099627/98921390-9687fc00-2514-11eb-86d2-468c3f7864c8.png)  
+**issue: docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/create: dial unix /var/run/docker.sock: connect: permission denied.**  
+
+
+
 ### sudo service docker stop 후 다시 접속 하고 자 할때 
 **issue: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?**
 https://velog.io/@pop8682/Docker-Cannot-connect-to-the-Docker-daemon-at-unixvarrundocker.sock.-Is-the-docker-daemon-running-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0  
