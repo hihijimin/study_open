@@ -5,9 +5,18 @@ https://m.blog.naver.com/kimmingul/220639741333
 ![image](https://user-images.githubusercontent.com/56099627/90863952-cd91ba00-e3ca-11ea-9e01-39c03196c6e9.png)  
 2. 
 ![image](https://user-images.githubusercontent.com/56099627/90863631-5825e980-e3ca-11ea-8302-51777e8625d0.png)  
-3. 
+3. $ sudo mkfs -t ext4 /dev/sda1
 ![image](https://user-images.githubusercontent.com/56099627/90863680-74c22180-e3ca-11ea-8148-448095a20633.png)
-4. 마운트 된걸 확인 가능함 
+4. 새로운 하드디스크 사용 경로 설정 
+- 여기에선 sudo 관리자 권한으로 해야함
+```
+원하는 경로에 설정 $ mkdir /home/사용자이름/data  
+누구나 입출력할 수 있게 권한변경 $ sudo chmod 777 /home/사용자이름/data  
+마운트 설정 $ sudo mount /dev/sda1 /home/사용자이름/data  
+마운트! $ mount 
+```
+![image](https://user-images.githubusercontent.com/56099627/98892901-a5ef5100-24e4-11eb-81b7-696f34cfd6ae.png)  
+
 ### 2TB 이상 하드디스크 일때 마운트 방법
 https://topis.me/109  
 1. DOS 파티션으로는 2테라까지만 지원하니 GPT로 포맷하라는 안내가 메세지가 나오면 GPT으로 바꿔주면 된다  
