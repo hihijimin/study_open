@@ -22,6 +22,20 @@ $ sudo usermod -aG docker jimin
 (참고: https://github.com/palantir/gradle-docker/issues/188 )
 ![image](https://user-images.githubusercontent.com/56099627/89254188-8af58100-d659-11ea-9b6b-4d959ea29681.png)  
 
+### nvidia docker 설치
+http://blog.naver.com/PostView.nhn?blogId=doksg&logNo=221467903478&parentCategoryNo=&categoryNo=19&viewDate=&isShowPopularPosts=false&from=postView   
+- nvidia-docker는 nvidia gpu를 사용할수 있도록 해주는 docker로 다른 CUDA version을 사용할수 있도록 해준다. 
+```
+$ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+$ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+$ sudo apt-get update
+```
+![image](https://user-images.githubusercontent.com/56099627/98925396-46f7ff00-2519-11eb-937f-d12708b7b304.png)  
+- 위에 내용을 복붙해서 넣으면 sudo apt-get으로 nvidia-docker2를 설치할수 있도록 repo가 추가된다.  
+$ sudo apt-get install nvidia-docker2  
+![image](https://user-images.githubusercontent.com/56099627/98925635-92aaa880-2519-11eb-894f-adf8ff4f3a8d.png)  
+
 ### docker hub 이미지 레파지토리에 올리고 삭제하기
 1. 레파지토리 로그인 하기  
 ![image](https://user-images.githubusercontent.com/56099627/89258912-1a079680-d664-11ea-95ee-2e2cac7a6466.png)  
