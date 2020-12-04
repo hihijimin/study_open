@@ -23,8 +23,10 @@ pip + cuda10.0 설치 (원하는 버전 수정: torch==1.4.0 torchvision==0.5.0)
 $ pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html  
 -> 안정적으로 설치됨  
 ![image](https://user-images.githubusercontent.com/56099627/84872856-5f283700-b0bd-11ea-8197-c3463468bfe8.png)  
-![image](https://user-images.githubusercontent.com/56099627/84872938-75ce8e00-b0bd-11ea-80ba-0706072737d1.png)  
-
+![image](https://user-images.githubusercontent.com/56099627/84872938-75ce8e00-b0bd-11ea-80ba-0706072737d1.png) 
+$ pip install torch==1.6.0 torchvision==0.7.0  
+![image](https://user-images.githubusercontent.com/56099627/101139321-b498d600-3654-11eb-93a9-4f762ba322df.png)
+![image](https://user-images.githubusercontent.com/56099627/101139380-ced2b400-3654-11eb-9bcc-2362a0bd0fee.png)
 <참고> https://varhowto.com/how-to-install-pytorch-with-cuda-10-0/  
 
     1. Check if CUDA 10.0 is installed
