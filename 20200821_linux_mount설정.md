@@ -22,6 +22,7 @@ https://kilim.tistory.com/155
 - UUID 확인한 정보를 등록해주기  
 $ sudo vim /etc/fstab  
 ![image](https://user-images.githubusercontent.com/56099627/98916663-c6cc9c00-250e-11eb-8466-fb9e8429919b.png)  
+![image](https://user-images.githubusercontent.com/56099627/101147751-1f9bda00-3660-11eb-91e9-06de1e094e2a.png)  
 - reboot 하기  
 
 ### 2TB 이상 하드디스크 일때 마운트 방법
