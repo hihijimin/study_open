@@ -34,4 +34,40 @@ https://topis.me/109
 3. 설정된 GPT 하드디스크를 포맷하기  
 ![image](https://user-images.githubusercontent.com/56099627/90867963-22d0ca00-e3d1-11ea-802a-b9e6ef592ad9.png)  
 
-
+### 2TB 이상 하드디스크 마운트 할때 발생한 에러
+https://m.blog.naver.com/PostView.nhn?blogId=rbar&logNo=220569935459&proxyReferer=https:%2F%2Fwww.google.com%2F  
+```
+The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.
+Falling back to read-only mount because the NTFS partition is in an
+unsafe state. Please resume and shutdown Windows fully (no hibernation
+or fast restarting.)
+```
+- 일단 터미널에서 마운트 명령을 내려본다
+```
+jimin@jimin-System:~$ sudo mount /dev/sda1 /home/jimin/HDD2
+The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.
+Falling back to read-only mount because the NTFS partition is in an
+unsafe state. Please resume and shutdown Windows fully (no hibernation
+or fast restarting.)
+```
+- 주절 주절 NTFS 파티션이 문제가 있다는 오류 메시지가 뜨면 ntfsfix 명령으로 해결한다
+$ sudo ntfsfix /dev/sda1  
+```
+jimin@jimin-System:~$ sudo ntfsfix /dev/sda1
+Mounting volume... The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.
+FAILED
+Attempting to correct errors... 
+Processing $MFT and $MFTMirr...
+Reading $MFT... OK
+Reading $MFTMirr... OK
+Comparing $MFTMirr to $MFT... OK
+Processing of $MFT and $MFTMirr completed successfully.
+Setting required flags on partition... OK
+Going to empty the journal ($LogFile)... OK
+Checking the alternate boot sector... OK
+NTFS volume version is 3.1.
+NTFS partition /dev/sda1 was processed successfully.
+```
