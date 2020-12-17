@@ -33,7 +33,8 @@ cuda - tensorflow 호환 버전 확인 링크: https://www.tensorflow.org/instal
 2020-12-17 17:01:05.249308: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory
 2020-12-17 17:01:05.249316: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
 ```
---> https://qastack.kr/programming/60368298/could-not-load-dynamic-library-libnvinfer-so-6  
+--> (https://qastack.kr/programming/60368298/could-not-load-dynamic-library-libnvinfer-so-6  
+이것은 오류가 아니라 경고입니다. 여전히 TensorFlow를 사용할 수 있습니다. 공유 라이브러리 libnvinfer와는 libnvinfer_plugin선택 사항이며 엔비디아의 TensorRT 기능을 사용하는 경우에만 필요합니다.
 ```
 시스템에 다음 NVIDIA® 소프트웨어가 설치되어 있어야합니다.
 
