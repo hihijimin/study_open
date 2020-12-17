@@ -70,3 +70,10 @@ sudo apt-get install -y --no-install-recommends libnvinfer6=6.0.1-1+cuda10.1 \
     libnvinfer-dev=6.0.1-1+cuda10.1 \
     libnvinfer-plugin6=6.0.1-1+cuda10.1
 ```
+### 에러
+```
+AttributeError: module 'tensorflow' has no attribute 'python_io'
+```
+--> (해결) https://github.com/datitran/raccoon_dataset/issues/90  
+**tf.compat.v1.python_io**
+![image](https://user-images.githubusercontent.com/56099627/102461457-bbc7d700-408b-11eb-88ed-34d298d42233.png)  
