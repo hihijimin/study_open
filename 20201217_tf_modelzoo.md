@@ -22,14 +22,34 @@ python object_detection/builders/model_builder_tf2_test.py1
 ![image](https://user-images.githubusercontent.com/56099627/102451488-ead64c80-407b-11eb-99f4-9358b951d0e6.png)  
 ![image](https://user-images.githubusercontent.com/56099627/102451547-08a3b180-407c-11eb-8f3c-14d3555b6402.png)  
 
-###
+### pip install tensorflow==2.3
 cuda-10.1, cudnn-7.6버전 설치 하여 pip install tensoflow==2.1 을 설치하였음
 : cuda_10.1.105_418.39_linux.run, cudnn-10.1-linux-x64-v7.6.5.32.tgz  
 cuda - tensorflow 호환 버전 확인 링크: https://www.tensorflow.org/install/source?hl=ko  
+--> 근데 pip install tensorflow==2.3 설치해야만 다른 패키지 실행 가능함
 
-### TfRecords 만들기
+### train 전에 TfRecords 만들기
 https://github.com/mwindowshz/YoloToTfRecords  
 : yolo format -> xml format -> csv format -> tfrecord format  
+
+### train 하기 위한 model download(pipline_config)
+https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73  
+1. 원하는 모델 적당한 위치에 다운로드 하기  
+https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md  
+2. pipline_config 수정하기  
+EfficientDet D0 512x512 모델 다운로드 받은 후, 클래스 바꾸기(**num_classes: 1**), **fine_tune_checkpoint: "custom_dir/efficientdet_d0_coco17_tpu-32/checkpoint/ckpt-0"**, **fine_tune_checkpoint_type: "detection"**
+3. research/object_detection/model_main_tf2.py 수정하기  
+: tensorflow v 2.3 환경에서 model_main.py 이거보단 model_main_tf2.py 이거 실행하길 추천!  
+: **'pipeline_config_path', '../models/ssd_mobilenet_v1_fpn_640x640_coco17_tpu-8/pipeline.config'**  
+: **'model_dir', '../models/ssd_mobilenet_v1_fpn_640x640_coco17_tpu-8/saved_model.pb'**  
+4. lable_map(.pbtxt) 파일 만들기  
+```
+item  {
+  id: 1
+  name: 'person'
+}
+```
+
 ### tensorflow 실행 중 발생 하는 에러
 ```
 2020-12-17 17:01:05.249234: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory
