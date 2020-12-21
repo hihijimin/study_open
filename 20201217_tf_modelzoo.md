@@ -27,6 +27,9 @@ cuda-10.1, cudnn-7.6버전 설치 하여 pip install tensoflow==2.1 을 설치�
 : cuda_10.1.105_418.39_linux.run, cudnn-10.1-linux-x64-v7.6.5.32.tgz  
 cuda - tensorflow 호환 버전 확인 링크: https://www.tensorflow.org/install/source?hl=ko  
 
+### TfRecords 만들기
+https://github.com/mwindowshz/YoloToTfRecords  
+: yolo format -> xml format -> csv format -> tfrecord format  
 ### tensorflow 실행 중 발생 하는 에러
 ```
 2020-12-17 17:01:05.249234: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory
