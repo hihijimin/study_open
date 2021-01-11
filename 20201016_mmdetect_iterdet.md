@@ -35,3 +35,12 @@ pip install -v -e .  # or "python setup.py develop"
 7  
 ![image](https://user-images.githubusercontent.com/56099627/97130121-d5335d80-1783-11eb-9663-ec7380cdad59.png)  
 
+## 실행
+./demo/image_demo.py 에서 잘 실행되는지 보기  
+```
+parser.add_argument('--img', help='Image file', type=str, default='')
+parser.add_argument('--config', help='Config file', type=str, default='')
+parser.add_argument('--checkpoint', help='Checkpoint file', type=str, default='')
+parser.add_argument('--device', default='cuda:0', help='Device used for inference')
+parser.add_argument('--score-thr', type=float, default=0.3, help='bbox score threshold')
+```
