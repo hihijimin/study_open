@@ -44,3 +44,5 @@ parser.add_argument('--checkpoint', help='Checkpoint file', type=str, default=''
 parser.add_argument('--device', default='cuda:0', help='Device used for inference')
 parser.add_argument('--score-thr', type=float, default=0.3, help='bbox score threshold')
 ```
+## docker 예시
+docker run --gpus all --shm-size=8g -it --name iterdet_jm -p 8888:8888 -v "/home/jimin/HDD2/DB":"/iterdet/DB" iterdet /bin/bash  
