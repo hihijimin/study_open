@@ -48,3 +48,7 @@ parser.add_argument('--score-thr', type=float, default=0.3, help='bbox score thr
 $ docker run --gpus all --shm-size=8g -it --name iterdet_jm -p 8888:8888 -v "/home/jimin/HDD2/DB":"/iterdet/DB" iterdet /bin/bash  
 $ pip install notebook  
 $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root  
+
+## train 
+https://github.com/lesliejackson/PyTorch-Distributed-Training  
+$ python -m torch.distributed.launch --nproc_per_node = ngpus --master_port = 29500 ./tools/train.py  
