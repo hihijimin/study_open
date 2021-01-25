@@ -51,4 +51,20 @@ $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root
 
 ## train 
 https://github.com/lesliejackson/PyTorch-Distributed-Training  
+multi-gpu 사용하여 ~  
 $ python -m torch.distributed.launch --nproc_per_node = ngpus --master_port = 29500 ./tools/train.py  
+
+## train loss 확인(seaborn, tensorboard)
+- seaborn 을 사용하여 train loss 확인  
+$ python ./tools/analyze_logs.py plot_curve [log 경로: ex) 20210119_133603.log.json] --keys loss  
+- tensorboard  
+  - pip install tensorboard==2.2, tensorflow==2.2  
+  - config 파일에 옵션 추가하기(아래)  
+```
+log_config = dict(
+    interval=50,
+    hooks=[
+        dict(type='TextLoggerHook'),
+        dict(type='TensorboardLoggerHook')
+    ])
+```
