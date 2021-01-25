@@ -56,6 +56,7 @@ $ python -m torch.distributed.launch --nproc_per_node = ngpus --master_port = 29
 
 ## train loss 확인(seaborn, tensorboard)
 - seaborn 을 사용하여 train loss 확인  
+  - pip install seaborn  
 $ python ./tools/analyze_logs.py plot_curve [log 경로: ex) 20210119_133603.log.json] --keys loss  
 - tensorboard  
   - pip install tensorboard==2.2, tensorflow==2.2  
