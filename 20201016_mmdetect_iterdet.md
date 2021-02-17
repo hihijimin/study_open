@@ -48,7 +48,19 @@ parser.add_argument('--score-thr', type=float, default=0.3, help='bbox score thr
 $ docker run --gpus all --shm-size=8g -it --name iterdet_jm -p 8888:8888 -v "/home/jimin/HDD2/DB":"/iterdet/DB" iterdet /bin/bash  
 $ pip install notebook  
 $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root  
+```
+참고
+https://soyoung-new-challenge.tistory.com/70
 
+--shm-size 의미: shared memory 설정
+따로 추가 설정을 하지 않을 시 기본 --shm-size = 4mb이다
+- 기본 설정으로 딥러닝 모델 학습시 아래와 같은 insufficient shared memory 에러 발생
+"[ERROR: Unexpected bus error encountered in worker. This might be caused by insufficient shared memory]"
+
+- 여기서는 --shm-size=8G 로 설정
+$ docker run --name deepmodel -ti --shm-size=8G -v [공유파일설정] [이미지_이름]:[이미지_태그]
+- 위와 같이 재 설정 해주면 에러 없이 실행 가능
+```
 ## train 
 https://github.com/lesliejackson/PyTorch-Distributed-Training  
 multi-gpu 사용하여 ~  
