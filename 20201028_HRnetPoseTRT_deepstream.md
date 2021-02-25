@@ -10,3 +10,6 @@ onnx convert
 해외 블로그 https://satyajitghana.medium.com/human-pose-estimation-and-quantization-of-pytorch-to-onnx-models-a-detailed-guide-b9c91ddc0d9f  
 pytorch 공식 블로그 https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html  
 한글 블로그 https://tutorials.pytorch.kr/advanced/super_resolution_with_onnxruntime.html  
+
+deepstream_pose_estimation  
+https://github.com/NVIDIA-AI-IOT/deepstream_pose_estimation  
