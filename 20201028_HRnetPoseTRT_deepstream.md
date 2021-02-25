@@ -7,4 +7,6 @@ trt_pose 할때 필요한 코드:
 https://spyjetson.blogspot.com/2019/12/jetsonnano-human-pose-estimation-using.html  
 
 onnx convert  
-https://satyajitghana.medium.com/human-pose-estimation-and-quantization-of-pytorch-to-onnx-models-a-detailed-guide-b9c91ddc0d9f  
+해외 블로그 https://satyajitghana.medium.com/human-pose-estimation-and-quantization-of-pytorch-to-onnx-models-a-detailed-guide-b9c91ddc0d9f  
+pytorch 공식 블로그 https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html  
+한글 블로그 https://tutorials.pytorch.kr/advanced/super_resolution_with_onnxruntime.html  
