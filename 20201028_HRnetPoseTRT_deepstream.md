@@ -13,3 +13,6 @@ pytorch 공식 블로그 https://pytorch.org/tutorials/advanced/super_resolution
 
 deepstream_pose_estimation  
 https://github.com/NVIDIA-AI-IOT/deepstream_pose_estimation  
+
+higher-HRnet pose(onnx 있음)  
+https://github.com/luohuan2uestc/pose-multi/blob/master/tools/export_to_onnx.py  
