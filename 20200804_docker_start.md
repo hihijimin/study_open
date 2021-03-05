@@ -177,7 +177,15 @@ https://github.com/NVIDIA/nvidia-docker/issues/1034
 **issue: docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/create: dial unix /var/run/docker.sock: connect: permission denied.**  
 
 ### docker에 화면 공유
-docker run --gpus all -it --privileged --ipc=host -v /home/jimin/HDD1/AiPose:/workspace -w /workspace -p 8080:8080 --name iter_pose_trt -v /home/jimin/HDD2/DB:/workspace/DB -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY hict/aipose:20210305
+· (먼저)$xhost +local:docker  
+※ 호스트에서 토커가 Xserver와 통신할 수 있도록 설정함  
+
+· $ docker run … -v /tmp/.X11-unix:/tmp/.X11-unix:ro -e DISPLAY=$DISPLAY  
+※ 호스트의 XServer를 볼륨 형태로 공유 (ro : Readonly), DISPLAY 환경변수 전달  
+※ XSever소켓은 ‘/tmp/.X11-unux’에 존재한다.  
+
+· 예시
+$ docker run --gpus all -it --privileged --ipc=host -v /home/jimin/HDD1/AiPose:/workspace -w /workspace -p 8080:8080 --name iter_pose_trt -v /home/jimin/HDD2/DB:/workspace/DB -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY hict/aipose:20210305
 
 ### sudo service docker stop 후 다시 접속 하고 자 할때 
 **issue: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?**
