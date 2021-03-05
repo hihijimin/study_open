@@ -176,7 +176,8 @@ https://github.com/NVIDIA/nvidia-docker/issues/1034
 ![image](https://user-images.githubusercontent.com/56099627/98921390-9687fc00-2514-11eb-86d2-468c3f7864c8.png)  
 **issue: docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/create: dial unix /var/run/docker.sock: connect: permission denied.**  
 
-
+### docker에 화면 공유
+docker run --gpus all -it --privileged --ipc=host -v /home/jimin/HDD1/AiPose:/workspace -w /workspace -p 8080:8080 --name iter_pose_trt -v /home/jimin/HDD2/DB:/workspace/DB -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY hict/aipose:20210305
 
 ### sudo service docker stop 후 다시 접속 하고 자 할때 
 **issue: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?**
