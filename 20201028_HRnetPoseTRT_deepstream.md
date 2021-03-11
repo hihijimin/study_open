@@ -16,3 +16,7 @@ https://github.com/NVIDIA-AI-IOT/deepstream_pose_estimation
 
 higher-HRnet pose(onnx 있음)  
 https://github.com/luohuan2uestc/pose-multi/blob/master/tools/export_to_onnx.py  
+
+trt_pose  
+/trt_pose/utils/export_for_isaac.py 실행코드  
+python3 trt_pose/utils/export_for_isaac.py --input_checkpoint resnet18_baseline_att_224x224_A_epoch_249.pth --input_model resnet18_baseline_att --input_topology tasks/human_pose/human_pose.json --input_width 224 --input_height 224 --output_model resnet18_baseline_att_224x224_A_epoch_249.onnx  
