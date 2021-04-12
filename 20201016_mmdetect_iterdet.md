@@ -44,7 +44,74 @@ parser.add_argument('--checkpoint', help='Checkpoint file', type=str, default=''
 parser.add_argument('--device', default='cuda:0', help='Device used for inference')
 parser.add_argument('--score-thr', type=float, default=0.3, help='bbox score threshold')
 ```
-## docker 예시
+## mmdetection docker for tensorrt
+https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md  
+0. docker file
+```
+# nvidia-driver 450, cuda 11, cudnn 8 환경에서 mmcv-full 파키지 설치하기  
+ARG PYTORCH="1.7.0"
+ARG CUDA="11.0"
+ARG CUDNN="8"
+
+FROM pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel
+
+ENV TORCH_CUDA_ARCH_LIST="6.0 6.1 7.0+PTX"
+ENV TORCH_NVCC_FLAGS="-Xfatbin -compress-all"
+ENV CMAKE_PREFIX_PATH="$(dirname $(which conda))/../"
+
+RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install MMCV
+RUN pip install mmcv-full==latest+torch1.7.0+cu110 -f https://openmmlab.oss-accelerate.aliyuncs.com/mmcv/dist/index.html
+
+# Install MMDetection
+RUN conda clean --all
+RUN git clone https://github.com/open-mmlab/mmdetection.git /mmdetection
+WORKDIR /mmdetection
+ENV FORCE_CUDA="1"
+RUN pip install -r requirements/build.txt
+RUN pip install --no-cache-dir -e .
+
+# Update apt packages
+RUN apt update
+RUN apt upgrade -y
+
+# Install vim
+RUN apt install vim -y
+```
+1. mmdetection docker image download: $ docker build -t mmdetection docker/  
+2. Tensorrt (.tar)다운로드 후, mmdetection dir 안에 넣어주기
+3. mmcv download : https://github.com/open-mmlab/mmcv/blob/master/docs/tensorrt_plugin.md  
+```
+clone $ git clone https://github.com/open-mmlab/mmcv.git
+
+Install TensorRT
+Download the corresponding TensorRT build from NVIDIA Developer Zone.
+
+For example, for Ubuntu 16.04 on x86-64 with cuda-10.2, the downloaded file is TensorRT-7.2.1.6.Ubuntu-16.04.x86_64-gnu.cuda-10.2.cudnn8.0.tar.gz.
+
+Then, install as below:
+
+$ cd ~/Downloads
+$ tar -xvzf TensorRT-7.2.2.3.Ubuntu-18.04.x86_64-gnu.cuda-11.0.cudnn8.0.tar.gz
+export TENSORRT_DIR=`pwd`/TensorRT-7.2.2.3
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_DIR/lib
+Install python packages: tensorrt, graphsurgeon, onnx-graphsurgeon
+
+$ pip install $TENSORRT_DIR/python/tensorrt-7.2.2.3-cp38-none-linux_x86_64.whl
+$ pip install $TENSORRT_DIR/onnx_graphsurgeon/onnx_graphsurgeon-0.2.6-py2.py3-none-any.whl
+$ pip install $TENSORRT_DIR/graphsurgeon/graphsurgeon-0.4.5-py2.py3-none-any.whl
+For more detailed infomation of installing TensorRT using tar, please refer to Nvidia' website.
+
+Build on Linux
+$ cd mmcv # to MMCV root directory
+$ MMCV_WITH_OPS=1 MMCV_WITH_TRT=1 pip install -e .
+```
+4. 실행 : docker run --gpus all --shm-size=8g -it --name onnxtrt -p 9000:9000 -v "/home/jimin/D/mmdetection_new":"/mmdetection" mmdetection_cuda11 /bin/bash  
+
+## iterdet docker 예시
 $ docker run --gpus all --shm-size=8g -it --name iterdet_jm -p 8888:8888 -v "/home/jimin/HDD2/DB":"/iterdet/DB" iterdet /bin/bash  
 $ pip install notebook  
 $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root  
