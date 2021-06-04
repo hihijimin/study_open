@@ -115,6 +115,8 @@ $ MMCV_WITH_OPS=1 MMCV_WITH_TRT=1 pip install -e .
 $ docker run --gpus all --shm-size=8g -it --name iterdet_jm -p 8888:8888 -v "/home/jimin/HDD2/DB":"/iterdet/DB" iterdet /bin/bash  
 $ pip install notebook  
 $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root  
+
+$ docker run --gpus all -it --privileged --ipc=host -v [Ai 디렉토리]:/workspace -w /workspace -p 8080:8080 --name iter_pose_trt -v [동영상 디렉토리]:/workspace/DB -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY hict/aipose:20210308
 ```
 참고
 https://soyoung-new-challenge.tistory.com/70
