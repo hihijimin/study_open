@@ -117,6 +117,7 @@ $ pip install notebook
 $ jupyter notebook --ip=0.0.0.0 -port=8888 --allow-root  
 
 $ docker run --gpus all -it --privileged --ipc=host -v [Ai 디렉토리]:/workspace -w /workspace -p 8080:8080 --name iter_pose_trt -v [동영상 디렉토리]:/workspace/DB -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY hict/aipose:20210308
+$ docker run -it --gpus all --privileged --ipc=host --shm-size=8g -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --name torch2onnx -v /home/jimin/HDD1/iterdet:/iterdet --ip 0.0.0.0 -p 9000:9000 iterdet /bin/bash
 ```
 참고
 https://soyoung-new-challenge.tistory.com/70
