@@ -112,8 +112,12 @@ $ MMCV_WITH_OPS=1 MMCV_WITH_TRT=1 pip install -e .
 4. 실행 : docker run --gpus all --shm-size=8g -it --name onnxtrt -p 9000:9000 -v "/home/jimin/D/mmdetection_new":"/mmdetection" mmdetection_cuda11 /bin/bash 
 
 ## mmdetect 에 onnx 실행하기
-https://github.com/open-mmlab/mmdetection/blob/master/docs/tutorials/pytorch2onnx.md#list-of-supported-models-exportable-to-onnx 
+[reference: mmdetect onnx doc](https://github.com/open-mmlab/mmdetection/blob/master/docs/tutorials/pytorch2onnx.md#list-of-supported-models-exportable-to-onnx)
+Install onnx and onnxruntime
 
+  ```shell
+  pip install onnx onnxruntime
+  ```
 List of supported models exportable to ONNX  
 The table below lists the models that are guaranteed to be exportable to ONNX and runnable in ONNX Runtime.  
 
