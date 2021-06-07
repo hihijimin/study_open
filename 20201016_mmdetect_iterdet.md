@@ -109,7 +109,25 @@ Build on Linux
 $ cd mmcv # to MMCV root directory
 $ MMCV_WITH_OPS=1 MMCV_WITH_TRT=1 pip install -e .
 ```
-4. 실행 : docker run --gpus all --shm-size=8g -it --name onnxtrt -p 9000:9000 -v "/home/jimin/D/mmdetection_new":"/mmdetection" mmdetection_cuda11 /bin/bash  
+4. 실행 : docker run --gpus all --shm-size=8g -it --name onnxtrt -p 9000:9000 -v "/home/jimin/D/mmdetection_new":"/mmdetection" mmdetection_cuda11 /bin/bash 
+
+## mmdetect 에 onnx 실행하기
+https://github.com/open-mmlab/mmdetection/blob/master/docs/tutorials/pytorch2onnx.md#list-of-supported-models-exportable-to-onnx 
+
+List of supported models exportable to ONNX  
+The table below lists the models that are guaranteed to be exportable to ONNX and runnable in ONNX Runtime.  
+
+|    Model     |                               Config                                | Dynamic Shape | Batch Inference |                                     Note                                      |
+| :----------: | :-----------------------------------------------------------------: | :-----------: | :-------------: | :---------------------------------------------------------------------------: |
+|     FCOS     |      `configs/fcos/fcos_r50_caffe_fpn_gn-head_4x4_1x_coco.py`       |       Y       |        Y        |                                                                               |
+|     FSAF     |               `configs/fsaf/fsaf_r50_fpn_1x_coco.py`                |       Y       |        Y        |                                                                               |
+|  RetinaNet   |          `configs/retinanet/retinanet_r50_fpn_1x_coco.py`           |       Y       |        Y        |                                                                               |
+|     SSD      |                    `configs/ssd/ssd300_coco.py`                     |       Y       |        Y        |                                                                               |
+|    YOLOv3    |         `configs/yolo/yolov3_d53_mstrain-608_273e_coco.py`          |       Y       |        Y        |                                                                               |
+| Faster R-CNN |        `configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py`         |       Y       |        Y        |                                                                               |
+|  Mask R-CNN  |          `configs/mask_rcnn/mask_rcnn_r50_fpn_1x_coco.py`           |       Y       |        Y        |                                                                               |
+|  CornerNet   | `configs/cornernet/cornernet_hourglass104_mstest_10x5_210e_coco.py` |       Y       |        N        | no flip, no batch inference, tested with torch==1.7.0 and onnxruntime==1.5.1. |
+ 
 
 ## iterdet docker 예시
 $ docker run --gpus all --shm-size=8g -it --name iterdet_jm -p 8888:8888 -v "/home/jimin/HDD2/DB":"/iterdet/DB" iterdet /bin/bash  
