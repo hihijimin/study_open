@@ -9,8 +9,9 @@ pandas : ppip install pandas
 torch : 1.3+
 torchvision : 0.4+
 pytoan : pip install pytoan
-albumentations : 
+albumentations : pip install albumentations==0.5.2
 
 opencv : pip install opencv-python
 matplotlib : pip install matplotlib
+
 ```
