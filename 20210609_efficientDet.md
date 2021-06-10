@@ -163,5 +163,5 @@ ERROR: builtin_op_importers.cpp:2249 In function importPad:
 [06/10/2021-07:04:50] [E] Engine set up failed
 &&&& FAILED TensorRT.trtexec # /mmdetection/TensorRT-7.2.2.3/targets/x86_64-linux-gnu/bin/trtexec --onnx=weights/efficientdet-d0.pth_1_512_512.onnx --explicitBatch --saveEngine=efficientdet-d0.engine --workspace=2048 --fp16
 ```
-[8] Assertion failed: inputs.at(1).is_weights()
--> I am afraid, but TRT currently does not support convolutions where the weights are tensors.[지원불가 소개 링크](https://forums.developer.nvidia.com/t/assertion-failed-inputs-at-1-is-weights/153445/2)  
+[8] Assertion failed: inputs.at(1).is_weights()  
+-> I am afraid, but TRT currently does not support convolutions where the weights are tensors.  [지원불가 소개 링크](https://forums.developer.nvidia.com/t/assertion-failed-inputs-at-1-is-weights/153445/2)  
