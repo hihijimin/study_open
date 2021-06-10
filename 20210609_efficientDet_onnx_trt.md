@@ -75,6 +75,9 @@ torch.onnx.export(model, dummy_input,
                   #input_names=['data'],
                   opset_version=11)
 
+## result compare torch and onnx
+## torch predict shape : (1, 49104, 4)  
+## onnx predict shape: (1, 49104, 4)  
 ```
 
 ## 생성한 onnx 으로 convert onnx to tensorrt
