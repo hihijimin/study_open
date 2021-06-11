@@ -168,3 +168,5 @@ ERROR: builtin_op_importers.cpp:2249 In function importPad:
 ```
 [8] Assertion failed: inputs.at(1).is_weights()  
 -> I am afraid, but TRT currently does not support convolutions where the weights are tensors.  [지원불가 소개 링크](https://forums.developer.nvidia.com/t/assertion-failed-inputs-at-1-is-weights/153445/2)  
+
+[tensorrt 에서 지원되는 Caffe, TensorFlow, ONNX 연산들](https://docs.nvidia.com/deeplearning/tensorrt/support-matrix/index.html)
