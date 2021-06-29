@@ -1,4 +1,36 @@
+<pre class="EnlighterJSRAW" data-enlighter-language="python">
+class CNN(nn.Module):
+    def __init__(self):
+        super(CNN,self).__init__()
+        self.layer = nn.Sequential(
+            nn.Conv2d(1, 16, 3, padding=1),
+            nn.BatchNorm2d(16),
+            nn.ReLU(),
+            nn.Conv2d(16, 32, 3,padding=1),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2),           
+            nn.Conv2d(32, 64, 3,padding=1),
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2)        
+        )
+        self.fc_layer = nn.Sequential(
+            nn.Linear(64*7*7, 128),
+            nn.BatchNorm1d(128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.BatchNorm1d(64),
+            nn.ReLU(),            
+            nn.Linear(64, 10),
+        )       
 
+    def forward(self,x):
+        out = self.layer(x)
+        out = out.view(batch_size, -1)
+        out = self.fc_layer(out)
+        return out
+</pre>
 
 ##  numba 으로 GPU 코드 실행
 https://programmersought.com/article/29957543534/#21_llvm_55  
