@@ -39,3 +39,5 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D OPENCV_ENABLE_NONFREE=ON -D OPENCV_EXTRA_MO
 make
 sudo make install
 ```
+## docker
+docker run --gpus all --shm-size=8g -it --name onnxtrt -p 1000:1000 -v "/home/jimin/HDD1/c++Project":"/workspace/cppProject" hict/cpp:210716 /bin/bash
