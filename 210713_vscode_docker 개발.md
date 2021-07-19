@@ -56,3 +56,9 @@ sudo make install
 ```
 ## docker
 docker run --gpus all --shm-size=8g -it --name onnxtrt -p 1000:1000 -v "/home/jimin/HDD1/c++Project":"/workspace/cppProject" hict/cpp:210716 /bin/bash
+
+## 도커 실행하기 in vs code 
+vs code 실행 -> crtl + shift +p 누르면 검색창 뜸 -> remote_containers: 클릭! ->새로운 visual studio code 화면 뜸  
+vs code 실행 -> 왼쪽 탭에 원격탐색기 -> 원하는 도커 컨테이너 선택 -> (right click) -> (click) attach to container  
+![image](https://user-images.githubusercontent.com/56099627/126133725-50bcf379-3bb1-4651-8881-529bc3270581.png)  
+![image](https://user-images.githubusercontent.com/56099627/126133410-74c856fd-85a6-43cb-90f3-e068d624f55d.png)   
