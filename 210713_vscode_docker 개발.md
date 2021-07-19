@@ -35,7 +35,22 @@ cd .. #get out of opencv_contrib folder
 cd opencv
 mkdir build
 cd build
+# cmake 빌드 하기 전에 디폴드로 사용되는 python3 버전 경로 확인하기!
+$ whereis python3
+=>>>(example) python3: /usr/bin/python3.6m-config /usr/bin/python3.6 /usr/bin/python3 /usr/bin/python3.6-config /usr/bin/python3.6m /usr/lib/python3.8 /usr/lib/python3.7 /usr/lib/python3.6 /usr/lib/python3 /etc/python3.6 /etc/python3 /usr/local/lib/python3.6 /usr/include/python3.6 /usr/include/python3.6m /usr/share/python3 /opt/conda/bin/python3.8 /opt/conda/bin/python3 /opt/conda/bin/python3.8-config
+#
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D OPENCV_ENABLE_NONFREE=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D WITH_GTK=ON ..
+OR
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D OPENCV_ENABLE_NONFREE=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D WITH_GTK=ON \
+-D PYTHON2_INCLUDE_DIR=/usr/include/python2.7 \
+-D PYTHON2_NUMPY_INCLUDE_DIRS=/usr/lib/python2.7/dist-packages/numpy/core/include/ \
+-D PYTHON2_PACKAGES_PATH=/usr/lib/python2.7/dist-packages \
+-D PYTHON2_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython2.7.so \
+-D PYTHON3_INCLUDE_DIR=/usr/include/python3.6m \
+-D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/lib/python3/dist-packages/numpy/core/include/  \
+-D PYTHON3_PACKAGES_PATH=/usr/lib/python3/dist-packages \
+-D PYTHON3_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so \..
+
 make
 sudo make install
 ```
