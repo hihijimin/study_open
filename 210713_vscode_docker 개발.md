@@ -62,3 +62,8 @@ vs code 실행 -> crtl + shift +p 누르면 검색창 뜸 -> remote_containers: 
 vs code 실행 -> 왼쪽 탭에 원격탐색기 -> 원하는 도커 컨테이너 선택 -> (right click) -> (click) attach to container  
 ![image](https://user-images.githubusercontent.com/56099627/126133725-50bcf379-3bb1-4651-8881-529bc3270581.png)  
 ![image](https://user-images.githubusercontent.com/56099627/126133410-74c856fd-85a6-43cb-90f3-e068d624f55d.png)   
+
+build 디렉토리 생성시켜 cpp를 여기에 빌드 시키도록 한다. 예: "workspace/{projectName}/build"  
+build 디렉토리에 담겨있는 파일이 있다면 삭제하도록 한다. 디렉토리 삭제 명령: $ rm -rf *  
+cmake으로 빌드 한다. 명령: $ cmake ..  
+make 실행으로 빌드 및 디버깅(또는 릴리즈) 실행 파일을 만든다. 명령: $ make  
