@@ -23,6 +23,9 @@ https://docs.nvidia.com/deeplearning/tensorrt/api/python_api/gettingStarted.html
 batch 사이즈 따른 tensorrt 생성 코드  
 https://github.com/ycchanau/FYP-Seg/blob/29c99e27f2f27eb58b8a5056bea47689b7aee945/test_tensorrt.py  
 
+간단하게 설명 잘해둠 정리...(Pytorch와 TensorRT를 이용한 딥 러닝 추론 최적화) 
+https://blog.si-analytics.ai/33  
+
 
 trt_pose  
 /trt_pose/utils/export_for_isaac.py 실행코드  
