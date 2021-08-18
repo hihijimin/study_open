@@ -26,7 +26,7 @@ $ sudo chmod 666 /var/run/docker.sock 실행하기
 
 - 문제발생, **Error loading config file: /home/$USER/.docker/config.json: open /home/$USER/.docker/config.json: permission denied**  
 해결: https://askubuntu.com/questions/747778/docker-warning-config-json-permission-denied   
-터미널에서 echo $USER 으로 $USER 확인해 볼것!
+터미널에서 echo $USER 으로 $USER 확인해 볼것!  
 $ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R  
 $ sudo chmod g+rwx "/home/$USER/.docker" -R  
 문제발생 캡쳐:  
