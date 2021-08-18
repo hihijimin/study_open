@@ -18,9 +18,23 @@ $ cat /etc/group | grep docker
 $ sudo usermod -aG docker <USER_ID>  
 $ sudo usermod -aG docker jimin 
 ![image](https://user-images.githubusercontent.com/56099627/89253996-13bfed00-d659-11ea-983f-d8b7cbcb6840.png)  
-- 버전확인 했을 시, **Error: got permission denied while trying to connect to the docker daemon socket** 해결은 $ sudo chmod 666 /var/run/docker.sock 실행하기  
+
+- 버전확인 했을 시, **Error: got permission denied while trying to connect to the docker daemon socket** 해결은  
+$ sudo chmod 666 /var/run/docker.sock 실행하기  
 (참고: https://github.com/palantir/gradle-docker/issues/188 )
 ![image](https://user-images.githubusercontent.com/56099627/89254188-8af58100-d659-11ea-9b6b-4d959ea29681.png)  
+
+- 문제발생, **Error loading config file: /home/$USER/.docker/config.json: open /home/$USER/.docker/config.json: permission denied**  
+해결: https://askubuntu.com/questions/747778/docker-warning-config-json-permission-denied   
+터미널에서 echo $USER 으로 $USER 확인해 볼것!
+$ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R  
+$ sudo chmod g+rwx "/home/$USER/.docker" -R  
+문제발생 캡쳐:  
+![image](https://user-images.githubusercontent.com/56099627/129864427-ab95431c-1a85-4687-8dff-ccab69da799a.png)  
+문제해결 캡쳐:  
+![image](https://user-images.githubusercontent.com/56099627/129864677-0c597902-a2a1-4577-83e9-6b9e513504e2.png)  
+
+
 
 ### nvidia docker 설치
 http://blog.naver.com/PostView.nhn?blogId=doksg&logNo=221467903478&parentCategoryNo=&categoryNo=19&viewDate=&isShowPopularPosts=false&from=postView   
