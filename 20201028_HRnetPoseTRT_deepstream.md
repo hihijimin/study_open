@@ -17,8 +17,12 @@ https://github.com/NVIDIA-AI-IOT/deepstream_pose_estimation
 higher-HRnet pose(onnx 있음)  
 https://github.com/luohuan2uestc/pose-multi/blob/master/tools/export_to_onnx.py  
 
-nvidia에서 제공하는 tensorrt 실행 가이드
-https://docs.nvidia.com/deeplearning/tensorrt/api/python_api/gettingStarted.html
+nvidia에서 제공하는 tensorrt 실행 가이드  
+https://docs.nvidia.com/deeplearning/tensorrt/api/python_api/gettingStarted.html  
+
+batch 사이즈 따른 tensorrt 생성 코드  
+https://github.com/ycchanau/FYP-Seg/blob/29c99e27f2f27eb58b8a5056bea47689b7aee945/test_tensorrt.py  
+
 
 trt_pose  
 /trt_pose/utils/export_for_isaac.py 실행코드  
