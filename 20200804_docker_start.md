@@ -195,7 +195,7 @@ https://github.com/NVIDIA/nvidia-docker/issues/1034
 ※ 호스트에서 토커가 Xserver와 통신할 수 있도록 설정함  
 · (또는)$ xhost +local:root    
 ![image](https://user-images.githubusercontent.com/56099627/131605767-7a4f9a56-73d1-4768-8bf6-a527b27ac9f6.png)  
-error 해결 링크[https://eungbean.github.io/2018/12/04/EOD-cannot-connect-to-X-server-0.0/]  
+[error 해결 링크](https://eungbean.github.io/2018/12/04/EOD-cannot-connect-to-X-server-0.0/)  
 ```  
 문제상황: docker에서 opencv를 사용하려고 했는데, 이미지를 띄우는 과정에서 오류 남
 error message :  
