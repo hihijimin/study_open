@@ -191,8 +191,19 @@ https://github.com/NVIDIA/nvidia-docker/issues/1034
 **issue: docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/create: dial unix /var/run/docker.sock: connect: permission denied.**  
 
 ### docker에 화면 공유
-· (먼저)$xhost +local:docker  
+· (먼저)$ xhost +local:docker  
 ※ 호스트에서 토커가 Xserver와 통신할 수 있도록 설정함  
+· (또는)$ xhost +local:root    
+![image](https://user-images.githubusercontent.com/56099627/131605767-7a4f9a56-73d1-4768-8bf6-a527b27ac9f6.png)  
+error 해결 링크[https://eungbean.github.io/2018/12/04/EOD-cannot-connect-to-X-server-0.0/]  
+```  
+문제상황: docker에서 opencv를 사용하려고 했는데, 이미지를 띄우는 과정에서 오류 남
+error message :  
+No protocol specified
+: cannot connect to X server :1  
+
+해결방안: local 터미널에서 $ xhost +local:root 명령 실행해준다
+```
 
 · $ docker run … -v /tmp/.X11-unix:/tmp/.X11-unix:ro -e DISPLAY=$DISPLAY  
 ※ 호스트의 XServer를 볼륨 형태로 공유 (ro : Readonly), DISPLAY 환경변수 전달  
