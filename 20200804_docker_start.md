@@ -72,6 +72,13 @@ $ docker push <docker hub ID>/<>
 $ docker push hihijimin/dockerlab:base  
 ![image](https://user-images.githubusercontent.com/56099627/89259251-dbbea700-d664-11ea-9e84-1aab87a9af62.png)  
 
+### docker image USB으로 옮기기!
+1. 도커 tar으로 저장하기 $ docker save [image repository:tag]또는[image ID] -o [이미지이름].tar
+(주의 ! **이미지 ID가 먼저작성 후, tar 작성** 여기에서 순서 바뀌지 않기!)  
+![image](https://user-images.githubusercontent.com/56099627/131771434-0f81b590-5646-4489-8bbf-dab106dcdad7.png)  
+2. 도커 tar 파일 풀고 이미지 생성하기 $ docker load -i [이미지이름].tar  
+
+  
 ### **종료된 contatiner에 다시 접속하기**
 ```
 1. $ docker ps -a 으로 컨테이너가 있는지 확인한다
