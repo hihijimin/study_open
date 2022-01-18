@@ -55,7 +55,7 @@ $ sudo apt-get install nvidia-docker2
 1. 레파지토리 로그인 하기  
 ![image](https://user-images.githubusercontent.com/56099627/89258912-1a079680-d664-11ea-95ee-2e2cac7a6466.png)  
 2. Docker Commit - Container를 Image로 생성하기  
-`$ docker commit <container ID> <만들고자 할 이미지 이름>:<만들고자하는 Tag>`
+`$ docker commit <container ID> <만들고자 할 이미지 이름>:<만들고자하는 Tag>`  
 예) $ docker commit -a "hihijimin" -m "web container" web_server webserver/web:1.0  
 기존 "web_server" 라는 컨테이너를 기반으로 작성되며, -a 옵션을 통해 "hihijimin"라는 작성자 이름을 넣어주고, -m 통해 "주석 메시지"를 넣어주고 레포지토리 이름을 "webserver/web"으로 지정하며, 태그는 "1.0"으로 할당하여 이미지 작성
 ![image](https://user-images.githubusercontent.com/56099627/97673340-f7541500-1ace-11eb-9576-8d61da78771e.png)  
