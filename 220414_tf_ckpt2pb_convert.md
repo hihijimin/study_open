@@ -14,5 +14,7 @@ Converting the TensorFlow model checkpoint file.  .ckpt -> .pb
 ![image](https://user-images.githubusercontent.com/56099627/163320985-3257f66c-6980-4f0c-99fc-3097402259d5.png)  
 - .pbtxt 파일 준비 (그래프 정보)  
 - tensorboardx 설치하여 텐서보드 설치해두기  
-- 
+: 텐서보드 사용 (학습 시에) https://hyuna-tech.tistory.com/entry/Tensorboard-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%B2%95-with-Pytorch 
 
+- ckpt2pb
+: https://github.com/r1cebank/tf-ckpt-2-pb
